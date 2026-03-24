@@ -8,6 +8,7 @@ It is now a multilingual documentation repository. The current language sites in
 - German: `docs/de/`
 - Spanish: `docs/es/`
 - Japanese: `docs/jp/`
+- Korean: `docs/ko/`
 
 Each language has its own `mkdocs.yml`, `docs/`, and `overrides/` directory.
 
@@ -59,6 +60,10 @@ docs/
     mkdocs.yml
     docs/
     overrides/
+  ko/
+    mkdocs.yml
+    docs/
+    overrides/
 ```
 
 In most cases, localized pages should mirror the corresponding English page path under `docs/en/docs/`.
@@ -74,6 +79,7 @@ mkdocs serve -f docs/en/mkdocs.yml
 mkdocs serve -f docs/de/mkdocs.yml
 mkdocs serve -f docs/es/mkdocs.yml
 mkdocs serve -f docs/jp/mkdocs.yml
+mkdocs serve -f docs/ko/mkdocs.yml
 ```
 
 If you are reviewing or translating localized content, open the English source page and the matching localized page side by side in VS Code.
@@ -86,6 +92,7 @@ Published documentation:
 - German: [https://docs.gl-inet.com/router/de/4/](https://docs.gl-inet.com/router/de/4/)
 - Spanish: [https://docs.gl-inet.com/router/es/4/](https://docs.gl-inet.com/router/es/4/)
 - Japanese: [https://docs.gl-inet.com/router/jp/4/](https://docs.gl-inet.com/router/jp/4/)
+- Korean: [https://docs.gl-inet.com/router/ko/4/](https://docs.gl-inet.com/router/ko/4/)
 
 ## Writing Guide
 
