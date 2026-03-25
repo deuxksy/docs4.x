@@ -1,39 +1,39 @@
-# Data Statistics
+# 데이터 통계
 
-Data Statistics offers an intelligent traffic insight dashboard that categorizes and visualizes network usage by applications, helping you monitor real-time and historical traffic for better network awareness and control.
+데이터 통계는 애플리케이션별로 네트워크 사용량을 분류하고 시각화하는 지능적인 트래픽 인사이트 대시보드를 제공하여, 더 나은 네트워크 인식과 제어를 위해 실시간 및 과거 트래픽을 모니터링할 수 있습니다.
 
-**Note**:
+**참고**:
 
-1. This feature is now available only on **GL-MT5000 (Brume 3)**.
+1. 이 기능은 현재 **GL-MT5000 (Brume 3)** 에서만 사용할 수 있습니다.
 
-2. This feature cannot work with Network Acceleration. Enabling it will automatically disable Network Acceleration to ensure proper operation.
+2. 이 기능은 네트워크 가속과 함께 작동하지 않습니다. 활성화하면 proper operation을 보장하기 위해 네트워크 가속이 자동으로 비활성화됩니다.
 
 ---
 
-## Quick Setup
+## 빠른 설정
 
-On the left side of the web Admin Panel, go to **FLOW CONTROL** > **Data Statistics**.
+웹 관리 패널 왼쪽에서 **FLOW CONTROL** > **Data Statistics**로 이동합니다.
 
-Toggle the switch in the upper right corner to view the **Application Total Data**.
+오른쪽 상단의 스위치를 토글하여 **애플리케이션 전체 데이터**를 확인합니다.
 
 ![data statistics](https://static.gl-inet.com/docs/router/en/4/interface_guide/data_statistics/data-statistics.png){class="glboxshadow"}
 
-- **Top 10 Apps by Bandwidth Usage**: It presents a time-based trend chart (e.g., for the past day) to show the bandwidth consumption of the top 10 applications over the selected period. 
+- **대역폭 사용량 상위 10개 애플리케이션**: 선택한 기간 동안 상위 10개 애플리케이션의 대역폭 소비를 표시하는 시간 기반 트렌드 차트(예: 지난 1일)를 제공합니다.
 
-    Switch the timeline among Past Hour, Past Day, and Past Week if required. 
+    필요한 경우 지난 1시간, 지난 1일, 지난 1주 간의 타임라인을 전환합니다.
 
-- **App Traffic Statistics**: It displays detailed traffic metrics for each application, including Download, Upload, and Total Bandwidth data. 
+- **애플리케이션 트래픽 통계**: 다운로드, 업로드 및 전체 대역폭 데이터를 포함하여 각 애플리케이션의 자세한 트래픽 메트릭을 표시합니다.
 
-    Search for specific apps in the search bar if required.
+    필요한 경우 검색창에서 특정 앱을 검색합니다.
 
-## Data Storage Rules
+## 데이터 저장 규칙
 
-1. Traffic statistics are saved to RAM every 15 seconds and stored in flash every 1 hour. Frequent flash writes are avoided to protect flash memory lifespan.
+1. 트래픽 통계는 15초마다 RAM에 저장되고 1시간마다 플래시 메모리에 저장됩니다. 플래시 메모리 수명을 보호하기 위해 잦은 플래시 쓰기를 피합니다.
 
-2. A soft reboot will not cause data loss. The system first writes data from RAM to flash before restarting.
+2. 소프트 리부트는 데이터 손실을 일으키지 않습니다. 시스템은 재시작하기 전에 먼저 RAM의 데이터를 플래시에 씁니다.
 
-3. A hard reboot (unplugging and replugging the power) or a firmware upgrade (retaining settings) may result in data loss of up to the most recent hour.
+3. 하드 리부트(전원을 뽑았다가 다시 연결) 또는 펌웨어 업그레이드(설정 유지)는 최근 1시간까지의 데이터 손실을 초래할 수 있습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 통해 연락하세요.
