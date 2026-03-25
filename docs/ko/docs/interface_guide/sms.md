@@ -1,12 +1,12 @@
 # SMS
 
-GL.iNet cellular routers are equipped with a built-in modem that supports sending and receiving SMS messages after a SIM card is inserted.
+GL.iNet 셀룰러 라우터에는 SIM 카드를 삽입한 후 SMS 메시지를 송수신할 수 있는 내장형 모뎸이 장착되어 있습니다.
 
-**Note**: This feature only works on GL.iNet 4G/5G models with the original 4G LTE/5G NR module, and is not supported on other modules or any other USB modules.
+**참고**: 이 기능은 원본 4G LTE/5G NR 모듈이 장착된 GL.iNet 4G/5G 모델에서만 작동하며 다른 모듈이나 다른 USB 모듈에서는 지원되지 않습니다.
 
-## Supported Models
+## 지원 모델
 
-??? "Supported Models"
+??? "지원 모델"
     - GL-E5800 (Mudi 7)
     - GL-X2000 (Spitz Plus)
     - GL-X3000 (Spitz AX)
@@ -16,7 +16,7 @@ GL.iNet cellular routers are equipped with a built-in modem that supports sendin
     - GL-XE300 (Puli)
     - GL-X300B (Collie)
 
-??? "Unsupported Models"
+??? "미지원 모델"
     - GL-MT5000 (Brume 3)
     - GL-MT3600BE (Beryl 7)
     - GL-BE6500 (Flint 3e)
@@ -37,48 +37,48 @@ GL.iNet cellular routers are equipped with a built-in modem that supports sendin
     - GL-B1300 (Convexa-B)
     - GL-AP1300 (Cirrus)
 
-## Quick Setup
+## 빠른 설정
 
-Take the GL-X3000 (Spitz AX) as an example.
+GL-X3000 (Spitz AX)을 예로 들겠습니다.
 
-Please refer to [this link](internet_cellular.md) to set up the SIM card first.
+먼저 [이 링크](internet_cellular.md)를 참조하여 SIM 카드를 설정하세요.
 
-On the left side of the web Admin Panel, go to **INTERNET** -> **Cellular** section.
+웹 관리 패널 왼쪽에서 **INTERNET** -> **Cellular** 섹션으로 이동합니다.
 
-Click the envelope icon in the upper right corner.
+오른쪽 상단의 모봉표 아이콘을 클릭합니다.
 
-![sms](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/sms.png){class="glboxshadow gl-90-desktop"}
+![sms](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/sms.png){class="glboxshadow gl-90-desktop"}
 
-You will be directed to the SMS page, where you can view incoming messages or send new messages.
+SMS 페이지로 이동하며 수신 메시지를 보거나 새 메시지를 보낼 수 있습니다.
 
-![sms receive](https://static.gl-inet.com/docs/router/en/4/tutorials/sms/sms_receive.jpg){class="glboxshadow gl-90-desktop"}
+![sms receive](https://static.gl.inet.com/docs/router/en/4/tutorials/sms/sms_receive.jpg){class="glboxshadow gl-90-desktop"}
 
-Click a message to view the details.
+메시지를 클릭하여 세부 정보를 확인합니다.
 
-![sms detail](https://static.gl-inet.com/docs/router/en/4/tutorials/sms/sms_detail.png){class="glboxshadow"}
+![sms detail](https://static.gl.inet.com/docs/router/en/4/tutorials/sms/sms_detail.png){class="glboxshadow"}
 
-Click the **Send Message** button in the upper right corner to compose a new message.
+오른쪽 상단의 **Send Message** 버튼을 클릭하여 새 메시지를 작성합니다.
 
-![sms new message](https://static.gl-inet.com/docs/router/en/4/tutorials/sms/sms_new_message.jpg){class="glboxshadow"}
+![sms new message](https://static.gl.inet.com/docs/router/en/4/tutorials/sms/sms_new_message.jpg){class="glboxshadow"}
 
-* Recepient
+* 수신자
 
-    You need to select the international area code and enter the number. 
+    국가 코드를 선택하고 번호를 입력해야 합니다.
 
-* From modem (SIM)
+* 모뎰에서 보내기 (SIM)
 
-    Select which SIM card to send from.
+    보낼 SIM 카드를 선택합니다.
 
-* SMS Content
+* SMS 내용
 
-    Each SMS can have up to 160 characters.
-
----
-
-Related Articles
-
-- [SMS Forwarding](../tutorials/sms_forwarding.md)
+    각 SMS는 최대 160자까지 입력할 수 있습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+관련 문서
+
+- [SMS 전달](../tutorials/sms_forwarding.md)
+
+---
+
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl.inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.
