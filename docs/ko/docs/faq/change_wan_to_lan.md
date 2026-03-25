@@ -1,61 +1,61 @@
-# Change WAN to LAN
+# WAN을 LAN으로 변경
 
-You can change the WAN port of your router to be a LAN port. This is particularly useful when using the router in repeater mode, where the WAN port is unnecessary. By changing the WAN port to a LAN port, you will have an additional LAN port for expanded connectivity.
+라우터의 WAN 포트를 LAN 포트로 변경할 수 있습니다. 이는 라우터를 리피터 모드로 사용할 때 WAN 포트가 불필요하게 되므로 특히 유용합니다. WAN 포트를 LAN 포트로 변경하면 확장된 연결을 위한 추가 LAN 포트가 생깁니다.
 
-Follow the steps below to change WAN to LAN.
+아래 단계에 따라 WAN을 LAN으로 변경하세요.
 
-## For Firmware 4.7 and above
+## 펌웨어 4.7 이상
 
-1. Leave the WAN port unconnected.
+1. WAN 포트를 연결하지 마세요.
 
-2. Connect a device to the router and access the router's web admin panel.
+2. 장치를 라우터에 연결하고 라우터의 웹 관리 패널에 액세스하세요.
 
-3. In the web admin panel, navigate to **INTERNET** -> **Ethernet** section, and click on the gear icon at the upper right corner.
+3. 웹 관리 패널에서 **INTERNET** -> **Ethernet** 섹션으로 이동하고 우측 상단의 기어 아이콘을 클릭하세요.
 
-	![port management](https://static.gl-inet.com/docs/router/en/4/faq/change_wan_to_lan/ethernet_gear_icon.png){class="glboxshadow"}
+	![port management](https://static.gl.inet.com/docs/router/en/4/faq/change_wan_to_lan/ethernet_gear_icon.png){class="glboxshadow"}
 
-	You will be directed to the **Port Management** page, where the WAN port status is displayed as being used for WAN.
+	**Port Management** 페이지로 이동하며 WAN 포트 상태가 WAN으로 사용 중인 것으로 표시됩니다.
 
-	![port management](https://static.gl-inet.com/docs/router/en/4/faq/change_wan_to_lan/port_management.jpg){class="glboxshadow"}
+	![port management](https://static.gl.inet.com/docs/router/en/4/faq/change_wan_to_lan/port_management.jpg){class="glboxshadow"}
 
-4. Click on **LAN** to change the Ethernet port properties, and click **Apply**.
+4. **LAN**을 클릭하여 이더넷 포트 속성을 변경하고 **Apply**를 클릭하세요.
 
-	![switch to lan apply](https://static.gl-inet.com/docs/router/en/4/faq/change_wan_to_lan/switch_to_lan_apply.jpg){class="glboxshadow"}
+	![switch to lan apply](https://static.gl.inet.com/docs/router/en/4/faq/change_wan_to_lan/switch_to_lan_apply.jpg){class="glboxshadow"}
 
-	In the pop-up caution window, click **Apply** to confirm.
-	
-	![caution](https://static.gl-inet.com/docs/router/en/4/faq/change_wan_to_lan/caution.png){class="glboxshadow"}
+	팝업 경고 창에서 **Apply**를 클릭하여 확인하세요.
 
-	**Note**: Wi-Fi may disconnect temporarily during this process. Please re-connect to the router once completed.
+	![caution](https://static.gl.inet.com/docs/router/en/4/faq/change_wan_to_lan/caution.png){class="glboxshadow"}
 
-5. Back in the Ethernet section, it will show that the WAN port is now used as a LAN port.
+	**참고**: 이 과정에서 Wi-Fi가 일시적으로 연결이 끊길 수 있습니다. 완료된 후 라우터에 다시 연결하세요.
 
-	![wan using as lan](https://static.gl-inet.com/docs/router/en/4/faq/change_wan_to_lan/wan_using_as_lan.png){class="glboxshadow"}
+5. Ethernet 섹션으로 돌아가면 WAN 포트가 이제 LAN 포트로 사용되고 있는 것으로 표시됩니다.
 
-	You can switch it back to WAN in **Port Management** page, or press the RESET button for 4 seconds to restart the WAN interface.
+	![wan using as lan](https://static.gl.inet.com/docs/router/en/4/faq/change_wan_to_lan/wan_using_as_lan.png){class="glboxshadow"}
 
-## For Firmware 4.6 and earlier
+	**Port Management** 페이지에서 다시 WAN으로 전환하거나 RESET 버튼을 4초간 눌러 WAN 인터페이스를 재시작할 수 있습니다.
 
-1. Leave the WAN port unconnected.
+## 펌웨어 4.6 이전
 
-2. Connect a device to the router and access the web admin panel.
+1. WAN 포트를 연결하지 마세요.
 
-3. In the web admin panel, navigate to **INTERNET** -> **Ethernet** section, where it displays the WAN port status is **Using as WAN**. Click **Change to LAN**.
+2. 장치를 라우터에 연결하고 웹 관리 패널에 액세스하세요.
 
-	![internet page](https://static.gl-inet.com/docs/router/en/4/tutorials/change_wan_to_lan/ethernet_no_cable.png){class="glboxshadow"}
+3. 웹 관리 패널에서 **INTERNET** -> **Ethernet** 섹션으로 이동합니다. WAN 포트 상태가 **Using as WAN**으로 표시됩니다. **Change to LAN**을 클릭하세요.
 
-4. Click **Apply** to confirm.
+	![internet page](https://static.gl.inet.com/docs/router/en/4/tutorials/change_wan_to_lan/ethernet_no_cable.png){class="glboxshadow"}
 
-	![caution change wan as lan](https://static.gl-inet.com/docs/router/en/4/tutorials/change_wan_to_lan/ethernet_change_to_lan_caution.png){class="glboxshadow"}
+4. **Apply**를 클릭하여 확인하세요.
 
-	**Note**: Wi-Fi may disconnect temporarily during this process. Please re-connect to the router once completed.
+	![caution change wan as lan](https://static.gl.inet.com/docs/router/en/4/tutorials/change_wan_to_lan/ethernet_change_to_lan_caution.png){class="glboxshadow"}
 
-5. Back in the Ethernet section, it displays `Using as LAN`.
+	**참고**: 이 과정에서 Wi-Fi가 일시적으로 연결이 끊길 수 있습니다. 완료된 후 라우터에 다시 연결하세요.
 
-	![using as lan](https://static.gl-inet.com/docs/router/en/4/tutorials/change_wan_to_lan/ethernet_using_as_lan.png){class="glboxshadow"}
+5. Ethernet 섹션으로 돌아가면 `Using as LAN`으로 표시됩니다.
 
-	You can simply revert the setting by repeating the above procedures.
+	![using as lan](https://static.gl.inet.com/docs/router/en/4/tutorials/change_wan_to_lan/ethernet_using_as_lan.png){class="glboxshadow"}
+
+	위 절차를 반복하여 설정을 되돌릴 수 있습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.

@@ -1,182 +1,182 @@
-# Using Uboot to unbrick your router
+# U-Boot를 사용하여 라우터 벽돌 해제
 
-If you bricked your router due to some DIY projects or flashing a wrong firmware, you may fail to access it. In this case, you can re-install the firmware by using U-Boot failsafe.
+DIY 프로젝트나 잘못된 펌웨어를 플래시하여 라우터가 벽돌(bricked)된 경우 라우터에 액세스하지 못할 수 있습니다. 이 경우 U-Boot failsafe를 사용하여 펌웨어를 재설치할 수 있습니다.
 
-**Note:** The U-Boot operation will remove your router's settings and installed plugins.
+**참고:** U-Boot 작업은 라우터의 설정과 설치된 플러그인을 제거합니다.
 
 ---
 
-## Preparation
+## 준비
 
-Please prepare a computer with an ethernet port. If your computer does not have ethernet port, please prepare an additional USB Ethernet Adapter.
+이더넷 포트가 있는 컴퓨터를 준비하세요. 컴퓨터에 이더넷 포트가 없는 경우 추가 USB 이더넷 어댑터를 준비하세요.
 
-## Unbrick Steps
+## 벽돌 해제 단계
 
-Refer to this video tutorial or follow the procedures below to access the U-Boot Web UI and re-install the firmware.
+비디오 튜토리얼을 참조하거나 아래 절차에 따라 U-Boot Web UI에 액세스하고 펌웨어를 재설치하세요.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pz0DidfIXRk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<small>The steps for using U-Boot to re-install firmware are roughly the same, and this video takes Mudi/Mudi V2 as an example. For other models, you may follow the procedures below.</small>
+<small>U-Boot를 사용하여 펌웨어를 재설치하는 단계는 대략적으로 동일하며 이 비디오는 Mudi/Mudi V2를 예로로 사용합니다. 다른 모델의 경우 아래 절차를 따르세요.</small>
 
-1. Download firmware [here](https://dl.gl-inet.com/){target="_blank"} to your computer.
+1. 컴퓨터에 펌웨어를 [다운로드](https://dl.gl-inet.com/){target="_blank"}하세요.
 
-    Some models, such as GL-AR750S-EXT, are available in two formats of firmware. Please use the firmware for U-Boot, whose file name extension is **.img**.
+    GL-AR750S-EXT와 같은 일부 모델은 두 가지 형식의 펌웨어를 제공합니다. U-Boot용 펌웨어(파일 이름 확장자가 **.img**)를 사용하세요.
 
-2. Remove the power of router. Connect your computer to the **Ethernet LAN port** of the router. You **MUST** leave all the other ports **unconnected**.
+2. 라우터의 전원을 제거하세요. 컴퓨터를 라우터의 **이더넷 LAN 포트**에 연결하세요. 다른 모든 포트는 **연결하지 마세요**.
 
     !!! note
 
-        For some models, certain individual LAN ports and the WAN port are interchangeable. Please do not use this LAN port. For example, on the GL-MT6000 (Flint 2), do not use LAN 1. Please use LAN 2, LAN 3, or LAN 4 instead.
+        일부 모델에서는 개별 LAN 포트와 WAN 포트가 상호 교체 가능합니다. 이 LAN 포트를 사용하지 마세요. 예를 들어 GL-MT6000 (Flint 2)에서는 LAN 1을 사용하지 마세요. 대신 LAN 2, LAN 3 또는 LAN 4를 사용하세요.
 
-3. Press and hold the Reset button firmly, **at the same time power up the router**. If your router doesn't have a power button, plugging the power in will power it on automatically.
+3. Reset 버튼을 단단히 누른 상태에서 **동시에 라우터의 전원을 켜세요**. 라우터에 전원 버튼이 없는 경우 전원을 연결하면 자동으로 켜집니다.
 
-    Then you will see the LED flashing in a regular sequence a few times, please release your finger **after** the sequence changes.
+    그러면 LED가 몇 번 정기적인 순서로 깜빡이게 됩니다. 순서가 바뀐 때 손가락을 놓으세요.
 
-    The following will give the description of sequence of each model of LED flashing.
+    각 모델의 LED 깜빡임 순서에 대한 설명은 다음과 같습니다.
 
-    **Note:** Same router models with different manufacturing dates may have different LED colours or flashing sequences, it won't affect the U-Boot process. Please pay more attention to the change of the flashing LED.
+    **참고:** 제조일이 다른 동일한 라우터 모델은 LED 색상이나 깜빡임 순서가 다를 수 있으며 U-Boot 과정에 영향을 주지 않습니다. 깜빡이는 LED의 변화에 더 주의하세요.
 
-    - For **GL-BE9300(Flint 3)**, the blue LED flashes 6 times, then turns solid white.
-    
-    - For **GL-BE3600(Slate 7)**, after holding down the reset button for about 5 seconds, a 5-second countdown will appear on the LED display. Keep pressing the reset button until the next step is displayed on the screen:
+    - **GL-BE9300(Flint 3)**의 경우 파란색 LED가 6번 깜빡이고 then 흰색으로 켜집니다.
 
-        1. Manually set the IP address of your computer to 192.168.1.2
-        2. Use browser to visit  http://192.168.1.1
+    - **GL-BE3600(Slate 7)**의 경우 Reset 버튼을 약 5초간 누르고 있으면 LED 디스플레이에 5초 카운트다운이 표시됩니다. 다음 단계가 화면에 표시될 때까지 Reset 버튼을 계속 누르고 있세요:
 
-        Turn to Step 4 for further instruction.
+        1. 컴퓨터의 IP 주소를 192.168.1.2로 수동 설정하세요
+        2. 브라우저를 사용하여 http://192.168.1.1에 방문하세요
 
-    - For **GL-B3000(Marble)**, the blue LED light flashes 7 times, then turns solid white.
+        추가 지침은 4단계로 이동하세요.
 
-    - For **GL-MT6000(Flint 2)**, the blue LED flashes 6 times, then turns solid white.
+    - **GL-B3000(Marble)**의 경우 파란색 LED가 7번 깜빡이고 then 흰색으로 켜집니다.
 
-    - For **GL-MT3000(Beryl AX)**, the blue LED flashes 6 times, then turns solid white.
+    - **GL-MT6000(Flint 2)**의 경우 파란색 LED가 6번 깜빡이고 then 흰색으로 켜집니다.
 
-    - For **GL-MT2500/GL-MT2500A(Brume 2)**, the blue LED flashes 5 times, then turns solid white.
+    - **GL-MT3000(Beryl AX)**의 경우 파란색 LED가 6번 깜빡이고 then 흰색으로 켜집니다.
 
-    - For **GL-S200**, the cyan LED flashes 5 times, then briefly turns purple, then turns solid cyan.
+    - **GL-MT2500/GL-MT2500A(Brume 2)**의 경우 파란색 LED가 5번 깜빡이고 then 흰색으로 켜집니다.
 
-    - For **GL-A1300(Slate Plus)**, the LED flashes slowly 5 times, then stays on for a short while, then flashes quickly all the time.
+    - **GL-S200**의 경우 청록색 LED가 5번 깜빡이고 then 잠시 자주색이 된 후 청록색으로 켜집니다.
 
-    - For **GL-AR150**, **GL-AR300M**, **GL-USB150(Microuter)**, **GL-AR750(Creta)**, **GL-AR750S-EXT(Slate)**, **GL-X750(Spitz)**, **GL-MT300N-V2(Mango)** and **microuter-N300**, the LED flashes 5 times.
+    - **GL-A1300(Slate Plus)**의 경우 LED가 5번 천천히 깜빡이고 then 잠시 켜져 있는 상태를 유지하다가 계속 빠르게 깜빡입니다.
 
-    - For **GL-E750(Mudi)**, its screen will first display "Booting", followed by "Reset Counting 1 to 4", and finally "Please Open Web 192.168.1.1".
+    - **GL-AR150**, **GL-AR300M**, **GL-USB150(Microuter)**, **GL-AR750(Creta)**, **GL-AR750S-EXT(Slate)**, **GL-X750(Spitz)**, **GL-MT300N-V2(Mango)** 및 **microuter-N300**의 경우 LED가 5번 깜빡입니다.
 
-    - For **GL-S1300(Convexa-S)** and **GL-B1300(Convexa-B)**, the LED flashes 4 times.
-        
-        The leftmost Power LED may stay on the whole time while the rightmost Wi-Fi LED flashes 4 times, then the middle Mesh LED turns solid on.
-        
-        (For some old GL-B1300, the leftmost Power LED stays on the whole time, and both the middle LED and the rightmost LED flash 5 times simutaneously, then stay on.)
+    - **GL-E750(Mudi)**의 경우 화면에 먼저 "Booting"이 표시되고 "Reset Counting 1 to 4"가 이어지며 마지막으로 "Please Open Web 192.168.1.1"이 표시됩니다.
 
-    - For **GL-SF1200**, the 5G LED flashes 5 times, then turns solid on.
+    - **GL-S1300(Convexa-S)** 및 **GL-B1300(Convexa-B)**의 경우 LED가 4번 깜빡입니다.
 
-    - For **GL-AX1800(Flint)**, the blue LED flashes 5 times, then turns solid white.
+        가장 왼쪽의 Power LED는 계속 켜져 있을 수 있고 가장 오른쪽의 Wi-Fi LED가 4번 깜빡인 후 가운데 Mesh LED가 켜진 채로 유지됩니다.
 
-    - For **GL-AXT1800(Slate AX)**, the blue LED flashes 5 times, then turns solid on.
+        (일부 오래된 GL-B1300의 경우 가장 왼쪽의 Power LED가 계속 켜져 있고 중간 LED와 오른쪽� LED가 동시에 5번 깜빡인 후 켜진 상태를 유지합니다.)
 
-    - For **GL-XE300(Puli)**, the LAN LED flashes 5 times, then the Wi-Fi LED stays on.
+    - **GL-SF1200**의 경우 5G LED가 5번 깜빡이고 then 켜진 상태를 유지합니다.
 
-    - For **GL-X300B(Collie)**, the WAN LED flashes 5 times, then the Wi-Fi LED stays on.
+    - **GL-AX1800(Flint)**의 경우 파란색 LED가 5번 깜빡이고 then 흰색으로 켜집니다.
 
-    - For **GL-X3000(Spitz AX)**, the WAN LED flashes 5 times, then the Wi-Fi LED stays on.
+    - **GL-AXT1800(Slate AX)**의 경우 파란색 LED가 5번 깜빡이고 then 켜진 상태를 유지합니다.
 
-    - For **GL-XE3000(Puli AX)**, the WAN LED flashes 5 times, then the Wi-Fi LED stays on.
+    - **GL-XE300(Puli)**의 경우 LAN LED가 5번 깜빡이고 Wi-Fi LED가 켜진 상태를 유지합니다.
 
-    - For **GL-SFT1200(Opal)**, the blue LED flashes 5 times, then turns solid white.
+    - **GL-X300B(Collie)**의 경우 WAN LED가 5번 깜빡이고 Wi-Fi LED가 켜진 상태를 유지합니다.
 
-    - For **GL-AP1300(Cirrus)**, the power LED flashes slowly 5 times, then stays on for a short while, then flashes quickly all the time.
+    - **GL-X3000(Spitz AX)**의 경우 WAN LED가 5번 깜빡이고 Wi-Fi LED가 켜진 상태를 유지합니다.
 
-    - For **GL-MT1300(Beryl)**, the LED starts blue, flashes twice slowly, then flashes 5 times faster and turns solid white.
+    - **GL-XE3000(Puli AX)**의 경우 WAN LED가 5번 깜빡이고 Wi-Fi LED가 켜진 상태를 유지합니다.
 
-    - For **GL-B2200(Velica)**, the two LEDs start blue, then turn white and flash 5 times, then turn solid blue.
+    - **GL-SFT1200(Opal)**의 경우 파란색 LED가 5번 깜빡이고 then 흰색으로 켜집니다.
 
-    - For **GL-MV1000/GL-MV1000W(Brume)**, no repeat LED flashes signal. (Power and WAN LEDs will stay on the whole time.)
+    - **GL-AP1300(Cirrus)**의 경우 Power LED가 5번 천천히 깜빡이고 잠시 켜져 있다가 계속 빠르게 깜빡입니다.
 
-    - For **GL-MiFi**, the LED flashes 6 times.
+    - **GL-MT1300(Beryl)**의 경우 LED가 파란색으로 시작되어 2번 천천히 깜빡이고 5번 더 빠르게 깜빡인 후 흰색으로 켜집니다.
 
-    - For **GL-MT300N**, **GL-MT300A**, the LED flashes 3 times.
+    - **GL-B2200(Velica)**의 경우 두 LED가 파란색으로 시작되고 흰색으로 바뀌며 5번 깜빡인 후 파란색으로 켜집니다.
 
-4. Manually set the IP address of your computer to **192.168.1.2**. Please check the step-by-step guide for different operating systems below:
+    - **GL-MV1000/GL-MV1000W(Brume)**의 경우 반복적인 LED 깜빡임 신호가 없습니다. (Power 및 WAN LED가 계속 켜져 있습니다.)
+
+    - **GL-MiFi**의 경우 LED가 6번 깜빡입니다.
+
+    - **GL-MT300N**, **GL-MT300A**의 경우 LED가 3번 깜빡입니다.
+
+4. 컴퓨터의 IP 주소를 **192.168.1.2**로 수동 설정하세요. 다른 운영체제에 대한 단계별 가이드는 아래와 같습니다:
 
     ??? "Windows 7 / Windows 10"
 
-        1. Go to **Control Panel** -> **Network and Internet** -> **Network and Sharing Center** -> **Change adapter settings**.
+        1. **Control Panel** -> **Network and Internet** -> **Network and Sharing Center** -> **Change adapter settings**로 이동하세요.
 
-        2. Right click **Local Area Connection** -> **Properties**.
+        2. **Local Area Connection** -> **Properties**를 마우스 오른쪽 버튼으로 클릭하세요.
 
-        3. Click **Internet Protocol Version 4 (TCP/IPv4)** -> **Properties**.
+        3. **Internet Protocol Version 4 (TCP/IPv4)** -> **Properties**를 클릭하세요.
 
-        4. Set the **IP adress** to `192.168.1.2` manually.
+        4. **IP adress**를 `192.168.1.2`로 수동 설정하세요.
 
-        5. Set the **Subnet mask** to `255.255.255.0`.
+        5. **Subnet mask**를 `255.255.255.0`으로 설정하세요.
 
-            ![ipv4 properties](https://static.gl-inet.com/docs/router/en/2/troubleshooting/src/debrick/set_ip.jpg){class="glboxshadow"}
+            ![ipv4 properties](https://static.gl.inet.com/docs/router/en/2/troubleshooting/src/debrick/set_ip.jpg){class="glboxshadow"}
 
-        6. Click the **OK** button.
+        6. **OK** 버튼을 클릭하세요.
 
     ??? "Windows 11"
 
-        7. Open Settings.
+        7. Settings를 엽니다.
 
-        8. Click on **Network & Internet**.
+        8. **Network & Internet**을 클릭합니다.
 
-        9. Click the **Ethernet** tab.
+        9. **Ethernet** 탭을 클릭합니다.
 
-            ![windows 11 ethernet](https://static.gl-inet.com/docs/router/en/4/tutorials/debrick/windwos11_ethernet.png){class="glboxshadow"}
+            ![windows 11 ethernet](https://static.gl.inet.com/docs/router/en/4/tutorials/debrick/windwos11_ethernet.png){class="glboxshadow"}
 
-        10. Under the "IP assignment" section, click the **Edit** button.
+        10. "IP assignment" 섹션에서 **Edit** 버튼을 클릭합니다.
 
-            ![windows 11 ethernet edit](https://static.gl-inet.com/docs/router/en/4/tutorials/debrick/windows11_ethernet_ip_assignment_edit.png){class="glboxshadow"}
+            ![windows 11 ethernet edit](https://static.gl.inet.com/docs/router/en/4/tutorials/debrick/windows11_ethernet_ip_assignment_edit.png){class="glboxshadow"}
 
-        11. Select the **Manual** option.
+        11. **Manual** 옵션을 선택합니다.
 
-            ![windows 11 ethernet edit](https://static.gl-inet.com/docs/router/en/4/tutorials/debrick/windows11_ethernet_edit_ip_settings.png){class="glboxshadow"}
+            ![windows 11 ethernet edit](https://static.gl.inet.com/docs/router/en/4/tutorials/debrick/windows11_ethernet_edit_ip_settings.png){class="glboxshadow"}
 
-        12. Turn on the **IPv4 toggle** switch.
+        12. **IPv4 토글** 스위치를 켭니다.
 
-        13. Set the static **IP address** as **192.168.1.2**.
+        13. static **IP address**를 **192.168.1.2**로 설정합니다.
 
-            ![windows 11 ethernet edit](https://static.gl-inet.com/docs/router/en/4/tutorials/debrick/windows11_ethernet_edit_ip_settings_2.png){class="glboxshadow"}
+            ![windows 11 ethernet edit](https://static.gl.inet.com/docs/router/en/4/tutorials/debrick/windows11_ethernet_edit_ip_settings_2.png){class="glboxshadow"}
 
-        14. Specify the **Subnet mask** as **255.255.255.0**.
+        14. **Subnet mask**를 **255.255.255.0**로 지정합니다.
 
-        15. Click the **Save** button.
+        15. **Save** 버튼을 클릭합니다.
 
     ??? "macOS"
-    
-        16. Click the **Apple** icon in the top left corner of the screen, and select **System Preferences**.
 
-            ![macos system preferences](https://static.gl-inet.com/docs/router/en/4/tutorials/debrick/macos_system_preferences.png){class="glboxshadow"}
+        16. 화면 왼쪽 상단의 **Apple** 아이콘을 클릭하고 **System Preferences**를 선택합니다.
 
-        17. Click **Network**.
+            ![macos system preferences](https://static.gl.inet.com/docs/router/en/4/tutorials/debrick/macos_system_preferences.png){class="glboxshadow"}
 
-            ![macos system preferences network](https://static.gl-inet.com/docs/router/en/4/tutorials/debrick/macos_system_preferences_network.png){class="glboxshadow"}
+        17. **Network**를 클릭합니다.
 
-        18. Click **Ethernet** on the left and then click the drop-down box next to **Configure IPv4** and select **Manually**. If you are using a USB Ethernet Adapter, Ethernet may not be found and it may show up as the name of the USB Ethernet Adapter.
+            ![macos system preferences network](https://static.gl.inet.com/docs/router/en/4/tutorials/debrick/macos_system_preferences_network.png){class="glboxshadow"}
 
-            ![macos ip manually](https://static.gl-inet.com/docs/router/en/4/tutorials/debrick/macos_ip_manually_1.png){class="glboxshadow"}
+        18. 왼쪽에서 **Ethernet**을 클릭한 후 **Configure IPv4** 옆의 드롭다운 상자를 클릭하고 **Manually**를 선택합니다. USB Ethernet Adapter를 사용하는 경우 Ethernet을 찾을 수 없고 USB Ethernet Adapter의 이름으로 표시될 수 있습니다.
 
-        19. Enter the **IPv4 Address** to `192.168.1.2`, **Subnet Mask** to `255.255.255.0`, **Router** to `192.168.1.1`, then click the Apply button in the lower right corner.
+            ![macos ip manually](https://static.gl.inet.com/docs/router/en/4/tutorials/debrick/macos_ip_manually_1.png){class="glboxshadow"}
 
-            ![macos ip manually](https://static.gl-inet.com/docs/router/en/4/tutorials/debrick/macos_ip_manually_2.png){class="glboxshadow"}
+        19. **IPv4 Address**를 `192.168.1.2`, **Subnet Mask**를 `255.255.255.0`, **Router**를 `192.168.1.1`로 입력한 후 우측 하단의 Apply 버튼을 클릭합니다.
 
-5. Use browser to visit **http://192.168.1.1**. This is the U-Boot Web UI.
+            ![macos ip manually](https://static.gl.inet.com/docs/router/en/4/tutorials/debrick/macos_ip_manually_2.png){class="glboxshadow"}
 
-    ![Uboot web ui](https://static.gl-inet.com/docs/router/en/4/tutorials/debrick/uboot_ui.png){class="glboxshadow" width="700"}
+5. 브라우저를 사용하여 **http://192.168.1.1**을 방문하세요. 이것이 U-Boot Web UI입니다.
 
-    !!! Note 
-    
-        - If you fail to access U-Boot Web UI, check if you have any VPN or proxy software running. Disable any VPN or proxy software, including Tailscale and ZeroTier.
-    
-        - The U-Boot Web UI above may not be exactly the same as what you see, because the U-Boot version is different for different production dates. In some extreme cases, we recommend upgrading the U-Boot version. Please refer to the tutorial [here](upgrade_uboot_version.md).
+    ![Uboot web ui](https://static.gl.inet.com/docs/router/en/4/tutorials/debrick/uboot_ui.png){class="glboxshadow" width="700"}
 
-6. Click **Choose file** button to find the firmware file. Then click **Update firmware** button.
+    !!! Note
 
-7. Wait for around 3 minutes. Don't power off your device when updating. The router is ready when both power and  Wi-Fi LED are on or you can find its SSID on your device.
+        - U-Boot Web UI에 액세스하지 못하는 경우 VPN 또는 프록시 소프트웨어가 실행 중인지 확인하세요. Tailscale 및 ZeroTier를 포함한 모든 VPN 또는 프록시 소프트웨어를 비활성화하세요.
 
-8. Revert the IP setting you did in step 4 and connect your device to the LAN or Wi-Fi of the router. You will be able to access the router via **192.168.8.1** again.
+        - 위의 U-Boot Web UI는 생산일에 따라 다를 수 있어 실제와 완전히 동일하지 않을 수 있습니다. 일부 극단적인 경우 U-Boot 버전을 업그레이드하는 것이 좋습니다. [여기](upgrade_uboot_version.md) 튜토리얼을 참조하세요.
 
-    **Note:** It might be required to use the incognito mode or to delete the browser cache and cookies to access the router.
+6. **Choose file** 버튼을 클릭하여 펌웨어 파일을 찾으세요. 그런 다음 **Update firmware** 버튼을 클릭하세요.
+
+7. 약 3분 정도 기다리세요. 업데이트 중에는 장치의 전원을 끄지 마세요. 전원 및 Wi-Fi LED가 모두 켜져 있거나 장치에서 SSID를 찾을 수 있으면 라우터가 준비된 것입니다.
+
+8. 4단계에서 수행한 IP 설정을 되돌리고 장치를 라우터의 LAN 또는 Wi-Fi에 연결하세요. 다시 **192.168.8.1**을 통해 라우터에 액세스할 수 있어야 합니다.
+
+    **참고:** 라우터에 액세스하려면 시크릿 모드를 사용하거나 브라우저 캐시와 쿠키를 삭제해야 할 수도 있습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.

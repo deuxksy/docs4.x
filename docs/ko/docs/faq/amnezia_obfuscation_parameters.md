@@ -1,36 +1,36 @@
-# Introduction to AmneziaWG Obfuscation Parameters
+# AmneziaWG 난독화 매개변수 소개
 
-AmneziaWG is a WireGuard-based VPN protocol with built-in traffic obfuscation. Its obfuscation parameters control how traffic is disguised to avoid detection by strict network controls. Below is a detailed breakdown of AmneziaWG version differences, obfuscation parameters, their constraints, and recommended settings.
+AmneziaWG는 내장된 트래픽 난독화 기능을 갖춘 WireGuard 기반 VPN 프로토콜입니다. 난독화 매개변수는 엄격한 네트워크 제어에서 감지를 피하기 위해 트래픽을 위장하는 방법을 제어합니다. 아래는 AmneziaWG 버전 차이, 난독화 매개변수, 제약 사항 및 권장 설정에 대한 자세한 설명입니다.
 
 ## AmneziaWG V2.0
 
-Compared with AmneziaWG v1.0, v2.0 provides stronger obfuscation by adding new parameters (**S3~S4**) and using dynamic headers for packet types (**H1~H4** as ranges instead of fixed values). In addition, AmneziaWG 2.0 supports the **I1~I5** parameters, which send formatted UDP packets before each handshake to disguise AmneziaWG traffic as ordinary non‑VPN traffic, effectively bypassing deep packet inspection and enhancing connectivity in restricted networks. 
+AmneziaWG v1.0과 비교하여 v2.0은 새로운 매개변수(**S3~S4**)를 추가하고 패킷 유형에 동적 헤더(**H1~H4**를 고정 값이 아닌 범위로)를 사용하여 더 강력한 난독화를 제공합니다. 또한 AmneziaWG 2.0은 **I1~I5** 매개변수를 지원하여, 각 핸드셰이크 전에 포맷된 UDP 패킷을 전송하여 AmneziaWG 트래픽을 일반 비-VPN 트래픽처럼 위장하므로 심층 패킷 검사를 효과적으로 우회하고 제한된 네트워크에서 연결성을 향상시킵니다.
 
-These enhancements make VPN traffic more difficult to detect while preserving WireGuard's high speed and low latency.
+이러한 향상으로 인해 VPN 트래픽은 감지하기 어려워지면서 WireGuard의 높은 속도와 낮은 대기 시간을 유지합니다.
 
-Here is how to identify the AmneziaWG version:
+AmneziaWG 버전을 식별하는 방법은 다음과 같습니다.
 
-- **V1.0**: No S3~S4 parameters; H1~H4 are single fixed integers.
-- **V2.0**: Includes **S3~S4** parameters; **H1~H4** are defined as numeric ranges; supports **I1~I5** parameters.
+- **V1.0**: S3~S4 매개변수가 없음. H1~H4는 단일 고정 정수.
+- **V2.0**: **S3~S4** 매개변수 포함. **H1~H4**는 숫자 범위로 정의됨. **I1~I5** 매개변수 지원.
 
-**Note**: The parameters I1-I5 are not auto-generated. Users can manually add them as extra lines in the VPN configuration file to make AmneziaWG traffic look like other common protocols, such as QUIC or WebRTC.
+**참고**: I1-I5 매개변수는 자동 생성되지 않습니다. 사용자는 VPN 구성 파일에 추가 줄로 수동으로 추가하여 AmneziaWG 트래픽이 QUIC 또는 WebRTC와 같은 다른 일반 프로토콜처럼 보이게 할 수 있습니다.
 
-## Parameter Overview
+## 매개변수 개요
 
-| Parameter    | Description                    | Constraints     | Auto-generated   |
+| 매개변수    | 설명                    | 제약 사항     | 자동 생성   |
 | ------------ | ------------------------------ | --------------- | ---------------- |
-| Jc           | The number of junk packets before the client initiating the handshake (for interference with traffic feature detection) | 1~128 | 4~12 |
-| Jmin         | Minimun size for random junk packets (bytes); Must be configured with Jmax to define junk packats size | 0 ≤ Jmin < Jmax < 65535 | 0 <= jmin < jmax < 1280 |
-| Jmax         | Maximun size for random junk packets     | 0 ≤ Jmin < Jmax < 65535        | 0≤ Jmin < Jmax < 1280 |
-| S1           | Random prefixes for Init packets         | 0 ≤ S1 ≤ 1132                  | 15~150 |
-| S2           | Random prefixes for Response packets     | 0 ≤ S2 ≤ 1188 <br> S1 + 56 ≠ S2 | 15~150 |
-| S3           | Random prefixes for Cookie packets       | 0 ≤ S3 ≤ 1216                  | 15~150 |
-| S4           | Random prefixes for Data packets         | 0 ≤ S4 ≤ 32                    | 0~32   |
-| H1~H4        | Dynamic headers for packet types; Random values (v1.0) or ranges (v2.0)   | 5~2147483647; H1, H2, H3, and H4 must be different | 5~2147483647 |
-| I1~I5        | Signature packets for protocol imitation | arbitrary hex-blob             | N/A |
+| Jc           | 클라이언트가 핸드셰이크를 시작하기 전의 정크 패킷 수 (트래픽 기능 감지 방해) | 1~128 | 4~12 |
+| Jmin         | 무작위 정크 패킷의 최소 크기(바이트); Jmax와 함께 구성해야 함 | 0 ≤ Jmin < Jmax < 65535 | 0 <= jmin < jmax < 1280 |
+| Jmax         | 무작위 정크 패킷의 최대 크기     | 0 ≤ Jmin < Jmax < 65535        | 0≤ Jmin < Jmax < 1280 |
+| S1           | Init 패킷의 무작위 접두사         | 0 ≤ S1 ≤ 1132                  | 15~150 |
+| S2           | Response 패킷의 무작위 접두사     | 0 ≤ S2 ≤ 1188 <br> S1 + 56 ≠ S2 | 15~150 |
+| S3           | Cookie 패킷의 무작위 접두사       | 0 ≤ S3 ≤ 1216                  | 15~150 |
+| S4           | Data 패킷의 무작위 접두사         | 0 ≤ S4 ≤ 32                    | 0~32   |
+| H1~H4        | 패킷 유형의 동적 헤더; 무작위 값(v1.0) 또는 범위(v2.0)   | 5~2147483647; H1, H2, H3, H4는 서로 달라야 함 | 5~2147483647 |
+| I1~I5        | 프로토콜 위장을 위한 서명 패킷 | 임의의 hex-blob             | N/A |
 
-References: [AmneziaWG Official Documentation](https://docs.amnezia.org/documentation/amnezia-wg){target="_blank"}
+참조: [AmneziaWG 공식 문서](https://docs.amnezia.org/documentation/amnezia-wg){target="_blank"}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.

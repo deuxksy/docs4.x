@@ -1,23 +1,23 @@
-# How to connect a GL.iNet router to Starlink Dish?
+# GL.iNet 라우터를 Starlink Dish에 연결하는 방법
 
-If you need to connect a GL.iNet router to Starlink Dish, follow the steps below.
+GL.iNet 라우터를 Starlink Dish에 연결해야 하는 경우 아래 단계를 따르세요.
 
-**Topology**
+**토폴로지**
 
-![starlinkgl](https://static.gl-inet.com/docs/router/en/4/faq/starlink/starlinkgl.jpg){class="glboxshadow"}
+![starlinkgl](https://static.gl.inet.com/docs/router/en/4/faq/starlink/starlinkgl.jpg){class="glboxshadow"}
 
-1. Connect the power of your Starlink router to the Starlink Dish.
+1. Starlink 라우터의 전원을 Starlink Dish에 연결하세요.
 
-2. Connect Starlink router's LAN port to GL.iNet router's WAN port.
+2. Starlink 라우터의 LAN 포트를 GL.iNet 라우터의 WAN 포트에 연결하세요.
 
-3. Connect a device to the GL.iNet router's LAN port or Wi-Fi, then configure the router for Internet access. [First time setup](first_time_setup.md)
+3. 장치를 GL.iNet 라우터의 LAN 포트나 Wi-Fi에 연결한 후 인터넷 액세스를 위해 라우터를 구성하세요. [처음 사용 설정](first_time_setup.md)
 
-    **Note**: If your GL.iNet router supports [Network Acceleration](../interface_guide/network_acceleration.md), please go to the web Admin Panel -> **NETWORK** -> **Network Acceleration** and disable it.
+    **참고**: GL.iNet 라우터가 [Network Acceleration](../interface_guide/network_acceleration.md)을 지원하는 경우 웹 관리 패널 -> **NETWORK** -> **Network Acceleration**로 이동하여 비활성화하세요.
 
-    ![netacc](https://static.gl-inet.com/docs/router/en/4/faq/starlink/netacc.jpg){class="glboxshadow"}
+    ![netacc](https://static.gl.inet.com/docs/router/en/4/faq/starlink/netacc.jpg){class="glboxshadow"}
 
-4. Open Starlink App, go to Settings and enable the **Bypass mode**.
+4. Starlink 앱을 열고 Settings로 이동하여 **Bypass mode**를 활성화하세요.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.

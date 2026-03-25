@@ -1,123 +1,123 @@
-# Connect a GL.iNet router to public hotspots with a Captive Portal
+# Captive Portal가 있는 공용 핫스팟에 GL.iNet 라우터 연결
 
-## What is a captive portal?
+## Captive Portal이란 무엇인가요?
 
-A captive portal is a Web page where public hotspots require users to view and interact with the page before Internet access is granted.
+Captive Portal은 공용 핫스팟에서 인터넷 액세스가 허용되기 전에 사용자가 웹 페이지를 보고 상호 작용하도록 요구하는 페이지입니다.
 
-## Why use a router for public hotspots?
+## 공용 핫스팟에 라우터를 사용하는 이유는 무엇인가요?
 
-* Public Wi-Fi is not safe
+* 공용 Wi-Fi는 안전하지 않습니다
 
-    It's hard to overstate the risks of public Wi-Fi. By connecting your GL.iNet router to public Wi-Fi, you can log in to your VPN account directly through the router's Admin Panel. It will automatically encrypt all connected devices on the local network, saving you the trouble of setting up a VPN on every single device.
+    공용 Wi-Fi의 위험은 아무리 강조해도 지나치지 않습니다. GL.iNet 라우터를 공용 Wi-Fi에 연결하면 라우터의 관리 패널을 통해 VPN 계정에 직접 로그인할 수 있습니다. 로컬 네트워크의 모든 연결된 장치를 자동으로 암호화하여 모든 단일 장치에 VPN을 설정하는 번거로움을 덜어줍니다.
 
-* Use as a repeater to allow connections with multiple devices
+* 리피터로 사용하여 여러 장치 연결 가능
 
-    Besides that, some public Wi-Fi networks (e.g., hotel Wi-Fi) limit access to, for example, two devices. When traveling in a group, this is impractical. Instead, you can connect a travel router to the hotel Wi-Fi and use it as a repeater to broadcast a Wi-Fi signal to all your devices, including laptops, smartphones, tablets, etc. The hotel Wi-Fi will only recognize the travel router as a single device, but you can connect as many devices as you want to the free Wi-Fi.
+    게다가 일부 공용 Wi-Fi 네트워크(예: 호텔 Wi-Fi)는 예를 들어 두 개의 장치로 액세스를 제한합니다. 그룹으로 여행할 때 이는 비현실적입니다. 대신 여행용 라우터를 호텔 Wi-Fi에 연결하고 리피터로 사용하여 랩톱, 스마트폰, 태블릿 등 모든 장치에 Wi-Fi 신호를 브로드캐스트할 수 있습니다. 호텔 Wi-Fi는 여행용 라우터를 단일 장치로 인식하지만 무료 Wi-Fi에 원하는 만큼 많은 장치를 연결할 수 있습니다.
 
-## How to connect router to public hotspots with captive portal?
+## Captive Portal가 있는 공용 핫스팟에 라우터를 연결하는 방법은 무엇인가요?
 
-Watch this video or follow the steps below.
+동영상을 시청하거나 아래 단계를 따르세요.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CM4_soLf9fw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-1. Connect a smartphone or computer to the router.
+1. 스마트폰 또는 컴퓨터를 라우터에 연결하세요.
 
-    Power on the router. On your smartphone or computer, search for the router's SSID and enter the Wi-Fi password. The default SSID and password are printed on the bottom of the router.
+    라우터의 전원을 켜세요. 스마트폰 또는 컴퓨터에서 라우터의 SSID를 검색하고 Wi-Fi 비밀번호를 입력하세요. 기본 SSID와 비밀번호는 라우터 하단에 인쇄되어 있습니다.
 
-2. Log in to your router's web Admin Panel.
+2. 라우터의 웹 관리 패널에 로그인하세요.
 
-    On your smartphone or computer, open a web browser and enter the router IP address (default IP: `192.168.8.1`) into the address bar. You will be able to access the router's web Admin Panel.
-    
-    If you are logging in for the first time, select a language and create a login password for the router's web Admin Panel.
+    스마트폰 또는 컴퓨터에서 웹 브라우저를 열고 주소 표시줄에 라우터 IP 주소(기본 IP: `192.168.8.1`)를 입력하세요. 라우터의 웹 관리 패널에 액세스할 수 있습니다.
 
-3. Connect your router to the public hotspot. Please refer to the [Repeater](../interface_guide/internet_repeater.md/) tutorial.
+    처음 로그인하는 경우 언어를 선택하고 라우터 웹 관리 패널의 로그인 비밀번호를 생성하세요.
 
-## Troubleshooting
+3. 라우터를 공용 핫스팟에 연결하세요. [Repeater](../interface_guide/internet_repeater.md/) 튜토리얼을 참조하세요.
 
-If you fail to enter the captive portal, your router may be unable to access the Internet. Please try the following methods for troubleshooting.
+## 문제 해결
 
-### Method 1: Enable Public Hotspot Login Mode & Camouflage
+Captive Portal에 들어갈 수 없는 경우 라우터가 인터넷에 액세스하지 못할 수 있습니다. 문제 해결을 위해 다음 방법을 시도해 보세요.
 
-**Note**: These two features are available only in firmware v4.6 and above.
+### 방법 1: 공용 핫스팟 로그인 모드 및 위장 활성화
 
-When connecting the router to a public hotspot, on the **Join Network** page, enabling the following features can help improve the connection success rate.
+**참고**: 이 두 기능은 펌웨어 v4.6 이상에서만 사용할 수 있습니다.
 
-![hotspot login mode & camouflage](https://static.gl-inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/hotspot_login_mode_camouflage.png){class="glboxshadow"}
+라우터를 공용 핫스팟에 연결할 때 **Join Network** 페이지에서 다음 기능을 활성화하면 연결 성공률을 높이는 데 도움이 될 수 있습니다.
 
-- Auto-Enable Login Mode for Public Hotspots
+![hotspot login mode & camouflage](https://static.gl.inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/hotspot_login_mode_camouflage.png){class="glboxshadow"}
 
-    If this option is enabled, this router will automatically enter Login Mode for Public Hotspots when it is successfully connected to a hotspot but not the Internet. In this mode, some services will be suspended while the DNS mode will be switched to automatic, which may leak your network activity to the hotspot provider (e.g. hotel or shopping mall).
+- 공용 핫스팟용 로그인 모드 자동 활성화
 
-- Enable Camouflage
+    이 옵션을 활성화하면 라우터가 핫스팟에는 성공적으로 연결되었지만 인터넷에는 연결되지 않을 때 자동으로 공용 핫스팟용 로그인 모드로 들어갑니다. 이 모드에서 일부 서비스가 일시 중단되며 DNS 모드가 자동으로 전환되어 핫스팟 제공업체(예: 호텔 또는 쇼핑몰)에 네트워크 활동이 유출될 수 있습니다.
 
-    If enabled, the router will masquerade as the client device you use to access the admin panel by emulating that device’s MAC address.
+- 위장 활성화
 
----
-
-### Method 2: Change router settings
-
-1. Log in to the web Admin Panel, navigate to NETWORK -> DNS. Make sure the **DNS Rebinding Attack Protection** is disabled and the **Mode** is set to **Automatic**.
-
-    ![dns rebinding attack protection](https://static.gl-inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/dns_rebinding_attack_protection.png){class="glboxshadow" width="600"}
-
-2. In the web Admin Panel, navigate to VPN -> VPN Dashboard. Make sure all VPN connections are disabled.
-
-    **For firmware v4.7 and earlier**, the page is displayed as below. 
-    
-    ![vpn client disabled v4.7](https://static.gl-inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/vpn_client_is_disable.png){class="glboxshadow" width="600"}
-    
-    **For firmware v4.8 and higher**, the page is displayed as below.
-
-    ![vpn client disabled v4.8](https://static.gl-inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/vpn_disabled_4.8.png){class="glboxshadow" width="600"}
-
-3. In the web Admin Panel, navigate to APPLICATIONS -> AdGuard Home. Make sure the AdGuard Home is disabled.
-
-    ![adguard home is stopped](https://static.gl-inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/adguardhome_init.png){class="glboxshadow"}
-
-4. Open a web browser, re-enter or refresh the webpage of captive portal. Wait a minute and check if it will be redirected to the captive portal authentication page automatically.
-
-    If you are using a smartphone and your web browser doesn't redirect to the captive portal, please turn off your smartphone's Wi-Fi and turn it on, then reconnect to the router's Wi-Fi. The captive portal should pop up directly after you enter the Wi-Fi password.
-
-    ![connected](https://static.gl-inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/connected.png){class="glboxshadow"}
+    활성화하면 라우터가 관리 패널에 액세스하는 데 사용하는 클라이언트 장치의 MAC 주소를 에뮬레이션하여 해당 장치인 것처럼 위장합니다.
 
 ---
 
-### Method 3：MAC Clone
+### 방법 2: 라우터 설정 변경
 
-Some hotels limit the number of devices each customer can connect to the hotel's Wi-Fi by recognizing their MAC addresses, and they record the device's MAC address when it first connects. In this case, you can clone the MAC address your phone uses to connect to the hotel Wi-Fi to the router, allowing the router to use that MAC address to access the hotel's Wi-Fi.
+1. 웹 관리 패널에 로그인하고 NETWORK -> DNS로 이동하세요. **DNS Rebinding Attack Protection**가 비활성화되어 있고 **Mode**가 **Automatic**으로 설정되어 있는지 확인하세요.
 
-1. Connect your phone to the hotel Wi-Fi. Find the MAC address that your phone uses to connect to the hotel's Wi-Fi. 
+    ![dns rebinding attack protection](https://static.gl.inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/dns_rebinding_attack_protection.png){class="glboxshadow" width="600"}
 
-    Here is an example for iPhone (iOS 16.1.2): go to Settings -> Wi-Fi -> Select the hotel Wi-Fi and you will find the Wi-Fi Address. Write down this address.
+2. 웹 관리 패널에서 VPN -> VPN Dashboard로 이동하세요. 모든 VPN 연결이 비활성화되어 있는지 확인하세요.
 
-    ![iphone wifi private address](https://static.gl-inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/iphone_wifi_private_address.png){class="glboxshadow" width="350"}
+    **펌웨어 v4.7 이전**, 페이지는 아래와 같이 표시됩니다.
 
-    For some older models, the MAC address may not be available in the Wi-Fi settings. In this case, the device may use its real MAC address when connecting to public Wi-Fi, which can be found in your phone's Settings > About (or "About Phone").
+    ![vpn client disabled v4.7](https://static.gl.inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/vpn_client_is_disable.png){class="glboxshadow" width="600"}
 
-2. Connect your phone or computer to the router. Log in to the router's web Admin Panel, then clone or manually input this MAC access.
+    **펌웨어 v4.8 이상**, 페이지는 아래와 같이 표시됩니다.
 
-    **For firmware v4.5 and earlier**, please select NETWORK from the left side -> MAC Address.
+    ![vpn client disabled v4.8](https://static.gl.inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/vpn_disabled_4.8.png){class="glboxshadow" width="600"}
 
-    Select Manual Mode, enter the MAC address obtained in Step 1 and click Apply.
+3. 웹 관리 패널에서 APPLICATIONS -> AdGuard Home으로 이동하세요. AdGuard Home이 비활성화되어 있는지 확인하세요.
 
-    ![MAC manual](https://static.gl-inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/mac_address_manual.png){class="glboxshadow"}
+    ![adguard home is stopped](https://static.gl.inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/adguardhome_init.png){class="glboxshadow"}
 
-    **For firmware v4.6 and higher**, please select INTERNET from the left side -> Repeater section, click Modify.
+4. 웹 브라우저를 열고 captive portal 웹페이지를 다시 입력하거나 새로고침하세요. 1분 정도 기다린 후 자동으로 captive portal 인증 페이지로 리디렉션되는지 확인하세요.
 
-    ![repeater modify](https://static.gl-inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/repeater_modify.png){class="glboxshadow gl-90-desktop"}
+    스마트폰을 사용 중인데 웹 브라우저가 captive portal로 리디렉션되지 않는 경우 스마트폰의 Wi-Fi를 끄고 켠진 다음 라우터의 Wi-Fi에 다시 연결하세요. Wi-Fi 비밀번호를 입력한 후 직접 captive portal가 팝업되어야 합니다.
 
-    In the pop-up window, switch the MAC Mode to Clone, manually input the MAC address and click Apply.
-
-    ![repeater clone mac](https://static.gl-inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/repeater_clone_mac.png){class="glboxshadow gl-90-desktop"}
-
-3. It may be necessary to reboot the router to take effect.
+    ![connected](https://static.gl.inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/connected.png){class="glboxshadow"}
 
 ---
 
-### Method 4：Seek help from hotel staff
+### 방법 3: MAC 복제
 
-Some hotels have very strict verification policies for their networks. If none of the above methods work, try asking hotel staff to directly add the MAC address of your router (use the factory default MAC address, not the random one) to the whitelist of the hotel network.
+일부 호텔은 MAC 주소를 인식하여 각 고객이 호텔 Wi-Fi에 연결할 수 있는 장치 수를 제한하며 처음 연결할 때 장치의 MAC 주소를 기록합니다. 이 경우 휴대폰이 호텔 Wi-Fi에 연결하는 데 사용하는 MAC 주소를 라우터에 복제하여 라우터가 해당 MAC 주소를 사용하여 호텔 Wi-Fi에 액세스할 수 있도록 할 수 있습니다.
+
+1. 휴대폰을 호텔 Wi-Fi에 연결하세요. 휴대폰이 호텔 Wi-Fi에 연결하는 데 사용하는 MAC 주소를 찾으세요.
+
+    iPhone (iOS 16.1.2)의 예: Settings -> Wi-Fi -> 호텔 Wi-Fi를 선택하고 Wi-Fi Address를 찾을 수 있습니다. 이 주소를 기록하세요.
+
+    ![iphone wifi private address](https://static.gl.inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/iphone_wifi_private_address.png){class="glboxshadow" width="350"}
+
+    일부 구형 모델에서는 Wi-Fi 설정에서 MAC 주소를 사용할 수 없을 수 있습니다. 이 경우 장치는 공용 Wi-Fi에 연결할 때 실제 MAC 주소를 사용할 수 있으며 이는 휴대폰의 Settings > About(또는 "About Phone")에서 찾을 수 있습니다.
+
+2. 휴대폰 또는 컴퓨터를 라우터에 연결하세요. 라우터의 웹 관리 패널에 로그인한 후 이 MAC 액세스를 복제하거나 수동으로 입력하세요.
+
+    **펌웨어 v4.5 이전**, 왼쪽에서 NETWORK -> MAC Address를 선택하세요.
+
+    Manual Mode를 선택하고 1단계에서 얻은 MAC 주소를 입력한 후 Apply를 클릭하세요.
+
+    ![MAC manual](https://static.gl.inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/mac_address_manual.png){class="glboxshadow"}
+
+    **펌웨어 v4.6 이상**, 왼쪽에서 INTERNET -> Repeater 섹션을 선택하고 Modify를 클릭하세요.
+
+    ![repeater modify](https://static.gl.inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/repeater_modify.png){class="glboxshadow gl-90-desktop"}
+
+    팝업 창에서 MAC Mode를 Clone로 전환하고 MAC 주소를 수동으로 입력한 후 Apply를 클릭하세요.
+
+    ![repeater clone mac](https://static.gl.inet.com/docs/router/en/4/tutorials/connect_to_a_hotspot_with_captive_portal/repeater_clone_mac.png){class="glboxshadow gl-90-desktop"}
+
+3. 적용하려면 라우터를 재부팅해야 할 수 있습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+### 방법 4: 호텔 직원에게 도움 요청
+
+일부 호텔은 네트워크에 대해 매우 엄격한 검증 정책을 가지고 있습니다. 위의 방법이 작동하지 않는 경우 호텔 직원에게 문의하여 라우터의 MAC 주소(임의의 것이 아닌 공장 기본 MAC 주소 사용)를 호텔 네트워크의 허용 목록에 직접 추가해 달라고 요청해 보세요.
+
+---
+
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.

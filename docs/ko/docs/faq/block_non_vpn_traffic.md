@@ -1,61 +1,61 @@
-# How to let all data go through VPN?
+# 모든 데이터를 VPN 통해 전송하려면 어떻게 하나요?
 
-If you want all network traffic on the router to be routed through the VPN, and block all Internet connections when the VPN fails, please follow the steps below to enable the **VPN Kill Switch**.
+라우터의 모든 네트워크 트래픽을 VPN 통해 라우팅하고 VPN 실패 시 모든 인터넷 연결을 차단하려면 아래 단계에 따라 **VPN Kill Switch**를 활성화하세요.
 
-**Note**: Set up VPN client on your GL.iNet router first before enabling VPN Kill Switch.
+**참고**: VPN Kill Switch를 활성화하기 전에 GL.iNet 라우터에 VPN 클라이언트를 설정하세요.
 
-## For firmware v4.7 or earlier
+## 펌웨어 v4.7 이전
 
-Log in to your router's web Admin Panel, navigate to **VPN** -> **VPN Dashboard** -> **VPN Client** section, and click **Global Options**.
+라우터의 웹 관리 패널에 로그인하여 **VPN** -> **VPN Dashboard** -> **VPN Client** 섹션으로 이동한 후 **Global Options**를 클릭하세요.
 
-![global options 1](https://static.gl-inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.7-global-options-1.png){class="glboxshadow"}
+![global options 1](https://static.gl.inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.7-global-options-1.png){class="glboxshadow"}
 
-Toggle on **Block Non-VPN Traffic** (also called Kill Switch in some firmware version), then click **Apply**.
+**Block Non-VPN Traffic** (일부 펌웨어 버전에서는 Kill Switch라고 함)을 토글한 후 **Apply**를 클릭하세요.
 
-![global options 2](https://static.gl-inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.7-global-options-2.png){class="glboxshadow gl-80-desktop"}
+![global options 2](https://static.gl.inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.7-global-options-2.png){class="glboxshadow gl-80-desktop"}
 
-**Note:** When Block Non-VPN Traffic / Kill Switch is enabled, if your VPN is disabled or disconnected, all devices connected to the router will be restricted from accessing the Internet to prevent DNS leaks.
+**참고:** Block Non-VPN Traffic / Kill Switch를 활성화하면 VPN이 비활성화되거나 연결이 끊어졌을 때 DNS 누출을 방지하기 위해 라우터에 연결된 모든 장치의 인터넷 액세스가 제한됩니다.
 
-## For firmware v4.8 or later
+## 펌웨어 v4.8 이상
 
-In firmware v4.8, the VPN Kill Switch has been split into two modes.
+펌웨어 v4.8에서 VPN Kill Switch는 두 가지 모드로 분리되었습니다.
 
-- **Tunnel Kill Switch**: It is enabled by default when the corresponding VPN tunnel is activated.
+- **Tunnel Kill Switch**: 해당 VPN 터널이 활성화될 때 기본적으로 활성화됩니다.
 
-- **Enhanced Kill Switch (in Policy Mode)**: It is disabled by default to ensure that all traffic not covered by the VPN tunnels and policies above can still access the Internet. In short, it maintains normal Internet access for non-VPN traffic.
+- **Enhanced Kill Switch (정책 모드에서)**: VPN 터널 및 위 정책에서 다루지 않는 모든 트래픽이 여전히 인터넷에 액세스할 수 있도록 기본적으로 비활성화됩니다. 즉, 비-VPN 트래픽의 일반적인 인터넷 액세스를 유지합니다.
 
 ### Tunnel Kill Switch
 
-On the router's web Admin Panel, navigate to **VPN** -> **VPN Dashboard**.
+라우터의 웹 관리 패널에서 **VPN** -> **VPN Dashboard**로 이동하세요.
 
-If you set your router as a VPN client, the Kill Switch for this VPN tunnel is enabled by default once the VPN is activated.
+라우터를 VPN 클라이언트로 설정한 경우 VPN이 활성화되면 이 VPN 터널의 Kill Switch가 기본적으로 활성화됩니다.
 
-![global mode kill switch](https://static.gl-inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.8-global-mode-killswitch.png){class="glboxshadow"}
+![global mode kill switch](https://static.gl.inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.8-global-mode-killswitch.png){class="glboxshadow"}
 <small>(VPN Global Mode)</small>
 
-![policy mode kill switch](https://static.gl-inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.8-policy-mode-killswitch.png){class="glboxshadow"}
+![policy mode kill switch](https://static.gl.inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.8-policy-mode-killswitch.png){class="glboxshadow"}
 <small>(VPN Policy Mode)</small>
 
-Click the gear icon next to the tunnel name to enter the **Tunnel Options**.
+터널 이름 옆의 기어 아이콘을 클릭하여 **Tunnel Options**로 들어가세요.
 
-![tunnel options 1](https://static.gl-inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.8-global-mode-options1.png){class="glboxshadow"}
+![tunnel options 1](https://static.gl.inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.8-global-mode-options1.png){class="glboxshadow"}
 
-The Kill Switch for this tunnel is enabled by default.
+이 터널의 Kill Switch는 기본적으로 활성화됩니다.
 
-![tunnel options 2](https://static.gl-inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.8-global-mode-options2.png){class="glboxshadow"}
+![tunnel options 2](https://static.gl.inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.8-global-mode-options2.png){class="glboxshadow"}
 
 ### Enhanced Kill Switch
 
-This is available in Policy Mode.
+이 기능은 정책 모드에서 사용할 수 있습니다.
 
-On the router's web Admin Panel, navigate to **VPN** -> **VPN Dashboard**, switch the VPN mode to **Policy Mode**, then find a section named **All Other Traffic** at the bottom. This section may vary slightly depending on the firmware version.
+라우터의 웹 관리 패널에서 **VPN** -> **VPN Dashboard**로 이동하여 VPN 모드를 **Policy Mode**로 전환한 후 하단에서 **All Other Traffic**라는 섹션을 찾으세요. 이 섹션은 펌웨어 버전에 따라 약간 다를 수 있습니다.
 
-![all other traffic](https://static.gl-inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.8-all-other-traffic.png){class="glboxshadow"}
+![all other traffic](https://static.gl.inet.com/docs/router/en/4/faq/block_non_vpn_traffic/4.8-all-other-traffic.png){class="glboxshadow"}
 
-All Other Traffic is a default tunnel that ensures normal Internet access for traffic not covered by the VPN tunnels and policies above, or traffic that has failed over from VPN connections. This tunnel is enabled by default and mutually exclusive with Enhanced Kill Switch.
+All Other Traffic은 VPN 터널과 위 정책에서 다루지 않는 트래픽 또는 VPN 연결에서 장애 조치(Failover)된 트래픽의 일반적인 인터넷 액세스를 보장하는 기본 터널입니다. 이 터널은 기본적으로 활성화되며 Enhanced Kill Switch와 상호 배타적입니다.
 
-**Note**: If you disable All Other Traffic, you will only be able to access the Internet via VPN. All unmatched traffic will be blocked. This setting does not override the individual Kill Switch for each tunnel.
+**참고**: All Other Traffic을 비활성화하면 VPN을 통해서만 인터넷에 액세스할 수 있습니다. 일치하지 않는 모든 트래픽이 차단됩니다. 이 설정은 각 터널의 개별 Kill Switch를 재정의하지 않습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.
