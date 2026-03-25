@@ -1,16 +1,16 @@
-# NAT Settings
+# NAT 설정
 
-This feature has been available since v4.5.16.
+이 기능은 v4.5.16부터 사용할 수 있습니다.
 
-On the left side of the web Admin Panel, go to **NETWORK** -> **NAT Settings**.
+웹 관리 패널 왼쪽에서 **NETWORK** -> **NAT Settings**로 이동합니다.
 
-This page lets you enable **Full Cone NAT** to improve peer-to-peer connection stability for apps like gaming or streaming, and **SIP ALG** to fix compatibility issues with VoIP/SIP-based phone services.
+이 페이지에서는 게임 또는 스트리밍과 같은 앱의 P2P 연결 안정성을 높이기 위해 **Full Cone NAT**을 활성화하고 VoIP/SIP 기반 전화 서비스와의 호환성 문제를 해결하기 위해 **SIP ALG**을 활성화할 수 있습니다.
 
 ![nat settings](https://static.gl-inet.com/docs/router/en/4/interface_guide/nat_settings/nat_settings.png){class="glboxshadow"}
 
-## Supported Models
+## 지원 모델
 
-??? "Supported Models"
+??? "지원 모델"
     - GL-E5800 (Mudi 7)
     - GL-MT5000 (Brume 3)
     - GL-MT3600BE (Beryl 7)
@@ -31,9 +31,9 @@ This page lets you enable **Full Cone NAT** to improve peer-to-peer connection s
     - ※GL-SFT1200 (Opal)
     - ※GL-E750/E750V2 (Mudi)
 
-    **Note**: GL-SFT1200 (Opal) and GL-E750/E750V2 (Mudi) support this feature on firmware v4.7 and later.
+    **참고**: GL-SFT1200 (Opal) 및 GL-E750/E750V2 (Mudi)는 펌웨어 v4.7 이후에서 이 기능을 지원합니다.
 
-??? "Unsupported Models"
+??? "미지원 모델"
     - GL-MT1300 (Beryl)
     - GL-AR750 (Creta)
     - GL-AR750S (Slate)
@@ -45,20 +45,20 @@ This page lets you enable **Full Cone NAT** to improve peer-to-peer connection s
 
 ## Full Cone NAT
 
-Full Cone NAT acts as a "direct shortcut" for devices like game consoles or phones when connecting to others online (e.g., in multiplayer games or video calls). 
+Full Cone NAT은 게임 콘솔 또는 전화와 같은 장치가 온라인으로 다른 사람(예: 멀티플레이어 게임 또는 비디오 통화)에게 연결할 때 "직접 바로가기" 역할을 합니다.
 
-By allowing external devices to directly reach local devices through the router — instead of hiding them behind multiple layers — it enhances peer-to-peer (P2P) connection stability, reduces latency, and resolves connection failures in P2P applications. 
+외부 장치가 라우터를 통해 로컬 장치에 직접 도달할 수 있도록 하여(여러 계층 뒤에 숨기는 대신) P2P 연결 안정성을 높이고 대기 시간을 줄이며 P2P 애플리케이션의 연결 실패를 해결합니다.
 
-**Note**: Enabling this feature may lower security compared to other NAT types, as it exposes device ports to the public network.
+**참고**: 이 기능을 활성화하면 장치 포트가 공용 네트워크에 노출되므로 다른 NAT 유형보다 보안이 낮아질 수 있습니다.
 
 ## SIP ALG
 
-SIP ALG (Application Layer Gateway) functions as a router "translator" for VoIP/SIP-based communication services, such as business desk phones or app-based calls. 
+SIP ALG(Application Layer Gateway)는 비즈니스 데스크 전화 또는 앱 기반 통화와 같은 VoIP/SIP 기반 통신 서비스를 위한 라우터 "번역기" 역할을 합니다.
 
-Designed to address NAT traversal challenges, it adjusts call data to ensure seamless transmission through multiple NAT layers — common in networks with multiple routers (e.g., a primary router and a GL.iNet router) — thereby mitigating conflicts and preventing call disruptions. 
+NAT 트래버설 문제를 해결하기 위해 설계되었으며 통화 데이터를 조정하여 여러 NAT 계층(예: 기본 라우터와 GL.iNet 라우터가 있는 네트워크에서 일반적)을 통해 원활한 전송을 보장하여 충돌을 완화하고 통화 중단을 방지합니다.
 
-**Note**: Incompatible or poorly implemented SIP ALG may degrade call quality, leading to issues including one-way audio, unresponsive ringing, dropped calls, or calls being routed directly to voicemail.
+**참고**: 호환되지 않거나 잘못 구현된 SIP ALG는 통화 품질을 저하시켜 일방향 오디오, 응답 없는 벨소울림, 통화 끊김 또는 음성 사서함으로 직접 라우팅되는 통화와 같은 문제를 초래할 수 있습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 통해 연락하세요.

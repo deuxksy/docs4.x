@@ -1,104 +1,105 @@
-# Multi-WAN
+# 멀티 WAN
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/D1s1WScLP4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-On the left side of the web Admin Panel, go to **NETWORK** -> **Multi-WAN**.
+웹 관리 패널 왼쪽에서 **NETWORK** -> **Multi-WAN**으로 이동합니다.
 
-You can configure the router with multiple Internet access methods, so that when one type of Internet access is not available, it can automatically switch to another type of Internet access in a short time. Or use multiple Internet access methods at the same time, assigning the network connection to different connection methods in a certain ratio.
+라우터를 여러 인터넷 액세스 방법으로 구성할 수 있으므로 한 유형의 인터넷 액세스를 사용할 수 없을 때 짧은 시간 내에 자동으로 다른 유형의 인터넷 액세스로 전환할 수 있습니다. 또는 여러 인터넷 액세스 방법을 동시에 사용하여 네트워크 연결을 특정 비율로 다른 연결 방법에 할당합니다.
 
-GL.iNet routers can be connected to the Internet in multiple ways, such as [Ethernet](internet_ethernet.md), [Repeater](internet_repeater.md), [Tethering](internet_tethering.md), [Cellular](internet_cellular.md). 
+GL.iNet 라우터는 [이더넷](internet_ethernet.md), [리피터](internet_repeater.md), [터링](internet_tethering.md), [셀룰러](internet_cellular.md)와 같은 여러 방법으로 인터넷에 연결할 수 있습니다.
 
-!!! Note
+!!! 참고
 
-    1. Models lacking Wi-Fi functionality (e.g., GL-MT2500/GL-MT2500A) only support Ethernet, Tethering, and Cellular network access.
+    1. Wi-Fi 기능이 없는 모델(예: GL-MT2500/GL-MT2500A)은 이더넷, 터링 및 셀룰러 네트워크 액세스만 지원합니다.
 
-    2. Models lacking USB port (e.g., GL-B3000) only support Ethernet and Repeater network access.
+    2. USB 포트가 없는 모델(예: GL-B3000)은 이더넷 및 리피터 네트워크 액세스만 지원합니다.
 
-    3. Some models support [Dual-Ethernet WAN](dual-ethernet_wan.md), which will have an additional Ethernet interface on the user interface.
+    3. 일부 모델은 [듀얼 이더넷 WAN](dual-ethernet_wan.md)을 지원하며 사용자 인터페이스에 추가 이더넷 인터페이스가 있습니다.
 
-## Interface Status Track
+## 인터페이스 상태 추적
 
-GL.iNet routers support up to 5 virtual network interfaces, though the exact number may vary by model. For example, GL-MT6000 has **Ethernet 1**, **Ethernet 2**, **Repeater**, **Tethering** and **Cellular**, each serving distinct network functions in software-defined configurations.
+GL.iNet 라우터는 최대 5개의 가상 네트워크 인터페이스를 지원하지만 정확한 수는 모델에 따라 다를 수 있습니다. 예를 들어 GL-MT6000에는 **Ethernet 1**, **Ethernet 2**, **Repeater**, **Tethering** 및 **Cellular**가 있으며 각각 소프트웨어 정의 구성에서 고유한 네트워크 기능을 수행합니다.
 
-The routers use **ping** or **httping** (only for v4.3 and earlier) command to track the status of the connection to the destination IP, to determine if the interface is available. 
+라우터는 **ping** 또는 **httping**(v4.3 이전에만 해당) 명령을 사용하여 목적지 IP에 대한 연결 상태를 추적하여 인터페이스를 사용할 수 있는지 확인합니다.
 
-If the interface is available, a green dot will be displayed on the left side, otherwise it is gray.
+인터페이스를 사용할 수 있는 경우 왼쪽에 녹색 점이 표시되고, 그렇지 않으면 회색입니다.
 
 ![interface status track 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/multi-wan/interface_status_track_1.jpg){class="glboxshadow"}
 
-### Status Track Settings
+### 상태 추적 설정
 
-Click the cog icon to access the status track settings of each network interface. 
+톱니바퀴 아이콘을 클릭하여 각 네트워크 인터페이스의 상태 추적 설정에 액세스합니다.
 
-For example, this is the status tracking setting for Ethernet interface, and the same applies to other interfaces.
+예를 들어 이더넷 인터페이스에 대한 상태 추적 설정이며 다른 인터페이스에도 동일하게 적용됩니다.
 
 ![interface status track 2](https://static.gl-inet.com/docs/router/en/4/interface_guide/multi-wan/interface_status_track_2.png){class="glboxshadow"}
 
-- **Enable Interface Status Track**: It is enabled by default. You can disable the interface status tracking, as a result the router will determine the interface status by the physical status (such as whether the network cable is plugged in or not).
+- **인터페이스 상태 추적 활성화**: 기본적으로 활성화되어 있습니다. 인터페이스 상태 추적을 비활성화할 수 있으며 그 결과 라우터는 물리적 상태(예: 네트워크 케이블이 연결되어 있는지 여부)에 따라 인터페이스 상태를 결정합니다.
 
-- **Detection Mode**: This feature was introduced as Low Data Mode in v4.5 and renamed Detection Mode in v4.7. Three modes are available: Normal Mode, Low Data Mode, and Strict Mode.  
+- **감지 모드**: 이 기능은 v4.5에서 저데이터 모드로 도입되었으며 v4.7에서 감지 모드로 이름이 변경되었습니다. 세 가지 모드가 있습니다: 일반 모드, 저데이터 모드 및 엄격 모드.
 
-    Normal mode is used by default, low data mode traces only when an interface network error occurs, and strict mode determines the interface status only based on the results of a detect command from a public ip.
-    
-    You can use Low Data Mode when you are on a limited data plan. However, one drawback is that reconnecting after a network disconnection may be slightly slower compared to the normal mode, and only the cellular interface will be turned on by default.
+    일반 모드가 기본적으로 사용되며 저데이터 모드는 인터페이스 네트워크 오류가 발생할 때만 추적하고 엄격 모드는 공용 IP에서 감지 명령의 결과만을 기반으로 인터페이스 상태를 결정합니다.
 
-- **Track Command**: ping command is used to track the status of the connection to the destination IP, to determine if the interface is available. For firmware v4.3 and earlier, there is also httping command available.
+    제한된 데이터 요금제를 사용할 때 저데이터 모드를 사용할 수 있습니다. 그러나 단점은 네트워크 연결 해제 후 재연결이 일반 모드보다 약간 느릴 수 있으며 기본적으로 셀룰러 인터페이스만 켜져 있습니다.
 
-- **IPv4 Track IP**: You can customize the IPv4 Track IP here.
+- **추적 명령**: ping 명령은 목적지 IP에 대한 연결 상태를 추적하여 인터페이스를 사용할 수 있는지 확인하는 데 사용됩니다. 펌웨어 v4.3 이전에는 httping 명령도 사용할 수 있습니다.
 
-!!! Note
+- **IPv4 추적 IP**: 여기에서 IPv4 추적 IP를 사용자 지정할 수 있습니다.
 
-    Some old firmware, such as v4.3, provide settings such as **Track Interval**, **Change to Failure Condition** and **Change to Available Condition**. These settings have been removed since v4.5 and replaced with Detection Mode and Sensitivity Options.
+!!! 참고
 
-### Sensitivity Options
+    v4.3과 같은 일부 오래된 펌웨어는 **추적 간격**, **실패 조건으로 변경** 및 **사용 가능 조건으로 변경**과 같은 설정을 제공합니다. 이러한 설정은 v4.5부터 제거되었으며 감지 모드 및 민감도 옵션으로 대체되었습니다.
 
-This feature is available since v4.5.
+### 민감도 옵션
+
+이 기능은 v4.5부터 사용할 수 있습니다.
 
 ![Sensitivity Options](https://static.gl-inet.com/docs/router/en/4/interface_guide/multi-wan/sensitivity_options.jpg){class="glboxshadow"}
 
-This sensitivity determines the time interval for Internet status detection. 
+이 민감도는 인터넷 상태 감지의 시간 간격을 결정합니다.
 
-- If the network is stable and in scenarios such as watching videos or live streams, playing games, users are recommended to use high sensitivity for quick switching in case of network disconnection. 
-- If the network is unstable and downloading cached files, users are recommended to use low sensitivity to prevent constant network switching and discovering unsuccessful connections.
+- 네트워크가 안정적이고 비디오 또는 라이브 스트림 시청, 게임과 같은 시나리오에서 사용자는 네트워크 연결 해제 시 빠른 전환을 위해 높은 민감도 사용을 권장합니다.
 
-**Tips**: Switching to high sensitivity may lead to network disconnection, please adjust it with caution.
+- 네트워크가 불안정하고 캐시된 파일을 다운로드할 때 사용자는 지속적인 네트워크 전환 및 연결 실패를 방지하기 위해 낮은 민감도 사용을 권장합니다.
 
-## Multi-WAN Method
+**팁**: 높은 민감도로 전환하면 네트워크 연결이 끊어질 수 있으므로 신중하게 조정하세요.
 
-There are two methods: **Failover** and **Load Balance**. Failover is enabled by default when there are multi-wan connections.
+## 멀티 WAN 방법
 
-**Failover** and **Load Balance** are mutually exclusive and you can only use one of them.
+두 가지 방법이 있습니다: **장애 조치(Failover)** 및 **부하 분산(Load Balance)**. 멀티 WAN 연결이 있는 경우 장애 조치가 기본적으로 활성화됩니다.
 
-### Failover
+**장애 조치**와 **부하 분산**은 상호 배타적이며 둘 중 하나만 사용할 수 있습니다.
+
+### 장애 조치
 
 ![multi-wan failover](https://static.gl-inet.com/docs/router/en/4/interface_guide/multi-wan/failover.png){class="glboxshadow"}
 
-You can set the priority of each interface, when the interface being used fails, the router will automatically switch to another available highest priority interface.
+각 인터페이스의 우선 순위를 설정할 수 있으며 사용 중인 인터페이스가 실패하면 라우터는 자동으로 사용 가능한 다른 최고 우선 순위 인터페이스로 전환됩니다.
 
-For example, if the router has been set up with two types of Internet access, **Ethernet** and **Repeater**, and the priority of of Ethernet is 1, the priority of Repeater is 2, the priority of Ethernet is higher than Repeater, so the router will use the Ethernet to access Internet. If you unpluged the ethernet cable, the Ethernet interface will become unavailable, then the router will automatically switch to Repeater interface to access Internet.
+예를 들어 라우터에 **이더넷** 및 **리피터**의 두 가지 유형의 인터넷 액세스가 설정되어 있고 이더넷의 우선 순위는 1, 리피터의 우선 순위는 2인 경우 이더넷의 우선 순위가 리피터보다 높으므로 라우터는 이더넷을 사용하여 인터넷에 액세스합니다. 이더넷 케이블을 분리하면 이더넷 인터페이스를 사용할 수 없게 되며 라우터는 자동으로 리피터 인터페이스로 전환하여 인터넷에 액세스합니다.
 
-Once the Ethernet connection is restored, the router will automatically switch back to the Ethernet to access Internet as it has higher priority.
+이더넷 연결이 복원되면 라우터는 우선 순위가 더 높으므로 자동으로 이더넷으로 다시 전환하여 인터넷에 액세스합니다.
 
-### Load Balance
+### 부하 분산
 
-Use multiple network interfaces at the same time to increase the total bandwidth of the router.
+여러 네트워크 인터페이스를 동시에 사용하여 라우터의 전체 대역폭을 높입니다.
 
-The load ratio here is the ratio between each network interface, and the system will assign interfaces to deal with new connections based on the set load ratio.
+여기서 부하 비율은 각 네트워크 인터페이스 간의 비율이며 시스템은 설정된 부하 비율을 기반으로 인터페이스에 새 연결을 처리하도록 할당합니다.
 
-For example, if the router is connected to four networks (Ethernet, Repeater, Tethering and Cellular) at the same time, and all four network interfaces are available to access the Internet, then enabling Load Balance and setting 1:1:1:1 means that the four network interfaces will load the network bandwidth averagely, as the system will assign these four interfaces to new connections based on the set load ratio 1:1:1:1.
+예를 들어 라우터가 동시에 4개의 네트워크(이더넷, 리피터, 터링 및 셀룰러)에 연결되어 있고 4개의 네트워크 인터페이스 모두 인터넷에 액세스할 수 있는 경우 부하 분산을 활성화하고 1:1:1:1로 설정하면 4개의 네트워크 인터페이스가 네트워크 대역폭을 평균적으로 부하합니다. 시스템은 설정된 부하 비율 1:1:1:1을 기반으로 이 4개 인터페이스에 새 연결을 할당하기 때문입니다.
 
-You can also customize the load ratio. If the Ethernet bandwidth is 200 Mbps, the Repeater Wi-Fi bandwidth is 100 Mbps, and no Tethering or Cellular connections are active, you can set the load ratios to 2 for Ethernet, 1 for Repeater, and 0 for Tethering/Cellular. The system will then distribute new connections between these interfaces based on the configured ratio of 2:1, meaning the Ethernet interface will handle approximately twice as many connections as the Repeater interface. Compared with the Failover mode, this optimizes the overall throughput efficiency by balancing the load across available interface.
+부하 비율을 사용자 지정할 수도 있습니다. 이더넷 대역폭이 200Mbps이고 리피터 Wi-Fi 대역폭이 100Mbps이며 터링 또는 셀룰러 연결이 활성화되지 않은 경우 이더넷의 부하 비율을 2, 리피터의 부하 비율을 1, 터링/셀룰러의 부하 비율을 0으로 설정할 수 있습니다. 그러면 시스템은 구성된 비율 2:1을 기반으로 이러한 인터페이스 간에 새 연결을 분배하며 이는 이더넷 인터페이스가 리피터 인터페이스보다 약 두 배 더 많은 연결을 처리함을 의미합니다. 장애 조치 모드와 비교할 때 이는 사용 가능한 인터페이스 간에 부하를 분산하여 전체 처리량 효율을 최적화합니다.
 
-**Note:** Alive connections or traffic are not ensured to match the load ratio. It is closer to this ratio if it has been used for a longer time.
+**참고:** 활성 연결 또는 트래픽이 부하 비율과 일치한다고 보장되지 않습니다. 더 오랫동안 사용하면 이 비율에 더 가까워집니다.
 
 ![multi-wan load balance](https://static.gl-inet.com/docs/router/en/4/interface_guide/multi-wan/load_balance.png){class="glboxshadow"}
 
-## Usage Scenarios
+## 사용 시나리오
 
-* The store's cashier system uses a wired connection to the Internet, while Repeater to Wi-Fi in neighboring stores (or inserting a SIM card to enable cellular network) as a backup Internet access method to prevent mobile payments from being made when the network cable is unavailable.
+* 상점의 계산 시스템은 유선 연결을 사용하여 인터넷에 연결하고 인근 상점의 Wi-Fi를 리피터하거나(SIM 카드를 삽입하여 셀룰러 네트워크 활성화) 네트워크 케이블을 사용할 수 없을 때 모바일 결제가 이루어지지 않도록 백업 인터넷 액세스 방법으로 사용합니다.
 
-* Router Repeater to public Wi-Fi, but the network speed is not fast enough, then you can use Mobile Tethering to do load balance at the same time to improve the overall bandwidth.
+* 라우터가 공용 Wi-Fi를 리피터하지만 네트워크 속도가 충분히 빠르지 않은 경우 모바일 터링을 동시에 사용하여 부하 분산을 수행하여 전체 대역폭을 높일 수 있습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 통해 연락하세요.
