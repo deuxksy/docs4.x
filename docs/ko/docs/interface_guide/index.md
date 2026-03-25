@@ -4,103 +4,103 @@ hide:
   - toc
 ---
 
-# Interface Guide
+# 인터페이스 가이드
 
-Learn how to use our devices and add-on features with our step to step guides.
+단계별 가이드를 통해 장치와 추가 기능을 사용하는 방법을 알아보세요.
 
-## Internet Connection
+## 인터넷 연결
 
-* [The Internet Page](internet.md)
-* [How to connect to the Internet via an Ethernet cable](internet_ethernet.md)
-* [How to connect to the Internet via Repeater](internet_repeater.md)
-* [How to connect to the Internet via USB tethering](internet_tethering.md)
-* [How to connect to the Internet via cellular](internet_cellular.md)
+* [인터넷 페이지](internet.md)
+* [이더넷 케이블을 통해 인터넷에 연결하는 방법](internet_ethernet.md)
+* [Repeater를 통해 인터넷에 연결하는 방법](internet_repeater.md)
+* [USB 테더링을 통해 인터넷에 연결하는 방법](internet_tethering.md)
+* [셀룰러를 통해 인터넷에 연결하는 방법](internet_cellular.md)
 * [SMS](sms.md)
-* [Dual-Ethernet WAN](dual-ethernet_wan.md)
+* [듀얼 이더넷 WAN](dual-ethernet_wan.md)
 
-## Wireless
+## 무선
 
-* [Wireless](wireless.md)
+* [무선](wireless.md)
 
-## Clients
+## 클라이언트
 
-* [Clients](clients.md)
+* [클라이언트](clients.md)
 
-## Cloud Services
+## 클라우드 서비스
 
-* [GoodCloud](cloud.md) - the official cloud service.
-* [AstroWarp](astrowarp.md) - an advanced networking platform designed to provide seamless remote networking and remote device management.
+* [GoodCloud](cloud.md) - 공식 클라우드 서비스
+* [AstroWarp](astrowarp.md) - 원활한 원격 네트워킹과 원격 장치 관리를 제공하도록 설계된 고급 네트워킹 플랫폼
 
 ## VPN
 
-* [VPN Dashboard](vpn_dashboard.md)
-* [Set up OpenVPN Client](openvpn_client.md)
-* [Set up OpenVPN Server](openvpn_server.md)
-* [Set up WireGuard Client](wireguard_client.md)
-* [Set up WireGuard Server](wireguard_server.md)
-* [VPN Policy (for firmware v4.7 and earlier)](vpn_dashboard_v4.7.md#proxy-mode)
-* [VPN Policy (for firmware v4.8 and later)](vpn_dashboard.md#policy-mode)
-* [How to set up NordVPN on router?](openvpn_client.md#set-up-nordvpn)
-* [How to set up AzireVPN on router?](wireguard_client.md#set-up-azirevpn)
-* [How to set up Mullvad VPN on router?](wireguard_client.md#set-up-mullvad)
-* [For OpenVPN, which protocol should I choose, TCP or UDP?](../faq/openvpn_tcp_udp.md)
+* [VPN 대시보드](vpn_dashboard.md)
+* [OpenVPN 클라이언트 설정](openvpn_client.md)
+* [OpenVPN 서버 설정](openvpn_server.md)
+* [WireGuard 클라이언트 설정](wireguard_client.md)
+* [WireGuard 서버 설정](wireguard_server.md)
+* [VPN 정책 (펌웨어 v4.7 이전)](vpn_dashboard_v4.7.md#proxy-mode)
+* [VPN 정책 (펌웨어 v4.8 이후)](vpn_dashboard.md#policy-mode)
+* [라우터에 NordVPN을 설정하는 방법](openvpn_client.md#set-up-nordvpn)
+* [라우터에 AzireVPN을 설정하는 방법](wireguard_client.md#set-up-azirevpn)
+* [라우터에 Mullvad VPN을 설정하는 방법](wireguard_client.md#set-up-mullvad)
+* [OpenVPN의 경우 TCP 또는 UDP 중 어떤 프로토콜을 선택해야 합니까?](../faq/openvpn_tcp_udp.md)
 * [VPN Kill Switch](../faq/block_non_vpn_traffic.md)
-* [VPN Cascading](../tutorials/how_to_use_vpn_cascading_on_glinet_routers.md)
-* [Tor](tor.md) - to protect the personal privacy.
+* [VPN 계단식 연결](../tutorials/how_to_use_vpn_cascading_on_glinet_routers.md)
+* [Tor](tor.md) - 개인정보 보호
 
-## Applications
+## 애플리케이션
 
-* [Plug-ins](plugins.md)
-* [DDNS](ddns.md) - to overcome the issues related to Dynamic IP Addresses.
+* [플러그인](plugins.md)
+* [DDNS](ddns.md) - 동적 IP 주소와 관련된 문제를 해결
 * [AdGuard Home](adguardhome.md)
-* [Network Storage](network_storage.md)
-* [Parental Control](parental_control.md)
+* [네트워크 스토리지](network_storage.md)
+* [자녀 보호](parental_control.md)
 * [ZeroTier](zerotier.md)
 * [Tailscale](tailscale.md)
-* [eSIM Management](../tutorials/how_to_use_esim_physical_card_with_glinet_routers.md)
+* [eSIM 관리](../tutorials/how_to_use_esim_physical_card_with_glinet_routers.md)
 
-## Network
+## 네트워크
 
-* [Firewall](firewall.md)
-* [Port Forwarding](port_forwarding.md)
-* [Multi-WAN](multi-wan.md) - enables failover to another Internet connection or simultaneous use of multiple interfaces to increase total bandwidth.
+* [방화벽](firewall.md)
+* [포트 포워딩](port_forwarding.md)
+* [멀티 WAN](multi-wan.md) - 다른 인터넷 연결로의 장애 조치 또는 총 대역폭을 늘리기 위해 여러 인터페이스를 동시에 사용
 * [LAN](lan.md)
-* [Guest Network](guest_network.md)
+* [게스트 네트워크](guest_network.md)
 * [DNS](dns.md)
-* [Ethernet Port](ethernet_port.md)
-* [Network Mode](network_mode.md)
+* [이더넷 포트](ethernet_port.md)
+* [네트워크 모드](network_mode.md)
 * [IPv6](ipv6.md)
-* [MAC Address](mac_address.md)
+* [MAC 주소](mac_address.md)
 * [Drop-in Gateway](drop-in_gateway.md)
-* [IGMP Snooping](igmp_snooping.md) - to use the multicast function on the router
-* [Hardware Acceleration](hardware_acceleration.md)
-* [Network Acceleration](network_acceleration.md)
-* [NAT Settings](nat_settings.md)
+* [IGMP Snooping](igmp_snooping.md) - 라우터에서 멀티캐스트 기능을 사용
+* [하드웨어 가속](hardware_acceleration.md)
+* [네트워크 가속](network_acceleration.md)
+* [NAT 설정](nat_settings.md)
 
-## Flow Control
+## 흐름 제어
 
-* [DPI License](dpi_license.md)
-* [Data Statistics](data_statistics.md)
-* [Content Filter](content_filter.md)
-* [QoS (Quality of Service)](qos.md)
-* [SQM (Smart Queue Management)](sqm.md)
+* [DPI 라이선스](dpi_license.md)
+* [데이터 통계](data_statistics.md)
+* [콘텐츠 필터](content_filter.md)
+* [QoS (서비스 품질)](qos.md)
+* [SQM (스마트 큐 관리)](sqm.md)
 
-## System
+## 시스템
 
-* [UI Languages](ui_languages.md)
-* [System Overview](system_overview.md) - displays some hardware status and system info.
-* Upgrade
-    * [Upgrade](upgrade.md)
-    * [How to download official firmware?](../faq/how_to_download_firmware.md)
-    * [How to upgrade from 3.x to firmware 4.x?](../faq/upgrade_to_4.md)
-* [Scheduled Tasks](scheduled_tasks.md) - to set schedules for LED display, Wi-Fi status and reboot.
-* [Change admin password](admin_password.md)
-* [Display Management](display_management.md)
-* [USB & Power](usb_power.md)
-* [Time Zone](time_zone.md)
-* [Toggle Button Settings](toggle_button_settings.md)
-* [Log](log.md)
-* [Security](security.md)
-* [Reset Firmware](reset_firmware.md)
-* [Advanced Settings](advanced_settings.md)
-* [Help](help.md)
+* [UI 언어](ui_languages.md)
+* [시스템 개요](system_overview.md) - 일부 하드웨어 상태 및 시스템 정보 표시
+* 업그레이드
+    * [업그레이드](upgrade.md)
+    * [공식 펌웨어를 다운로드하는 방법](../faq/how_to_download_firmware.md)
+    * [3.x에서 펌웨어 4.x로 업그레이드하는 방법](../faq/upgrade_to_4.md)
+* [예약 작업](scheduled_tasks.md) - LED 표시, Wi-Fi 상태 및 재부팅을 위한 일정 설정
+* [관리자 비밀번호 변경](admin_password.md)
+* [디스플레이 관리](display_management.md)
+* [USB 및 전원](usb_power.md)
+* [시간대](time_zone.md)
+* [토글 버튼 설정](toggle_button_settings.md)
+* [로그](log.md)
+* [보안](security.md)
+* [펌웨어 재설정](reset_firmware.md)
+* [고급 설정](advanced_settings.md)
+* [도움말](help.md)
