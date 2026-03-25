@@ -1,17 +1,5 @@
 # GL.iNet Documentation
 
-<div align="center">
-
-**Language / 언어 / Sprache / Idioma / 言語:**
-
-[English](#english) | [한국어](README_KO.md) | [Deutsch](#deutsch) | [Español](#español) | [日本語](#日本語)
-
-</div>
-
----
-
-## English
-
 This repository contains the source files for GL.iNet router firmware 4.x documentation.
 
 It is now a multilingual documentation repository. The current language sites in this repo are:
