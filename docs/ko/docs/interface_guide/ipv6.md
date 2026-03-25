@@ -1,37 +1,37 @@
 # IPv6
 
-IPv6 (Internet Protocol version 6) is the latest Internet Protocol designed to replace IPv4. It offers a larger pool of unique IPs, solving the address exhaustion issue of IPv4 and supporting the growing number of connected devices globally.
+IPv6(Internet Protocol version 6)는 IPv4를 대체하기 위해 설계된 최신 인터넷 프로토콜입니다. 더 많은 고유 IP 주소 풀을 제공하여 IPv4의 주소 고갈 문제를 해결하고 전 세계적으로 증가하는 연결 장치를 지원합니다.
 
-On the left side of the web Admin Panel, go to **NETWORK** -> **IPv6**. 
+웹 관리 패널 왼쪽에서 **NETWORK** -> **IPv6**로 이동합니다.
 
-This page allows you to enable and configure IPv6 on your router.
+이 페이지에서 라우터의 IPv6를 활성화하고 구성할 수 있습니다.
 
 ![ipv6](https://static.gl-inet.com/docs/router/en/4/tutorials/ipv6/ipv6.png){class="glboxshadow"}
 
-When IPv6 is enabled, WAN interfaces such as Ethernet will get their IPv6 addresses via DHCPv6. You can also modify the IPv6 address manually in the Ethernet settings page.
+IPv6가 활성화되면 이더넷과 같은 WAN 인터페이스가 DHCPv6를 통해 IPv6 주소를 얻습니다. 이더넷 설정 페이지에서 IPv6 주소를 수동으로 수정할 수도 있습니다.
 
-**Note**: Some features (e.g., firewall, GoodCloud, OpenVPN DCO) do not yet support IPv6. If you use these features and IPv6 at the same time, it's likely to cause connectivity issues.
+**참고**: 일부 기능(예: 방화벽, GoodCloud, OpenVPN DCO)은 아직 IPv6를 지원하지 않습니다. 이러한 기능과 IPv6를 동시에 사용하면 연결 문제가 발생할 수 있습니다.
 
-Toggle on **Enable IPv6**, select the mode for your main network and DNS acquisition method, then click **Apply**.
+**IPv6 활성화**를 토글하고 기본 네트워크의 모드와 DNS 가져오기 방법을 선택한 다음 **적용**을 클릭합니다.
 
 ![ipv6 enabled](https://static.gl-inet.com/docs/router/en/4/tutorials/ipv6/ipv6_enabled.png){class="glboxshadow"}
 
-**Mode**: Four modes are available: **Native**, **Passthrough**, **NAT6** and **Static IPv6**.
+**모드**: 네 가지 모드가 있습니다: **네이티브**, **패스스루**, **NAT6** 및 **고정 IPv6**.
 
-- Native: This mode is applicable when the router directly obtains a public IPv6 address, and the router automatically assigns IPv6 addresses to online devices. This mode can meet the IPv6 access needs of most users.
+- 네이티브: 라우터가 공개 IPv6 주소를 직접 얻는 경우에 적용되며, 라우터가 온라인 장치에 자동으로 IPv6 주소를 할당합니다. 이 모드는 대부분의 사용자의 IPv6 액세스 요구를 충족할 수 있습니다.
 
-- Passthrough: This mode is applicable when IPv6 packets need to be directly passed through without any processing or conversion. For example, some specific network applications or services may require the complete preservation of the content of IPv6 packets for further processing or analysis, which is used by technical personnel for network debugging or security analysis.
+- 패스스루: IPv6 패킷이 처리나 변환 없이 직접 통과해야 할 때 적용됩니다. 예를 들어, 일부 특정 네트워크 애플리케이션이나 서비스는 추가 처리 또는 분석을 위해 IPv6 패킷의 내용을 완전히 보존해야 할 수 있으며, 이는 기술 personnel이 네트워크 디버깅 또는 보안 분석에 사용합니다.
 
-- NAT6: This mode is suitable for scenarios where a router is used as a management gateway to assign dynamic internal IPv6 addresses to each device on the network. In this mode, terminal devices connect through a Optical Network Terminal and obtain a local area network IPv6 address.
+- NAT6: 이 모드는 라우터가 관리 게이트웨이로 사용되어 네트워크의 각 장치에 동적 내부 IPv6 주소를 할당하는 시나리오에 적합합니다. 이 모드에서 터미널 장치는 광 네트워크 터미널을 통해 연결하고 LAN IPv6 주소를 얻습니다.
 
-- Static IPv6: This mode is suitable for devices or services that require a fixed IPv6 address, such as servers or network printers. This mode ensures that the device always uses the same IPv6 address, facilitating management and access.
+- 고정 IPv6: 이 모드는 서버 또는 네트워크 프린터와 같이 고정 IPv6 주소가 필요한 장치나 서비스에 적합합니다. 이 모드는 장치가 항상 동일한 IPv6 주소를 사용하도록 하여 관리와 액세스를 용이하게 합니다.
 
-**DNS acquisition method**: It determines how the router obtains IPv6 DNS server addresses. There are two options: **Automatic** and **Manual**. 
+**DNS 가져오기 방법**: 라우터가 IPv6 DNS 서버 주소를 가져오는 방법을 결정합니다. **자동** 및 **수동**의 두 가지 옵션이 있습니다.
 
-- Automatic: The router will obtain IPv6 DNS server addresses dynamically (e.g., via DHCPv6).
+- 자동: 라우터는 IPv6 DNS 서버 주소를 동적으로 가져옵니다(예: DHCPv6 통해).
 
-- Manual: Input custom IPv6 DNS server addresses. However, since DNS is used to resolve domain names to their corresponding IP addresses, manual DNS server configuration may result in DNS lookup failures. Please use it with caution.
+- 수동: 사용자 지정 IPv6 DNS 서버 주소를 입력합니다. 그러나 DNS는 도메인 이름을 해당 IP 주소로 확인하는 데 사용되므로, 수동 DNS 서버 구성은 DNS 조회 실패를 초래할 수 있습니다. 신중하게 사용하세요.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 통해 연락하세요.
