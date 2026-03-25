@@ -1,105 +1,105 @@
-# How to access OpenVPN Server LAN devices from the client via domain names?
+# 도메인 이름을 통해 클라이언트에서 OpenVPN 서버 LAN 기기에 접근하는 방법
 
-This tutorial explains how to access home devices (such as NAS, IP camera, etc.) on the OpenVPN server's LAN from a client using domain names.
+이 튜토리얼은 클라이언트에서 도메인 이름을 사용하여 OpenVPN 서버의 LAN에 있는 홈 기기(예: NAS, IP 카메라 등)에 접근하는 방법을 설명합니다.
 
-## Topology
+## 토폴로지
 
-As shown below, you can access devices such as NAS and IP camera on the OpenVPN server's LAN from a PC on the client's LAN using their respective domain names.
+아래와 같이 클라이언트 LAN의 PC에서 OpenVPN 서버 LAN에 있는 NAS, IP 카메라 등의 기기에 각각의 도메인 이름을 사용하여 접근할 수 있습니다.
 
 ![topology](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/topology_be9300_be3600.png){class="glboxshadow"}
 
-## Setup steps
+## 설정 단계
 
-### 1. Edit Hosts on Server (Optional)
+### 1. 서버에서 Hosts 편집 (선택 사항)
 
-This step applies when your VPN server cannot resolve local domain names properly. Skip this step if you are unsure.
+이 단계는 VPN 서버가 로컬 도메인 이름을 올바르게 확인할 수 없는 경우에 적용됩니다. 확실하지 않은 경우 이 단계를 건너뛰세요.
 
-Log in to the web admin panel of your VPN server router, navigate to **NETWORK** -> **DNS** -> **Edit Hosts**.
+VPN 서버 라우터의 웹 관리 패널에 로그인하고 **NETWORK** -> **DNS** -> **Edit Hosts**로 이동합니다.
 
 ![edit hosts](https://static.gl-inet.com/docs/router/en/4/tutorials/access_server_lan_via_domain_names/edit_hosts.png){class="glboxshadow"}
 
-Input the IP and domain name of the home devices you want to access, then click **Apply**.
+접근하려는 홈 기기의 IP와 도메인 이름을 입력한 다음 **Apply**를 클릭합니다.
 
 ![input ip domain](https://static.gl-inet.com/docs/router/en/4/tutorials/access_server_lan_via_domain_names/input_ip_domain.png){class="glboxshadow gl-80-desktop"}
 
-### 2. Allow Remote Access LAN on Server
+### 2. 서버에서 원격 LAN 접근 허용
 
-On the server's web admin panel, navigate to **VPN** -> **OpenVPN Server**. Click **Options** at the upper right corner.
+서버의 웹 관리 패널에서 **VPN** -> **OpenVPN Server**로 이동합니다. 오른쪽 상단의 **Options**를 클릭합니다.
 
 ![ovpnserver options 4.8](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/ovpnserver_options.png){class="glboxshadow"}
 
-Enable **Allow Remote Access the LAN Subnet**, and click **Apply**.
+**Allow Remote Access the LAN Subnet**을 활성화하고 **Apply**를 클릭합니다.
 
 ![ovpnserver allow access lan 4.8](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/allow_remote_access_lan.png){class="glboxshadow"}
 
-When enabled, the router and LAN devices can be accessed remotely via the VPN.
+활성화하면 VPN을 통해 라우터와 LAN 기기에 원격으로 접근할 수 있습니다.
 
-### 3. Export VPN Configuration
+### 3. VPN 설정 내보내기
 
-On the server's admin panel, navigate to **VPN** -> **OpenVPN Server** -> **Configuration** tab, click **Export Client Configuration** at the bottom. 
+서버의 관리 패널에서 **VPN** -> **OpenVPN Server** -> **Configuration** 탭으로 이동하고 하단의 **Export Client Configuration**을 클릭합니다.
 
 ![export config](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/export1.png){class="glboxshadow"}
 
-In the pop-up window, click **Export**. 
+팝업 창에서 **Export**를 클릭합니다.
 
-**Note**: If the public IP address on your server is dynamic and changes from time to time, please go to **APPLICATIONS** -> **Dynamic DNS** to enable **DDNS** before exporting the client configuration.
+**참고**: 서버의 공인 IP 주소가 동적이고 자주 변경되는 경우 클라이언트 설정을 내보내기 전에 **APPLICATIONS** -> **Dynamic DNS**로 이동하여 **DDNS**를 활성화하세요.
 
 ![export config](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/export2.png){class="glboxshadow"}
 
-You will then get a **.ovpn** file, as shown below.
+아래와 같이 **.ovpn** 파일을 얻게 됩니다.
 
 ![downloads](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/download.png){class="glboxshadow"}
 
-If your server router runs firmware v4.8 or later, no need to edit the configuration file; proceed to the next step.
+서버 라우터가 펌웨어 v4.8 이상을 실행 중인 경우 설정 파일을 편집할 필요가 없으며 다음 단계로 진행하세요.
 
-If your server router runs firmware v4.7 or earlier, open this file, add the following line to set the DNS server to your OpenVPN server's tunnel IP, then save your changes.
+서버 라우터가 펌웨어 v4.7 이전 버전을 실행 중인 경우 이 파일을 열고 다음 줄을 추가하여 DNS 서버를 OpenVPN 서버의 터널 IP로 설정한 다음 변경 사항을 저장합니다.
 
 `dns server 1 address 10.8.0.1`
 
 ![edit config](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/edit_config.png){class="glboxshadow"}
 
-Tip: The OpenVPN server's tunnel IPv4 subnet can be found under the **Configuration** tab of the OpenVPN Server page, as shown below. It varies by firmware version. Please check your OpenVPN server's tunnel IP.
+팁: OpenVPN 서버의 터널 IPv4 서브넷은 아래와 같이 OpenVPN Server 페이지의 **Configuration** 탭에서 찾을 수 있습니다. 펌웨어 버전에 따라 다릅니다. OpenVPN 서버의 터널 IP를 확인하세요.
 
 ![ovpnserver tunnel ip](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/ovpnserver_tunnel_ip.png){class="glboxshadow"}
 
-### 4. Enable VPN Server
+### 4. VPN 서버 활성화
 
-On the **OpenVPN Server** page, click the **Start** button in the upper right corner to start the server.
+**OpenVPN Server** 페이지에서 오른쪽 상단의 **Start** 버튼을 클릭하여 서버를 시작합니다.
 
 ![start server](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/ovpnserver_start.png){class="glboxshadow"}
 
-### 5. Upload VPN Configuration
+### 5. VPN 설정 업로드
 
-Log in to the web admin panel of your VPN client router, navigate to **VPN** -> **OpenVPN Client**, then click **Add Manually**.
+VPN 클라이언트 라우터의 웹 관리 패널에 로그인하고 **VPN** -> **OpenVPN Client**로 이동한 다음 **Add Manually**를 클릭합니다.
 
 ![add manually](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/ovpnclient_upload1.png){class="glboxshadow"}
 
-Create a name for this group and upload the configuration file.
+이 그룹의 이름을 만들고 설정 파일을 업로드합니다.
 
 ![add manually](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/ovpnclient_upload2.png){class="glboxshadow"}
 
-Upload successful. Click **Apply**. 
+업로드가 완료되면 **Apply**를 클릭합니다.
 
 ![apply](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/ovpnclient_upload3.png){class="glboxshadow"}
 
-You will get a configuration file listed here.
+설정 파일이 여기에 표시됩니다.
 
 ![applied](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/ovpnclient_upload4.png){class="glboxshadow"}
 
-### 6. Start VPN Client Connection
+### 6. VPN 클라이언트 연결 시작
 
-Click the three-dot icon to initiate the VPN connection. 
+세 점 아이콘을 클릭하여 VPN 연결을 시작합니다.
 
 ![start client](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/ovpnclient_start.png){class="glboxshadow"}
 
-When the grey dot turns green, the OpenVPN client has connected to the server successfully.
+회색 점이 녹색으로 바뀌면 OpenVPN 클라이언트가 서버에 성공적으로 연결된 것입니다.
 
 ![ovpnclient connected](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/ovpnclient_connected.png){class="glboxshadow"}
 
-Now you can access your home devices (such as NAS) on the server's LAN from the PC on the client's LAN using their domain names.
+이제 클라이언트 LAN의 PC에서 도메인 이름을 사용하여 서버 LAN에 있는 홈 기기(예: NAS)에 접근할 수 있습니다.
 
 ![ping test](https://static.gl-inet.com/docs/router/en/4/tutorials/access_ovpnserver_lan_via_domain_names/ping_test.png){class="glboxshadow"}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 이용하세요.

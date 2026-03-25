@@ -1,182 +1,182 @@
-# Clients
+# 클라이언트
 
-On the left side of the web Admin Panel, go to **CLIENTS**.
+웹 관리 패널 왼쪽에서 **CLIENTS**로 이동합니다.
 
-The Clients page displays information about connected devices, including device name, connection type, IP address, MAC address, speed, and traffic, arranged left to right.
+클라이언트 페이지에는 연결된 기기에 대한 정보가 표시되며, 왼쪽에서 오른쪽으로 기기 이름, 연결 유형, IP 주소, MAC 주소, 속도, 트래픽이 나열됩니다.
 
-## Device Name
+## 기기 이름
 
-The first column displays the device name and device type, which depends on the hostname of the device operator.
+첫 번째 열에는 기기 이름과 기기 유형이 표시되며, 이는 기기 운영자의 호스트 이름에 따라 달라집니다.
 
 ![device name](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/device_name.png){class="glboxshadow"}
 
-To modify the device name and type, click the three-dot icon in the Action column, and in the drop-down menu, click **Modify**.
+기기 이름과 유형을 수정하려면 Action 열의 점 세 개 아이콘을 클릭하고, 드롭다운 메뉴에서 **Modify**를 클릭합니다.
 
 ![modify](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/modify.png){class="glboxshadow"}
 
 ![modify client device](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/modify_client_device.png){class="glboxshadow"}
 
-## Connection Type
+## 연결 유형
 
-The blue icon on the right side of the device name represents the connection type/method of device.
+기기 이름 오른쪽의 파란색 아이콘은 기기의 연결 유형/방법을 나타냅니다.
 
-It indicates how the device is connected to the network - whether via Wi-Fi or an ethernet cable.
+기기가 네트워크에 연결된 방식(Wi-Fi 또는 이더넷 케이블)을 나타냅니다.
 
 ![connection type](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/connection_type.png){class="glboxshadow"}
 
-## IP and MAC Address
+## IP 및 MAC 주소
 
-The second column lists the IP and MAC addresses of the connected device.
+두 번째 열에는 연결된 기기의 IP 및 MAC 주소가 나열됩니다.
 
 ![ip and mac](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/ip_mac.png){class="glboxshadow"}
 
-Many devices use randomized MAC addresses. If the connected devices use randomized MAC addresses, the following prompt will appear.
+많은 기기에서 무작위 MAC 주소를 사용합니다. 연결된 기기에서 무작위 MAC 주소를 사용하는 경우 다음 프롬프트가 나타납니다.
 
 ![random mac prompt](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/randomized_mac.png){class="glboxshadow"}
 
-**Note**: The rule here is that if the second character of the MAC address is 2, 6, A or E(Ignore case), it is considered a randomized MAC address. However, some devices may use a different rule to generate a randomized MAC address, so this detection method may not be accurate.
+**참고**: 여기서 규칙은 MAC 주소의 두 번째 문자가 2, 6, A 또는 E(대소문자 구분 없음)인 경우 무작위 MAC 주소로 간주된다는 것입니다. 하지만 일부 기기는 다른 규칙을 사용하여 무작위 MAC 주소를 생성할 수 있으므로 이 감지 방법이 정확하지 않을 수 있습니다.
 
-## Speed
+## 속도
 
-The third column displays the internet speed of the connected device.
+세 번째 열에는 연결된 기기의 인터넷 속도가 표시됩니다.
 
 ![speed](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/speed.png){class="glboxshadow"}
 
-The speed here is the average speed over 3 minutes.
+이 속도는 3분간의 평균 속도입니다.
 
-- Open the current page for 10 seconds, the average speed of the last 10 seconds is displayed.
-- Open the current page for 30 seconds, the average speed of the last 30 seconds is displayed.
-- Open the current page for 60 seconds, the average speed of the last 60 seconds is displayed.
-- Open current page for 3 minutes, the average rate of the last 3 minutes is displayed.
-- Open current page for 10 minutes, the average rate of the last 3 minutes is displayed.
+- 현재 페이지를 10초 동안 열어두면 마지막 10초의 평균 속도가 표시됩니다.
+- 현재 페이지를 30초 동안 열어두면 마지막 30초의 평균 속도가 표시됩니다.
+- 현재 페이지를 60초 동안 열어두면 마지막 60초의 평균 속도가 표시됩니다.
+- 현재 페이지를 3분 동안 열어두면 마지막 3분의 평균 속도가 표시됩니다.
+- 현재 페이지를 10분 동안 열어두면 마지막 3분의 평균 속도가 표시됩니다.
 
-## Traffic
+## 트래픽
 
-The fourth column displays the internet traffic of the connected device.
+네 번째 열에는 연결된 기기의 인터넷 트래픽이 표시됩니다.
 
 ![traffic](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/traffic.png){class="glboxshadow"}
 
-## Reserved IP
+## 고정 IP
 
-In the fifth column, you can reserve IP address for a certain connected device with just one click. 
+다섯 번째 열에서는 연결된 특정 기기에 IP 주소를 한 번의 클릭으로 예약할 수 있습니다.
 
-This feature is available as of v4.8.
+이 기능은 v4.8부터 사용할 수 있습니다.
 
-When you specify a reserved IP address for a client within the LAN, the client always receives the same IP address each time it accesses the router's DHCP server. 
+LAN 내의 클라이언트에 고정 IP 주소를 지정하면, 해당 클라이언트는 라우터의 DHCP 서버에 액세스할 때마다 항상 동일한 IP 주소를 받습니다.
 
-You can assign reserved IP addresses to computers or servers that require permanent IP settings.
+영구 IP 설정이 필요한 컴퓨터나 서버에 고정 IP 주소를 할당할 수 있습니다.
 
 ![reserved ip](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/reserved_ip.png){class="glboxshadow"}
 
-## Blocklist {#blocklist}
+## 차단 목록 {#blocklist}
 
-In the sixth column, you can block specific connected devices with just one click. 
+여섯 번째 열에서는 특정 연결된 기기를 한 번의 클릭으로 차단할 수 있습니다.
 
-The access control rule is Blocklist by default, and you can switch it to Allowlist from the top if needed.
+액세스 제어 규칙은 기본적으로 차단 목록이며, 필요한 경우 상단에서 허용 목록으로 전환할 수 있습니다.
 
 ![blocklist](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/blocklist.jpg){class="glboxshadow"}
 
 ![access control](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/blocklist_allowlist.jpg){class="glboxshadow"}
 
-- **Blocklist**: Devices with MAC addresses on the blocklist list are not allowed to connect to this router.
+- **차단 목록**: 차단 목록에 있는 MAC 주소를 가진 기기는 이 라우터에 연결할 수 없습니다.
 
-- **Allowlist**: Only devices with specific MAC addresses are allowed to connect, suitable for IoT devices and enterprise network management.
+- **허용 목록**: 특정 MAC 주소를 가진 기기만 연결할 수 있으며, IoT 기기 및 기업 네트워크 관리에 적합합니다.
 
-To create a Blocklist, you can upload a block list in excel form at **(1)**, or input MAC addresses manually at **(2)**.
+차단 목록을 생성하려면 **(1)**에서 엑셀 형식의 차단 목록을 업로드하거나, **(2)**에서 MAC 주소를 수동으로 입력할 수 있습니다.
 
 ![create blocklist](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/create_blocklist.png){class="glboxshadow"}
 
-**Method 1. Import Clients**
+**방법 1. 클라이언트 가져오기**
 
-In the Access Control page, click on **Import Clients**.
+액세스 제어 페이지에서 **Import Clients**를 클릭합니다.
 
 ![import clients](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/import_clients.png){class="glboxshadow"}
 
-Click on **Download Import Template**, and you will download an XLS worksheet named "mac-template.csv".
+**Download Import Template**를 클릭하면 "mac-template.csv"라는 XLS 워크시트가 다운로드됩니다.
 
 ![download template](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/download_template.png){class="glboxshadow"}
 
-Open the file, import the MAC addresses and save.
+파일을 열고 MAC 주소를 가져온 후 저장합니다.
 
 ![import csv](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/importcsv.jpg){class="glboxshadow gl-80-desktop"}
 
-Select the saved file or drag it to the upload area.
+저장한 파일을 선택하거나 업로드 영역으로 드래그합니다.
 
 ![upload csv](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/dragcsv.jpg){class="glboxshadow  gl-80-desktop"}
 
-Once the upload is successful, click **Import** to complete the batch import of MAC addresses.
+업로드가 성공하면 **Import**를 클릭하여 MAC 주소 일괄 가져오기를 완료합니다.
 
 ![upload successful](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/upload_successful.png){class="glboxshadow"}
 
-**Method 2. Input Manually**
+**방법 2. 수동 입력**
 
-In the Access Control page, manually input the MAC address of the devices you want to block, and click **Apply**.
+액세스 제어 페이지에서 차단하려는 기기의 MAC 주소를 수동으로 입력하고 **Apply**를 클릭합니다.
 
 ![input mac manually](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/input_mac_manually.png){class="glboxshadow"}
 
-**Note**: Blocking client is based on the MAC address of the device. If the blocked device uses different MAC address next time, it can still be able to connect to router.
+**참고**: 클라이언트 차단은 기기의 MAC 주소를 기반으로 합니다. 차단된 기기가 다음에 다른 MAC 주소를 사용하면 여전히 라우터에 연결할 수 있습니다.
 
-## Sort
+## 정렬
 
-The current sort type is displayed in the upper right corner, and you can switch to other sort types.
+현재 정렬 유형은 오른쪽 상단에 표시되며, 다른 정렬 유형으로 전환할 수 있습니다.
 
-The default sort type is as follows:
+기본 정렬 유형은 다음과 같습니다:
 
-- The self device is always on top.
-- In the online client section, the later the device is connected, the higher it appears in the list.
+- 자신의 기기는 항상 맨 위에 표시됩니다.
+- 온라인 클라이언트 섹션에서는 기기가 연결된 시간이 늦을수록 목록 상단에 표시됩니다.
 
 ![sort](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/sort.png){class="glboxshadow"}
 
-## Action
+## 작업
 
-### Client Details
+### 클라이언트 상세 정보
 
-If you need to view the details of the client device, click the three-dot icon in the rightmost Action column and then click the **View Details** in the drop-down menu.
+클라이언트 기기의 상세 정보를 확인하려면 오른쪽 끝 Action 열의 점 세 개 아이콘을 클릭한 다음 드롭다운 메뉴에서 **View Details**를 클릭합니다.
 
 ![view details](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/details.png){class="glboxshadow"}
 
-You can see all the information about the client device in the opened subpage, including all IPv6 addresses of the device if any.
+열린 하위 페이지에서 클라이언트 기기에 대한 모든 정보를 확인할 수 있으며, 있는 경우 기기의 모든 IPv6 주소도 포함됩니다.
 
 ![client details](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/client_detail.png){class="glboxshadow"}
 
-### Modify
+### 수정
 
-Click the three-dot icon in the Action column, and in the drop-down menu, click **Modify**.
+Action 열의 점 세 개 아이콘을 클릭하고, 드롭다운 메뉴에서 **Modify**를 클릭합니다.
 
 ![modify](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/modify.png){class="glboxshadow"}
 
 ![modify client device](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/modify_client_device.png){class="glboxshadow"}
 
-### Limit Speed
+### 속도 제한
 
-Click the three-dot icon in the Action column, and in the drop-down menu, click **Limit Speed**.
+Action 열의 점 세 개 아이콘을 클릭하고, 드롭다운 메뉴에서 **Limit Speed**를 클릭합니다.
 
 ![limit speed](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/limit_speed.png){class="glboxshadow"}
 
 ![limit speed settings](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/clients_limit_speed_settings.png){class="glboxshadow"}
 
-If a client has been applied speed limitation, its up arrow and down arrow of speed will turn yellow.
+클라이언트에 속도 제한이 적용되면 속도의 위쪽 화살표와 아래쪽 화살표가 노란색으로 변합니다.
 
 ![limited speed](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/limit_speed.jpg){class="glboxshadow"}
 
-Click the three-dot icon in the Action column to disable speed limit.
+Action 열의 점 세 개 아이콘을 클릭하여 속도 제한을 비활성화합니다.
 
-### Use VPN Tunnel
+### VPN 터널 사용
 
-**Note**: This option is available as of firmware v4.8 and will only appear in the Action menu if a MAC-based policy is configured.
+**참고**: 이 옵션은 펌웨어 v4.8부터 사용할 수 있으며, MAC 기반 정책이 구성된 경우에만 Action 메뉴에 나타납니다.
 
-Add a client to the VPN tunnel list with MAC-based policy. If you need to make detailed adjustments to the tunnels, go to the VPN Dashboard for management.
+MAC 기반 정책으로 클라이언트를 VPN 터널 목록에 추가합니다. 터널에 대한 세부 조정이 필요한 경우 VPN 대시보드로 이동하여 관리합니다.
 
 ![use vpn tunnel](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/use-vpn-tunnel.png){class="glboxshadow"}
 
-## Remove Offline Clients
+## 오프라인 클라이언트 제거
 
-In the offline clients section, you can click **Delete All** at the top right to delete all offline clients. 
+오프라인 클라이언트 섹션에서 오른쪽 상단의 **Delete All**을 클릭하여 모든 오프라인 클라이언트를 삭제할 수 있습니다.
 
-If you want to remove specific client, click the three-dot icon in the Action column, and in the drop-down menu, click **Remove Client**.
+특정 클라이언트를 제거하려면 Action 열의 점 세 개 아이콘을 클릭하고, 드롭다운 메뉴에서 **Remove Client**를 클릭합니다.
 
 ![remove offline clients](https://static.gl-inet.com/docs/router/en/4/interface_guide/clients/remove_offline.png){class="glboxshadow"}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+궁금한 점이 있으시면 [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 이용하세요.

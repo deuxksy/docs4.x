@@ -1,199 +1,198 @@
-# How to manually configure static IP on the client devices?
+# 클라이언트 장치에서 고정 IP 수동으로 설정하는 방법
 
 === "Windows 11"
 
-    On Windows 11, you can set a static IP address configuration from the Settings app for wireless and wired adapters.
+    Windows 11에서는 설정 앱에서 무선 및 유선 어댑터에 대한 고정 IP 주소 구성을 설정할 수 있습니다.
 
-    **Set static IP address on Wi-Fi adapter**
+    **Wi-Fi 어댑터에 고정 IP 주소 설정**
 
-    To assign a static IP address configuration to a Wi-Fi adapter, use these steps:
+    Wi-Fi 어댑터에 고정 IP 주소 구성을 할당하려면 다음 단계를 따르세요:
 
-    1. Open Settings on Windows 11 -> Network & Internet ->  the Wi-Fi tab ->  Select the current network connection.
+    1. Windows 11에서 설정 열기 -> 네트워크 및 인터넷 -> Wi-Fi 탭 -> 현재 네트워크 연결 선택.
 
-    2. Under the “IP settings” section, click the Edit button.
+    2. "IP 설정" 섹션에서 편집 버튼을 클릭합니다.
 
         ![Windows 11 edit IP address](https://static.gl-inet.com/docs/router/en/4/tutorials/manually_configure_static_ip/Windows_11_edit_IP_address.webp){class="glboxshadow"}
 
-    3. Follow the steps below to set it up:
+    3. 아래 단계에 따라 설정하세요:
 
         ![Settings_app_set_static_IP_address](https://static.gl-inet.com/docs/router/en/4/tutorials/manually_configure_static_ip/Settings_app_set_static_IP_address.webp){class="glboxshadow"}
 
-        - Select the Manual option,Turn on the IPv4 toggle switch.
+        - 수동 옵션을 선택하고 IPv4 토글 스위치를 켭니다.
 
-        - Set a static IP address for Windows 11 – for example, 10.1.4.119.
+        - Windows 11용 고정 IP 주소 설정 – 예: 10.1.4.119.
 
-        - Specify a Subnet mask – for example, 255.255.255.0.
+        - 서브넷 마스크 지정 – 예: 255.255.255.0.
 
-        - Specify a Default Gateway address.
+        - 기본 게이트웨이 주소 지정.
 
-        - Specify a Preferred DNS address (required).
+        - 기본 DNS 주소 지정 (필수).
 
-        - (Optional) Specify an “Alternate DNS” address.
+        - (선택 사항) "보조 DNS" 주소 지정.
 
-        - Use the “DNS over HTTPS” drop-down menu and select the Off option for the preferred and alternate addresses, but you can enable DoH with these options:
+        - "HTTPS를 통한 DNS" 드롭다운 메뉴를 사용하고 기본 및 보조 주소에 대해 꺼짐 옵션을 선택하지만, 다음 옵션으로 DoH를 활성화할 수 있습니다:
 
-            - Off: Transmits all DNS traffic without encryption.
+            - 꺼짐: 모든 DNS 트래픽을 암호화 없이 전송합니다.
 
-            - On (automatic template): Sends all DNS traffic with encryption.
+            - 켜짐 (자동 템플릿): 모든 DNS 트래픽을 암호화하여 전송합니다.
 
-            - On (manual template): Allows you to specify a specific template. It is only required if the DNS service doesn't work automatically or has a template that works as expected.
+            - 켜짐 (수동 템플릿): 특정 템플릿을 지정할 수 있습니다. DNS 서비스가 자동으로 작동하지 않거나 예상대로 작동하는 템플릿이 있는 경우에만 필요합니다.
 
-        - Turn off the “Fallback to plaintext” toggle switch (if you enable DoH).
+        - "일반 텍스트 대체" 토글 스위치를 끕니다 (DoH를 활성화한 경우).
 
-            - Quick tip: If you enable this feature, the system will encrypt DNS traffic, but it allows queries to be sent without encryption.
+            - 빠른 팁: 이 기능을 활성화하면 시스템이 DNS 트래픽을 암호화하지만, 암호화 없이 쿼리를 보낼 수 있습니다.
 
-    4. Click the Save button.
+    4. 저장 버튼을 클릭합니다.
 
-        Once you complete the steps, the static network configuration will apply to the computer. You can test the new settings by opening the web browser and loading a website.
+        단계를 완료하면 컴퓨터에 고정 네트워크 구성이 적용됩니다. 웹 브라우저를 열어 웹사이트를 로드하여 새 설정을 테스트할 수 있습니다.
 
 
-    ## **Set static IP address on Ethernet adapter**
+    ## **Ethernet 어댑터에 고정 IP 주소 설정**
 
-    To assign a static IP address to an Ethernet (wired) adapter on Windows 11, use these steps:
+    Windows 11의 Ethernet (유선) 어댑터에 고정 IP 주소를 할당하려면 다음 단계를 따르세요:
 
-    1. Open Settings -> Network & Internet ->  Ethernet tab.
-    
-    2. Under the “IP settings” section, click the Edit button.
+    1. 설정 열기 -> 네트워크 및 인터넷 -> Ethernet 탭.
+
+    2. "IP 설정" 섹션에서 편집 버튼을 클릭합니다.
 
         ![Edit_TCP/IP_Ethernet_settings](https://static.gl-inet.com/docs/router/en/4/tutorials/manually_configure_static_ip/Edit_TCP_IP_Ethernet_settings.webp){class="glboxshadow"}
 
-    3. Follow the steps below to set it up:
+    3. 아래 단계에 따라 설정하세요:
 
         ![Settings_app_set_static_IP_address](https://static.gl-inet.com/docs/router/en/4/tutorials/manually_configure_static_ip/Settings_app_set_static_IP_address.webp){class="glboxshadow"}
-        
-        - Select the Manual option.
 
-        - Turn on the IPv4 toggle switch.
+        - 수동 옵션을 선택합니다.
 
-        - Set a static IP address for Windows 11 – for example, 10.1.4.119.
+        - IPv4 토글 스위치를 켭니다.
 
-        - Specify a Subnet mask – for example, 255.255.255.0.
+        - Windows 11용 고정 IP 주소 설정 – 예: 10.1.4.119.
 
-        - Specify a Default Gateway address.
+        - 서브넷 마스크 지정 – 예: 255.255.255.0.
 
-        - Specify a Preferred DNS address (required).
+        - 기본 게이트웨이 주소 지정.
 
-        - (Optional) Specify an “Alternate DNS” address.
+        - 기본 DNS 주소 지정 (필수).
 
-        - Use the “DNS over HTTPS” drop-down menu and select the Off option for the preferred and alternate addresses, but you can enable DoH with these options:
+        - (선택 사항) "보조 DNS" 주소 지정.
 
-            * Off: Transmits all DNS traffic without encryption.
+        - "HTTPS를 통한 DNS" 드롭다운 메뉴를 사용하고 기본 및 보조 주소에 대해 꺼짐 옵션을 선택하지만, 다음 옵션으로 DoH를 활성화할 수 있습니다:
 
-            * On (automatic template): Sends all DNS traffic with encryption.
+            * 꺼짐: 모든 DNS 트래픽을 암호화 없이 전송합니다.
 
-            * On (manual template): Allows you to specify a specific template. It is only required if the DNS service doesn't work automatically or has a template that works as expected.
-            
-        - Turn off the “Fallback to plaintext” toggle switch (if you enable DoH).
+            * 켜짐 (자동 템플릿): 모든 DNS 트래픽을 암호화하여 전송합니다.
 
-    4. Click the Save button.
+            * 켜짐 (수동 템플릿): 특정 템플릿을 지정할 수 있습니다. DNS 서비스가 자동으로 작동하지 않거나 예상대로 작동하는 템플릿이 있는 경우에만 필요합니다.
 
-        After you complete the steps, you can test your settings using your web browser to open a website.
+        - "일반 텍스트 대체" 토글 스위치를 끕니다 (DoH를 활성화한 경우).
+
+    4. 저장 버튼을 클릭합니다.
+
+        단계를 완료한 후 웹 브라우저를 사용하여 웹사이트를 열어 설정을 테스트할 수 있습니다.
 
 
 === "macOS"
 
-    Here's how to set a static IP address in macOS:
+    macOS에서 고정 IP 주소를 설정하는 방법은 다음과 같습니다:
 
-    If you own a MacBook, you may want to create a new network location. This will allow you to use the static IP address for certain networks and not others. 
+    MacBook을 소유하고 있는 경우 새로운 네트워크 위치를 만들고 싶을 수 있습니다. 이를 통해 특정 네트워크에 대해서만 고정 IP 주소를 사용하고 다른 네트워크에서는 사용하지 않을 수 있습니다.
 
-    From the Apple menu, select System Preferences.
+    Apple 메뉴에서 시스템 환경설정을 선택합니다.
 
-    Select Network. The window shown below appears.
+    네트워크를 선택합니다. 아래와 같은 창이 나타납니다.
 
     ![Mac_network_settings](https://static.gl-inet.com/docs/router/en/4/tutorials/manually_configure_static_ip/Mac_network_settings.webp){class="glboxshadow"}
 
-    From the sidebar, select an active network interface. In this example, I'm connected to a wireless network, so I'll select Wi-Fi.
+    사이드바에서 활성 네트워크 인터페이스를 선택합니다. 이 예에서는 무선 네트워크에 연결되어 있으므로 Wi-Fi를 선택합니다.
 
-    Make a note of the current IP address assigned to your Mac. You'll need to select a new IP address from within the private IP address range listed. More on that in a minute.
+    Mac에 할당된 현재 IP 주소를 기억해 두세요. 나중에 나열된 개인 IP 주소 범위 내에서 새 IP 주소를 선택해야 합니다. 자세한 내용은 잠시 후에 설명합니다.
 
-    Click Advanced.
+    고급을 클릭합니다.
 
-    Select TCP/IP. The window shown below appears.
-    
+    TCP/IP를 선택합니다. 아래와 같은 창이 나타납니다.
+
     ![Mac_Wi-Fi_settings](https://static.gl-inet.com/docs/router/en/4/tutorials/manually_configure_static_ip/Mac_Wi-Fi_settings.webp){class="glboxshadow"}
 
-    From the Configure IPv4 menu, select Manually.
+    IPv4 구성 메뉴에서 수동을 선택합니다.
 
-    Enter a static IP address in the IPv4 Address field. What number should you enter? One method is to take your current IP address and change the last part of the number. In this example, I could have picked any address between 192.168.7.0 and 192.168.7.255, as long as the address was not already assigned to another device.
+    IPv4 주소 필드에 고정 IP 주소를 입력합니다. 어떤 숫자를 입력해야 할까요? 한 가지 방법은 현재 IP 주소를 가져와서 숫자의 마지막 부분을 변경하는 것입니다. 이 예에서는 192.168.7.0부터 192.168.7.255 사이의 주소 중 다른 장치에 이미 할당되지 않은 주소를 선택할 수 있었습니다.
 
-    Click OK -> Click Apply.
-   
+    확인을 클릭 -> 적용을 클릭합니다.
+
 
 === "Android"
 
-    The steps will vary with different versions of Android. This documentation is based on Android version 11.
+    단계는 Android 버전에 따라 다릅니다. 이 문서는 Android 버전 11을 기준으로 합니다.
 
-    1. Go to Settings -> Select Network & Internet, then Wi-Fi -> Tap on the network currently connected to open the settings menu.
-    
+    1. 설정으로 이동 -> 네트워크 및 인터넷 선택,然后 Wi-Fi -> 현재 연결된 네트워크를 탭하여 설정 메뉴를 엽니다.
+
     ![list_available_networks](https://static.gl-inet.com/docs/router/en/4/tutorials/manually_configure_static_ip/list_available_networks.png){class="gl-50-desktop"}
     {class="glboxshadow"}
 
-    2. To set a static IP address, do the following:
+    2. 고정 IP 주소를 설정하려면 다음을 수행합니다:
 
-    - Select the pencil icon in the top right to access the network settings.
-        
+    - 네트워크 설정에 액세스하려면 오른쪽 상단의 연필 아이콘을 선택합니다.
+
         ![pencil_icon](https://static.gl-inet.com/docs/router/en/4/tutorials/manually_configure_static_ip/pencil_icon.png){class="gl-50-desktop"}
         {class="glboxshadow"}
 
-    - Select Advanced Options.
-        
+    - 고급 옵션을 선택합니다.
+
         ![advanced_options](https://static.gl-inet.com/docs/router/en/4/tutorials/manually_configure_static_ip/advanced_options.png){class="gl-50-desktop"}
         {class="glboxshadow"}
 
-    - Select IP Settings.
-        
-    - Change the setting from DHCP to Static.
-        
+    - IP 설정을 선택합니다.
+
+    - 설정을 DHCP에서 정적(Static)으로 변경합니다.
+
         ![DHCP_to_Static](https://static.gl-inet.com/docs/router/en/4/tutorials/manually_configure_static_ip/DHCP_to_Static.png){class="gl-50-desktop"}
         {class="glboxshadow"}
 
-    - When using static IP addresses on home and other private networks, they should be chosen from within the standard private IP address ranges listed:10.0.0.0 through 10.255.255.255,172.16.0.0 through 172.31.255.255,192.168.0.0 through 192.168.255.255
+    - 가정 및 기타 개인 네트워크에서 고정 IP 주소를 사용하는 경우 나열된 표준 개인 IP 주소 범위 내에서 선택해야 합니다:10.0.0.0부터 10.255.255.255, 172.16.0.0부터 172.31.255.255, 192.168.0.0부터 192.168.255.255
 
-    - Now enter the IP address.
-        -This step is specific to each network. ex: 192.168.1.128
-        
-    - The Gateway should fill in automatically based on the IP address. If not, copy the IP address and replace the last number with a 1. 
-        -ex. Based on the previous example: 192.168.1.1
+    - 이제 IP 주소를 입력합니다.
+        -이 단계는 각 네트워크에 따라 다릅니다. 예: 192.168.1.128
 
-    3. Tap Save and let the network reconnect.
+    - 게이트웨이는 IP 주소를 기반으로 자동으로 채워져야 합니다. 그렇지 않은 경우 IP 주소를 복사하고 마지막 숫자를 1로 바꿉니다.
+        -예: 이전 예를 기준으로: 192.168.1.1
+
+    3. 저장을 탭하고 네트워크가 다시 연결될 때까지 기다립니다.
 
 === "iOS"
 
-    When using static IP addresses on home and other private networks, they should be chosen from within the standard private IP address ranges listed:
+    가정 및 기타 개인 네트워크에서 고정 IP 주소를 사용하는 경우 나열된 표준 개인 IP 주소 범위 내에서 선택해야 합니다:
 
-    10.0.0.0 through 10.255.255.255
-    172.16.0.0 through 172.31.255.255
-    192.168.0.0 through 192.168.255.255
+    10.0.0.0부터 10.255.255.255
+    172.16.0.0부터 172.31.255.255
+    192.168.0.0부터 192.168.255.255
 
-    To set a static IP address, do the following:
+    고정 IP 주소를 설정하려면 다음을 수행합니다:
 
-    - Tap on the Settings icon.
+    - 설정 아이콘을 탭합니다.
 
-    - Go to Wi-Fi.
+    - Wi-Fi로 이동합니다.
 
-    - Tap on the blue information icon (i) next to the name of the Wi-Fi network
-         - This may be a blue error if you are using something older than iOS 7.
+    - Wi-Fi 네트워크 이름 옆에 있는 파란색 정보 아이콘 (i)을 탭합니다
+         - iOS 7보다 오래된 버전을 사용하는 경우 파란색 오류일 수 있습니다.
 
-    - Go to the Static tab, pictured below.
+    - 아래와 같은 정적(Static) 탭으로 이동합니다.
 
-        
+
     ![IP_Settings_Screen_iOS](https://static.gl-inet.com/docs/router/en/4/tutorials/manually_configure_static_ip/IP_Settings_Screen_iOS.png){class="glboxshadow"}
 
-    - Tap on the IP Address field.
+    - IP 주소 필드를 탭합니다.
 
-    - Enter the static IP address that you want to use on your iPhone/iPad.
+    - iPhone/iPad에서 사용하려는 고정 IP 주소를 입력합니다.
 
-    - Tap on the Router field.
+    - 라우터 필드를 탭합니다.
 
-    - Enter the routers IP address.
-        
-    - Tap on Subnet Mask and enter your information
+    - 라우터의 IP 주소를 입력합니다.
 
-        - Usually, it will be 225.225.0.0.
+    - 서브넷 마스크를 탭하고 정보를 입력합니다
 
-    - Tap on the Wi-Fi button, in the upper left corner of the screen, to save settings.
+        - 일반적으로 225.225.0.0입니다.
+
+    - 설정을 저장하려면 화면 왼쪽 상단의 Wi-Fi 버튼을 탭합니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
-    
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 통해 문의해 주세요.

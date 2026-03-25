@@ -1,31 +1,31 @@
-# How to update OpenVPN server certificates?
+# OpenVPN 서버 인증서 업데이트하는 방법
 
-This tutorial explains how to update OpenVPN server certificates on your GL.iNet routers.
+이 튜토리얼에서는 GL.iNet 라우터의 OpenVPN 서버 인증서를 업데이트하는 방법을 설명합니다.
 
-**Note**: This process requires updating the Root CA certificate, which will invalidate all existing client certificates (embedded in configuration files). You must re‑export all configuration files for your OpenVPN clients to reconnect to the server.
+**참고**: 이 과정은 Root CA 인증서를 업데이트해야 하며, 이로 인해 모든 기존 클라이언트 인증서(구성 파일에 포함)가 무효화됩니다. OpenVPN 클라이언트가 서버에 다시 연결하려면 모든 구성 파일을 다시 내보내야 합니다.
 
-1. Log in to your router's web Admin Panel and go to **VPN** -> **OpenVPN Server**.
+1. 라우터의 웹 관리 패널에 로그인한 후 **VPN** -> **OpenVPN Server**로 이동합니다.
 
-    If your OpenVPN server is running, stop the service.
-    
-2. Under the Configuration tab, click **Advanced Configuration** to unfold the settings.
+    OpenVPN 서버가 실행 중인 경우 서비스를 중지합니다.
+
+2. Configuration 탭에서 **Advanced Configuration**을 클릭하여 설정을 펼칩니다.
 
     ![advanced](https://static.gl-inet.com/docs/router/en/4/tutorials/update_ovpn_certificate/advanced.png){class="glboxshadow"}
 
-3. Find the **Server Root Certificate** and delete all contents within the text box.
+3. **Server Root Certificate**를 찾아 텍스트 상자 안의 모든 내용을 삭제합니다.
 
     ![certificate](https://static.gl-inet.com/docs/router/en/4/tutorials/update_ovpn_certificate/certificate1.png){class="glboxshadow"}
 
-    The paired Server Certificate and Server Key will also be removed automatically, as shown below.
+    페어링된 Server Certificate와 Server Key도 자동으로 제거됩니다.
 
     ![certificate](https://static.gl-inet.com/docs/router/en/4/tutorials/update_ovpn_certificate/certificate2.png){class="glboxshadow"}
 
-4. Leave all three boxes blank, and click **Apply** at the bottom. New certificates will be automatically generated and populated in the boxes.
+4. 세 상자를 모두 비워 둔고 하단의 **Apply**를 클릭합니다. 새 인증서가 자동으로 생성되어 상자에 채워집니다.
 
     ![apply](https://static.gl-inet.com/docs/router/en/4/tutorials/update_ovpn_certificate/apply.png){class="glboxshadow"}
 
-5. The OpenVPN Server certificates are now updated. Click **Export Client Configuration** at the bottom to export new configuration files for your devices to connect.
+5. OpenVPN 서버 인증서가 업데이트되었습니다. 하단의 **Export Client Configuration**를 클릭하여 장치 연결용 새 구성 파일을 내보냅니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 통해 문의해 주세요.

@@ -1,82 +1,82 @@
-# How to block specific client devices on a GL.iNet router
+# GL.iNet 라우터에서 특정 클라이언트 장치 차단하기
 
-This tutorial will show you how to block specific client devices on a GL.iNet router. By blocking client devices, you prevent unauthorized access to your network. This helps to enhance your network security or control your family's access to the internet.
+이 튜토리얼에서는 GL.iNet 라우터에서 특정 클라이언트 장치를 차단하는 방법을 안내합니다. 클라이언트 장치를 차단하면 네트워크에 대한 무단 액세스를 방지할 수 있습니다. 이를 통해 네트워크 보안을 강화하거나 가족의 인터넷 액세스를 제어할 수 있습니다.
 
-GL.iNet routers block client devices based on their MAC addresses (a unique 12-character identifier assigned to individual devices on a network). This method is also called MAC address filtering. 
+GL.iNet 라우터는 MAC 주소(네트워크의 개별 장치에 할당된 고유한 12자리 식별자)를 기준으로 클라이언트 장치를 차단합니다. 이 방법은 MAC 주소 필터링이라고도 합니다.
 
-There are two methods of blocking client devices on your GL.iNet router: via the [router admin panel](#block-client-devices-via-the-admin-panel) or the [GL.iNet mobile app](#block-client-devices-via-the-glinet-mobile-app). 
+GL.iNet 라우터에서 클라이언트 장치를 차단하는 방법은 두 가지가 있습니다: [라우터 관리 패널](#관리-패널을-통한-클라이언트-장치-차단) 또는 [GL.iNet 모바일 앱](#glinet-모바일-앱을-통한-클라이언트-장치-차단)을 통하는 방법입니다.
 
-## Block client devices via the admin panel
+## 관리 패널을 통한 클라이언트 장치 차단
 
-### 1. Sign in to the admin panel
+### 1. 관리 패널에 로그인하세요
 
-In a web browser, enter `192.168.8.1`. Enter your password, then click **Login**. 
+웹 브라우저에서 `192.168.8.1`을 입력합니다. 비밀번호를 입력한 후 **Login**을 클릭합니다.
 
-### 2. Block client devices
+### 2. 클라이언트 장치 차단하기
 
-There are two ways to block client devices, depending on whether you have their MAC addresses:
+MAC 주소 보유 여부에 따라 클라이언트 장치를 차단하는 방법은 두 가지가 있습니다:
 
-* If you do not have their MAC addresses: Use the [first method](#method-1-block-devices-without-their-mac-addresses) which allows you to block the devices that appear in the lists.
-* If you have their MAC addresses: Use the [second method](#method-2-block-devices-with-their-mac-addresses). 
+* MAC 주소가 없는 경우: 목록에 표시되는 장치를 차단할 수 있는 [첫 번째 방법](#방법-1-mac-주소 없이-장치-차단)을 사용하세요.
+* MAC 주소가 있는 경우: [두 번째 방법](#방법-2-mac-주소로-장치-차단)을 사용하세요.
 
-#### Method 1: Block devices without their MAC addresses
+#### 방법 1: MAC 주소 없이 장치 차단
 
-1. In the left sidebar, click **Clients**.
-![click clients](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/click-clients.jpeg){class="glboxshadow"}
+1. 왼쪽 사이드바에서 **Clients**를 클릭합니다.
+![클라이언트 클릭](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/click-clients.jpeg){class="glboxshadow"}
 
-2. Next to the device, toggle the switch to on. 
-![toggle switch](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/toggle-block.jpeg){class="glboxshadow"}
+2. 장치 옆에서 스위치를 켭니다.
+![스위치 토글](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/toggle-block.jpeg){class="glboxshadow"}
 
-If you do not see the devices you want to block in the lists, you will need to block them by [adding their MAC addresses to the blocklist](#method-2-block-devices-with-their-mac-addresses). 
+목록에서 차단하려는 장치가 표시되지 않으면 [차단 목록에 MAC 주소를 추가하여](#방법-2-mac-주소로-장치-차단) 차단해야 합니다.
 
-#### Method 2: Block devices with their MAC addresses
+#### 방법 2: MAC 주소로 장치 차단
 
-To use this method, you will need to obtain the MAC address of the device. Refer to the instructions provided by the device manufacturer. 
-Once you have the device's MAC address, follow these steps: 
+이 방법을 사용하려면 장치의 MAC 주소를 가져와야 합니다. 장치 제조업체에서 제공하는 지침을 참조하세요.
+장치의 MAC 주소를 가져온 후 다음 단계를 따르세요:
 
-1. In the left sidebar, click **Clients**.
-2. At the top, click **Blocklist**. 
-![click blocklist](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/click-blocklist.jpeg){class="glboxshadow"}
-3. Follow either method to block devices: 
-    - To enter the MAC addresses individually: Enter them in the empty field.
-    - To import a list of MAC addresses: Click **Import Clients**. Import a file, then click **Import**. 
-4. Click **Apply**. 
-![click apply](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/click-apply.jpeg){class="glboxshadow"}
+1. 왼쪽 사이드바에서 **Clients**를 클릭합니다.
+2. 상단에서 **Blocklist**를 클릭합니다.
+![차단 목록 클릭](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/click-blocklist.jpeg){class="glboxshadow"}
+3. 다음 방법 중 하나를 사용하여 장치를 차단하세요:
+    - MAC 주소를 개별적으로 입력하려면: 빈 필드에 입력합니다.
+    - MAC 주소 목록을 가져오려면: **Import Clients**를 클릭합니다. 파일을 가져온 후 **Import**를 클릭합니다.
+4. **Apply**를 클릭합니다.
+![적용 클릭](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/click-apply.jpeg){class="glboxshadow"}
 
-## Block client devices via the GL.iNet mobile app
+## GL.iNet 모바일 앱을 통한 클라이언트 장치 차단
 
-**Note:** Before you start, install and set up the GL.iNet mobile app on your device. 
+**참고:** 시작하기 전에 장치에 GL.iNet 모바일 앱을 설치하고 설정하세요.
 
-There are two ways to block client devices, depending on whether you have their MAC addresses:
+MAC 주소 보유 여부에 따라 클라이언트 장치를 차단하는 방법은 두 가지가 있습니다:
 
-* If you do not have their MAC addresses: Use the [first method](#mobile-1) which allows you to block the devices that appear in the list. 
-* If you have their MAC addresses: Use the [second method](#mobile-2). 
+* MAC 주소가 없는 경우: 목록에 표시되는 장치를 차단할 수 있는 [첫 번째 방법](#모바일-1)을 사용하세요.
+* MAC 주소가 있는 경우: [두 번째 방법](#모바일-2)을 사용하세요.
 
-### Method 1: Block devices without their MAC addresses {#mobile-1}
+### 방법 1: MAC 주소 없이 장치 차단 {#mobile-1}
 
-1. On the main app screen, tap the device you want to block under **Connected Clients** and **Office Clients**. 
-![tap a device](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/tap-a-device.jpeg){class="glboxshadow"}
+1. 메인 앱 화면에서 **Connected Clients** 및 **Office Clients** 아래에서 차단하려는 장치를 탭합니다.
+![장치 탭](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/tap-a-device.jpeg){class="glboxshadow"}
 
-2. Under **Settings**, toggle the **Block** switch to on. 
-![toggle block](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/settings-toggle-block-to-on.jpeg){class="glboxshadow"}
+2. **Settings**에서 **Block** 스위치를 켭니다.
+![차단 토글](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/settings-toggle-block-to-on.jpeg){class="glboxshadow"}
 
-If you do not see the devices you want to block in the lists, you will need to block them by [adding their MAC addresses to the blocklist](#method-2-block-devices-with-their-mac-addresses-1)
+목록에서 차단하려는 장치가 표시되지 않으면 [차단 목록에 MAC 주소를 추가하여](#모바일-2) 차단해야 합니다.
 
-### Method 2: Block devices with their MAC addresses {#mobile-2}
+### 방법 2: MAC 주소로 장치 차단 {#mobile-2}
 
-To use this method, you will need to obtain the MAC address of the device you want to block. Refer to the instructions provided by your manufacturer. 
-Once you have the device's MAC address, follow these steps: 
+이 방법을 사용하려면 차단하려는 장치의 MAC 주소를 가져와야 합니다. 제조업체에서 제공하는 지침을 참조하세요.
+장치의 MAC 주소를 가져온 후 다음 단계를 따르세요:
 
-1. On the main app screen, tap the Settings icon > **Access Control**. 
-![tap access control](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/tap-access-control.jpeg){class="glboxshadow"}
+1. 메인 앱 화면에서 설정 아이콘을 탭한 후 **Access Control**을 탭합니다.
+![액세스 제어 탭](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/tap-access-control.jpeg){class="glboxshadow"}
 
-2. Tap **Block**.
-![tap block](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/tap-block.jpeg){class="glboxshadow"}
+2. **Block**을 탭합니다.
+![차단 탭](https://static.gl-inet.com/docs/router/en/4/tutorials/how-to-block-client-devices/tap-block.jpeg){class="glboxshadow"}
 
-3. Follow either method to block devices: 
-    - To enter the MAC addresses individually: Tap **Add MAC address**. Enter the MAC address, then tap **Done**.  
-    - To import a list of MAC addresses, click **Import Clients** > **Import Clients**. Tap a file.
+3. 다음 방법 중 하나를 사용하여 장치를 차단하세요:
+    - MAC 주소를 개별적으로 입력하려면: **Add MAC address**를 탭합니다. MAC 주소를 입력한 후 **Done**을 탭합니다.
+    - MAC 주소 목록을 가져오려면: **Import Clients** > **Import Clients**를 클릭합니다. 파일을 탭합니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 통해 문의해 주세요.

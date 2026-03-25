@@ -1,10 +1,10 @@
 # AdGuard Home
 
-AdGuard Home is a network-wide software for blocking ads and tracking. Once set up, it covers all devices on your home network with no need for additional client-side software.
+AdGuard Home는 광고 및 추적을 차단하는 네트워크 전용 소프트웨어입니다. 설정이 완료되면 추가 클라이언트 소프트웨어 없이 홈 네트워크의 모든 기기를 보호합니다.
 
-## Supported Models
+## 지원 모델
 
-??? "Supported Models"
+??? "지원 모델"
     - GL-E5800 (Mudi 7)
     - GL-MT5000 (Brume 3)
     - GL-MT3600BE (Beryl 7)
@@ -24,7 +24,7 @@ AdGuard Home is a network-wide software for blocking ads and tracking. Once set 
     - GL-AP1300 (Cirrus)
     - GL-S1300 (Convexa-S)
 
-??? "Unsupported Models"
+??? "미지원 모델"
     - GL-SFT1200 (Opal)
     - GL-MT1300 (Beryl)
     - GL-E750/E750V2 (Mudi)
@@ -36,28 +36,28 @@ AdGuard Home is a network-wide software for blocking ads and tracking. Once set 
     - GL-B1300 (Convexa-B)
     - GL-X300B (Collie)
 
-## Setup
+## 설정
 
-Log in to the router's web Admin Panel and go to **APPLICATIONS** -> **AdGuard Home**. 
+라우터의 웹 관리 패널에 로그인한 후 **APPLICATIONS** -> **AdGuard Home**로 이동합니다.
 
-Toggle the switch to enable AdGuard Home and click **Apply**. 
+스위치를 토글하여 AdGuard Home를 활성화하고 **Apply**를 클릭합니다.
 
 ![adguard home apply](https://static.gl-inet.com/docs/router/en/4/interface_guide/adguard_home/apply.png){class="glboxshadow"}
 
-- AdGuard Home Handle Client Requests: If this option is enabled, DNS queries from client devices will be handled directly by AdGuard Home. AdGuard Home will show DNS query logs by clients, but this will cause VPN policies based on domain not to work.
+- AdGuard Home Handle Client Requests: 이 옵션을 활성화하면 클라이언트 기기의 DNS 쿼리가 AdGuard Home에서 직접 처리됩니다. AdGuard Home에서 클라이언트별 DNS 쿼리 로그를 확인할 수 있지만, 도메인 기반 VPN 정책은 작동하지 않게 됩니다.
 
-This page displays statistics such as the DNS queries, blocked domains, etc, which is through the API provided by AdGuard Home. 
+이 페이지에는 DNS 쿼리, 차단된 도메인 등의 통계가 표시되며, 이는 AdGuard Home에서 제공하는 API를 통해 가져옵니다.
 
 ![adguard home web panel](https://static.gl-inet.com/docs/router/en/4/interface_guide/adguard_home/adguardhome_web_panel.png){class="glboxshadow"}
 
-Then please click **Settings Page**.
+그 다음 **Settings Page**를 클릭합니다.
 
 ![adguard home started](https://static.gl-inet.com/docs/router/en/4/interface_guide/adguard_home/settings_page.png){class="glboxshadow"}
 
-It will be re-directed to the AdGuard Home's official settings page, where you can perform advanced configuration for the filter rules, etc.
+AdGuard Home의 공식 설정 페이지로 이동하며, 여기서 필터 규칙 등의 고급 설정을 수행할 수 있습니다.
 
 ![adguard home settings](https://static.gl-inet.com/docs/router/en/4/interface_guide/adguard_home/adguardhome_dashboard.png){class="glboxshadow"}
 
-If you have any questions, please visit [Adguard Home Support Center](https://adguard.com/en/support.html){target="_blank"} for further assistance.
+질문이 있으시면 [Adguard Home 지원 센터](https://adguard.com/en/support.html){target="_blank"}를 방문하여 도움을 받으세요.
 
 ---

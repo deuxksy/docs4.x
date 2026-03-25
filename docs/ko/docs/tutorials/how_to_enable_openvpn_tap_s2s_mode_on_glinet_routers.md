@@ -1,50 +1,50 @@
-# How to enable OpenVPN TAP-S2S mode on GL.iNet routers?
+# GL.iNet 라우터에서 OpenVPN TAP-S2S 모드 활성화하는 방법
 
-## Usage Scenarios
+## 사용 시나리오
 
-After enabling TAP-S2S mode, the OpenVPN client device can remotely access the OpenVPN server device, and the OpenVPN server device can also remotely access the OpenVPN client device. However, the downside is that the VPN rules set by the OpenVPN client themselves will not take effect after enabling TAP-S2S mode.
+TAP-S2S 모드를 활성화한 후 OpenVPN 클라이언트 장치는 OpenVPN 서버 장치에 원격으로 액세스할 수 있으며, OpenVPN 서버 장치도 OpenVPN 클라이언트 장치에 원격으로 액세스할 수 있습니다. 그러나 단점은 TAP-S2S 모드를 활성화한 후 OpenVPN 클라이언트가 설정한 VPN 규칙이 적용되지 않는다는 것입니다.
 
-## TAP-S2S vs TUN mode
+## TAP-S2S vs TUN 모드
 
-Network Topology
+네트워크 토폴로지
 
 ![tap_s2s_topology](https://static.gl-inet.com/docs/router/en/4/tutorials/tap_s2s_vs_tun/tap_s2s_topology.png){class="glboxshadow"}
 
 ![tun_topology](https://static.gl-inet.com/docs/router/en/4/tutorials/tap_s2s_vs_tun/tun_topology.png){class="glboxshadow"}
 
-TAP-S2S and TUN modes have the same physical connection method, but their logical connection methods are different. Here are the differences:
+TAP-S2S와 TUN 모드는 동일한 물리적 연결 방법을 사용하지만 논리적 연결 방법이 다릅니다. 차이점은 다음과 같습니다:
 
-1. When devices on the GL-X3000 LAN side access the management backend of the GL-MT6000, TAP-S2S mode does not use a virtual IP, but TUN mode does.
-2. When devices on the GL-X3000 LAN side access the management backend of the GL-X3000, TAP-S2S mode uses a virtual IP, but TUN mode does not.
-3. When the GL-X3000 LAN-side device knows the IP address of a device on the GL-MT6000 LAN side, TAP-S2S mode allows direct remote access, but TUN mode cannot access directly without enabling additional settings.
-4. In TAP-S2S mode, the GL-X3000 needs to go through the GL-MT6000 to access the internet, while in TUN mode, the Gl-X3000 can directly access the internet. Therefore, in TAP-S2S mode, the VPN rules set by the GL-X3000 do not take effect and the VPN rules set by the GL-MT6000 must be followed.
+1. GL-X3000 LAN 측의 장치가 GL-MT6000의 관리 백엔드에 액세스할 때 TAP-S2S 모드는 가상 IP를 사용하지 않지만 TUN 모드는 사용합니다.
+2. GL-X3000 LAN 측의 장치가 GL-X3000의 관리 백엔드에 액세스할 때 TAP-S2S 모드는 가상 IP를 사용하지만 TUN 모드는 사용하지 않습니다.
+3. GL-X3000 LAN 측 장치가 GL-MT6000 LAN 측 장치의 IP 주소를 알고 있을 때 TAP-S2S 모드는 직접 원격 액세스를 허용하지만 TUN 모드는 추가 설정을 활성화하지 않으면 직접 액세스할 수 없습니다.
+4. TAP-S2S 모드에서 GL-X3000은 인터넷에 액세스하기 위해 GL-MT6000를 거쳐야 하지만 TUN 모드에서 GL-X3000은 인터넷에 직접 액세스할 수 있습니다. 따라서 TAP-S2S 모드에서 GL-X3000이 설정한 VPN 규칙은 적용되지 않으며 GL-MT6000이 설정한 VPN 규칙을 따라야 합니다.
 
-## Tutorials
+## 튜토리얼
 
-Firstly, use a router (assumed to be GL-MT6000) with a public IP to open the OpenVPN Server, set the device mode to **TAP-S2S**, click Apply, and then click **Export Client Configuration**.
+먼저 공용 IP가 있는 라우터(GL-MT6000로 가정)를 사용하여 OpenVPN 서버를 열고 장치 모드를 **TAP-S2S**로 설정한 후 **Apply**를 클릭하고 **Export Client Configuration**를 클릭합니다.
 
 ![tutorials_select_mode](https://static.gl-inet.com/docs/router/en/4/tutorials/tap_s2s_vs_tun/tutorials_select_mode.png){class="glboxshadow"}
 
 ![tutorials_export](https://static.gl-inet.com/docs/router/en/4/tutorials/tap_s2s_vs_tun/tutorials_export.png){class="glboxshadow"}
 
-In addition, use a router (assuming it is GL-X3000) with a public IP to open the OpenVPN client, import the configuration file downloaded in the above steps, click **Apply**, and then enable the function.
+또한 공용 IP가 있는 라우터(GL-X3000로 가정)를 사용하여 OpenVPN 클라이언트를 열고 위 단계에서 다운로드한 구성 파일을 가져온 후 **Apply**를 클릭한 후 기능을 활성화합니다.
 
 ![tutorials_select_file](https://static.gl-inet.com/docs/router/en/4/tutorials/tap_s2s_vs_tun/tutorials_select_file.png){class="glboxshadow"}
 
 ![tutorials_start](https://static.gl-inet.com/docs/router/en/4/tutorials/tap_s2s_vs_tun/tutorials_start.png){class="glboxshadow"}
 
-At this time, the IP address of the GL-X3000 router will change. You can log in to the GL-MT6000 management dashboard, open **Clients**, and find the new IP address of the GL-X3000.
+이때 GL-X3000 라우터의 IP 주소가 변경됩니다. GL-MT6000 관리 대시보드에 로그인한 후 **Clients**를 열고 GL-X3000의 새 IP 주소를 찾을 수 있습니다.
 
 ![tutorials_new_IP_address](https://static.gl-inet.com/docs/router/en/4/tutorials/tap_s2s_vs_tun/tutorials_new_IP_address.png){class="glboxshadow"}
 
-If the GL-MT6000 loses network connection or turns off the OpenVPN server, or the GL-X3000 turns off the OpenVPN client , the  IP address of the GL-X3000 will be restored.
+GL-MT6000의 네트워크 연결이 끊기거나 OpenVPN 서버를 끄거나 GL-X3000가 OpenVPN 클라이언트를 끄면 GL-X3000의 IP 주소가 복원됩니다.
 
-Points to Note:
+참고 사항:
 
-- Both devices must be upgraded to version v4.5, otherwise they will not be able to connect;
-- TAP-S2S only works with Global Proxy Mode, it will adjust automatically with OpenVPN on.
-- After enabling this feature, the following functions cannot be used: VPN server, Adguard Home, Parental Control, ZeroTier, Tailscale, Tor, Firewall, Multi-WAN, LAN, DNS, Network Mode, IPv6, MAC Address, Drop-in Gateway, IGMP Snooping, etc.
+- 두 장치 모두 버전 v4.5로 업그레이드해야 합니다. 그렇지 않으면 연결할 수 없습니다.
+- TAP-S2S는 전역 프록시 모드에서만 작동하며 OpenVPN과 함께 자동으로 조정됩니다.
+- 이 기능을 활성화한 후 다음 기능을 사용할 수 없습니다: VPN 서버, Adguard Home, 자녀 보호, ZeroTier, Tailscale, Tor, 방화벽, Multi-WAN, LAN, DNS, 네트워크 모드, IPv6, MAC 주소, Drop-in Gateway, IGMP Snooping 등.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 통해 문의해 주세요.

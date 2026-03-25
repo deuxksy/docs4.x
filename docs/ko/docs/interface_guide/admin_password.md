@@ -1,23 +1,23 @@
-# Admin Password
+# 관리자 비밀번호
 
-**Note**: This page has been moved to [Security](security.md) since v4.3.
+**참고**: 이 페이지는 v4.3부터 [보안](security.md)으로 이동되었습니다.
 
-The Admin Password page allows you to set or change the password for the router's administrative interface.
+관리자 비밀번호 페이지에서는 라우터 관리 인터페이스의 비밀번호를 설정하거나 변경할 수 있습니다.
 
 ---
 
-On the left side of the web Admin Panel, go to **SYSTEM** > **Admin Password**.
+웹 관리 패널 왼쪽에서 **SYSTEM** > **Admin Password**로 이동합니다.
 
 ![admin password](https://static.gl-inet.com/docs/router/en/4/tutorials/admin_password/admin_password.png){class="glboxshadow"}
 
-Change the login password for your router's web Admin Panel. Your current password is required to make changes.
+라우터 웹 관리 패널의 로그인 비밀번호를 변경합니다. 변경하려면 현재 비밀번호가 필요합니다.
 
-The admin password must meet the following requirements:
+관리자 비밀번호는 다음 요구사항을 충족해야 합니다:
 
-- Minimum 10 characters and maximum 63 characters.
-- Letters (case senstive), numbers and symbols `` ! @ # $ % ^ & * ( ) _ + - = , . > < | ? / \ [ ] { } : ; " ' ` ~ `` are allowed.
-- At least two of uppercase letters, lowercase letters, numbers, and symbols are required.
+- 최소 10자 이상, 최대 63자 이하
+- 문자(대소문자 구분), 숫자 및 기호 `` ! @ # $ % ^ & * ( ) _ + - = , . > < | ? / \ [ ] { } : ; " ' ` ~ `` 사용 가능
+- 대문자, 소문자, 숫자, 기호 중 최소 두 가지 이상 조합 필요
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+궁금한 점이 있으시면 [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 이용하세요.

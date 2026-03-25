@@ -1,65 +1,65 @@
-# How to access the LuCI interface via GoodCloud
+# GoodCloud를 통해 LuCI 인터페이스에 접근하는 방법
 
-GL.iNet [GoodCloud](https://www.goodcloud.xyz/){target="_blank"} breaks through geographical limitations and provides a convenient way for remote router management. Through GoodCloud, you can access the LuCI interface of the router anytime and anywhere, perform various settings on the router and easily manage the network.
+GL.iNet [GoodCloud](https://www.goodcloud.xyz/){target="_blank"}는 지리적 제한을 극복하고 원격 라우터 관리를 위한 편리한 방법을 제공합니다. GoodCloud를 통해 언제 어디서나 라우터의 LuCI 인터페이스에 접근하여 라우터의 다양한 설정을 수행하고 네트워크를 쉽게 관리할 수 있습니다.
 
-## Preparation
+## 준비 사항
 
-- Hardware Equipment: A GL.iNet router that has been configured with Internet and is operating normally.
-- Network Environment: The network to which the router is connected is stable and can access the Internet normally.
-- Device Binding: You need to [bind your GL.iNet router to your GoodCloud account](../interface_guide/cloud.md/#setup-your-goodcloud-account). If you don't have a GoodCloud account, please [register](https://www.goodcloud.xyz/){target="_blank"} one.
+- 하드웨어 장비: 인터넷이 구성되어 있고 정상적으로 작동하는 GL.iNet 라우터.
+- 네트워크 환경: 라우터가 연결된 네트워크가 안정적이고 정상적으로 인터넷에 접근할 수 있어야 합니다.
+- 기기 바인딩: [GL.iNet 라우터를 GoodCloud 계정에 바인딩](../interface_guide/cloud.md/#setup-your-goodcloud-account)해야 합니다. GoodCloud 계정이 없다면 [회원가입](https://www.goodcloud.xyz/){target="_blank"}을 하세요.
 
-## Steps to Access the LuCI Interface via GoodCloud
+## GoodCloud를 통해 LuCI 인터페이스에 접근하는 단계
 
-### For Firmware Version 4.7 or Above
+### 펌웨어 버전 4.7 이상의 경우
 
-Starting from v4.7, users can directly access the LuCI page from the GoodCloud platform without going through the router's web Admin Panel.
+v4.7부터 사용자는 라우터의 웹 관리 패널을 거치지 않고 GoodCloud 플랫폼에서 직접 LuCI 페이지에 접근할 수 있습니다.
 
-1. Log in to your GoodCloud account [here](https://www.goodcloud.xyz/){target="_blank"}.
+1. [여기](https://www.goodcloud.xyz/){target="_blank"}에서 GoodCloud 계정에 로그인합니다.
 
-2. On the left side -> **Devices** -> **Bound Devices**, Click the name of the device you want to access, then you will see the icons of Remote Web Access.
+2. 왼쪽 사이드바 -> **Devices** -> **Bound Devices**에서 접근하려는 기기의 이름을 클릭하면 Remote Web Access 아이콘이 표시됩니다.
 
     ![remote gui](https://static.gl-inet.com/docs/router/en/4/tutorials/access_luci_via_goodcloud/remote_gui_mt6000.png){class="glboxshadow"}
 
-    The pop-up window displays the port 80. Change the port to **8080**, click Apply.
+    팝업 창에 포트 80이 표시됩니다. 포트를 **8080**으로 변경하고 Apply를 클릭합니다.
 
     ![change port](https://static.gl-inet.com/docs/router/en/4/tutorials/access_luci_via_goodcloud/change_port.png){class="glboxshadow"}
 
-3. You will be re-directed to the LuCI login page. Enter your admin password to log in.
+3. LuCI 로그인 페이지로 리다이렉트됩니다. 관리 비밀번호를 입력하여 로그인합니다.
 
     ![log in luci](https://static.gl-inet.com/docs/router/en/4/tutorials/access_luci_via_goodcloud/log_in_luci.png){class="glboxshadow gl-80-desktop"}
 
-4. You have successfully logged in to LuCI.
+4. LuCI에 성공적으로 로그인했습니다.
 
-    ![luci interface](https://static.gl-inet.com/docs/router/en/4/tutorials/access_luci_via_goodcloud/log_in_luci_mt6000.png){class="glboxshadow"}    
+    ![luci interface](https://static.gl-inet.com/docs/router/en/4/tutorials/access_luci_via_goodcloud/log_in_luci_mt6000.png){class="glboxshadow"}
 
-### For Firmware Version 4.6 or Below
+### 펌웨어 버전 4.6 이하의 경우
 
-1. Log in to your GoodCloud account [here](https://www.goodcloud.xyz/){target="_blank"}.
+1. [여기](https://www.goodcloud.xyz/){target="_blank"}에서 GoodCloud 계정에 로그인합니다.
 
-2. On the left side -> **Devices** -> **Bound Devices**, Click the name of the device you want to access, then you will see the icons of Remote Web Access.
+2. 왼쪽 사이드바 -> **Devices** -> **Bound Devices**에서 접근하려는 기기의 이름을 클릭하면 Remote Web Access 아이콘이 표시됩니다.
 
     ![remote gui](https://static.gl-inet.com/docs/router/en/4/tutorials/access_luci_via_goodcloud/remote_gui_of_bound_device.png){class="glboxshadow"}
 
-    The pop-up window displays the port 80, click Apply.
+    팝업 창에 포트 80이 표시되면 Apply를 클릭합니다.
 
     ![vist web apply](https://static.gl-inet.com/docs/router/en/4/tutorials/access_luci_via_goodcloud/visit_web_apply.png){class="glboxshadow"}
 
-3. You will then be re-directed to the GL.iNet Admin Panel login page. Enter your admin password to log in.
+3. GL.iNet 관리 패널 로그인 페이지로 리다이렉트됩니다. 관리 비밀번호를 입력하여 로그인합니다.
 
     ![admin panel login](https://static.gl-inet.com/docs/router/en/4/tutorials/access_luci_via_goodcloud/admin_panel_login.png){class="glboxshadow"}
 
-4. After login, on the left side -> SYSTEM -> Advanced Settings, click the hyperlink to go to LuCI interface.
+4. 로그인 후 왼쪽 사이드바 -> SYSTEM -> Advanced Settings에서 하이퍼링크를 클릭하여 LuCI 인터페이스로 이동합니다.
 
     ![advanced settings](https://static.gl-inet.com/docs/router/en/4/tutorials/access_luci_via_goodcloud/advanced_settings.png){class="glboxshadow"}
 
-    You will be re-directed to the LuCI login page. Enter the same admin password to log in.
+    LuCI 로그인 페이지로 리다이렉트됩니다. 동일한 관리 비밀번호를 입력하여 로그인합니다.
 
     ![log in luci](https://static.gl-inet.com/docs/router/en/4/tutorials/access_luci_via_goodcloud/log_in_luci.png){class="glboxshadow gl-80-desktop"}
 
-5. You have successfully logged in to LuCI.
+5. LuCI에 성공적으로 로그인했습니다.
 
     ![luci interface](https://static.gl-inet.com/docs/router/en/4/tutorials/access_luci_via_goodcloud/luci_interface_example.png){class="glboxshadow"}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 이용하세요.

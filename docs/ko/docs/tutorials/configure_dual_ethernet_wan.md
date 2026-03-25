@@ -1,41 +1,41 @@
-# Configure dual wired Ethernet WAN via an Ethernet to USB-A adapter
+# 이더넷-USB 어댑터를 통한 듀얼 유선 이더넷 WAN 구성
 
-You can configure dual wired Ethernet WAN access on a single-WAN-port router via an Ethernet-to-USB-A adapter. 
+단일 WAN 포트 라우터에서 이더넷-USB-A 어댑터를 통해 듀얼 유선 이더넷 WAN 액세스를 구성할 수 있습니다.
 
-GL.iNet routers support common Ethernet-to-USB-A adapters, allowing you to convert the wired Ethernet access from your ISP router to a USB connection via the router's USB port, providing the router with an additional wired Ethernet access alongside the WAN port.
+GL.iNet 라우터는 일반적인 이더넷-USB-A 어댑터를 지원하여, ISP 라우터의 유선 이더넷 연결을 라우터의 USB 포트를 통해 USB 연결로 변환할 수 있습니다. 이를 통해 WAN 포트와 함께 추가 유선 이더넷 연결을 제공합니다.
 
-## Topology
+## 토폴로지
 
 ![Topology](https://static.gl-inet.com/docs/router/en/4/tutorials/multiwan_wire/adaptor.png){class="glboxshadow"}
 
-## Setup steps
+## 설정 단계
 
-1. Plug the Ethernet to USB-A adapter into the USB port of your GL.iNet router, and connect the other end to your ISP router.
+1. 이더넷-USB-A 어댑터를 GL.iNet 라우터의 USB 포트에 연결하고, 다른 쪽 끝을 ISP 라우터에 연결합니다.
 
-2. Install the USB driver. 
+2. USB 드라이버를 설치합니다.
 
-    Log in to the router's web admin panel, navigate to **Application** -> **Plug-ins**, and install the USB network driver for your adapter. 
+    라우터의 웹 관리 패널에 로그인하고 **Application** -> **Plug-ins**로 이동한 다음 어댑터용 USB 네트워크 드라이버를 설치합니다.
 
-    For instance, if you're using a Realtek adapter, please install the **kmod-usb-net-rtl8152** driver. 
+    예를 들어 Realtek 어댑터를 사용하는 경우 **kmod-usb-net-rtl8152** 드라이버를 설치하세요.
 
     ![plugins](https://static.gl-inet.com/docs/router/en/4/tutorials/multiwan_wire/plugins_usb.png){class="glboxshadow"}
 
-    Wait for installation to complete.
+    설치가 완료될 때까지 기다립니다.
 
     ![installation suceeded](https://static.gl-inet.com/docs/router/en/4/tutorials/multiwan_wire/suceeded.png){class="glboxshadow"}
 
-3. Connect by USB Tethering.
+3. USB 테더링으로 연결합니다.
 
-    Once the driver installation is complete, navigate to **INTERNET** -> **Tethering** section. 
-    
-    The USB connection will be detected, allowing you to connect to your ISP router.
+    드라이버 설치가 완료되면 **INTERNET** -> **Tethering** 섹션으로 이동합니다.
+
+    USB 연결이 감지되어 ISP 라우터에 연결할 수 있습니다.
 
     ![detected](https://static.gl-inet.com/docs/router/en/4/tutorials/multiwan_wire/detected.png){class="glboxshadow"}
 
-    Click on **Connect** and wait a minute. When a green dot lights up and the page displays information such as IP address, it indicates that USB Tethering connection is successful.
+    **Connect**를 클릭하고 잠시 기다립니다. 녹색 점이 켜지고 IP 주소와 같은 정보가 페이지에 표시되면 USB 테더링 연결이 성공한 것입니다.
 
     ![tether](https://static.gl-inet.com/docs/router/en/4/tutorials/multiwan_wire/tether.png){class="glboxshadow"}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 이용하세요.

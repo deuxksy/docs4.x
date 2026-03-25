@@ -1,57 +1,57 @@
-# How to manually upgrade or downgrade your router firmware (from v4.x to v4.x)?
+# 라우터 펌웨어 수동 업그레이드 또는 다운그레이드 방법 (v4.x에서 v4.x로)
 
-This tutorial will show you **how to manually upgrade or downgrade your router firmware (from v4.x to v4.x)**. The steps for manually upgrading and downgrading your router's firmware are the same.
+이 튜토리얼에서는 **라우터 펌웨어를 수동으로 업그레이드하거나 다운그레이드하는 방법(v4.x에서 v4.x로)**을 안내합니다. 라우터 펌웨어를 수동으로 업그레이드하고 다운그레이드하는 단계는 동일합니다.
 
-!!! Note "About upgrading and downgrading your router firmware"
+!!! Note "라우터 펌웨어 업그레이드 및 다운그레이드에 대해"
 
-    **Upgrade:** GL.iNet routers running firmware version 4.x do not offer the auto-update feature. 
-    
-    When a new firmware version is available, you will see the "Upgrade Reminder" prompt after you sign in to the router admin panel. You can click the **Upgrade** button to install the latest firmware version listed there. If you have a specific firmware version you want to upgrade to, follow the steps below to upgrade your router manually. 
+    **업그레이드:** 펌웨어 버전 4.x를 실행하는 GL.iNet 라우터는 자동 업데이트 기능을 제공하지 않습니다.
 
-    **Downgrade:** You can downgrade your router's firmware to resolve certain issues.
+    새 펌웨어 버전을 사용할 수 있게 되면 라우터 관리 패널에 로그인한 후 "Upgrade Reminder" 프롬프트가 표시됩니다. **Upgrade** 버튼을 클릭하여 나열된 최신 펌웨어 버전을 설치할 수 있습니다. 업그레이드할 특정 펌웨어 버전이 있는 경우 아래 단계에 따라 라우터를 수동으로 업그레이드하세요.
 
-## 1. Check if your router is running the latest firmware version (Only for upgrade)
+    **다운그레이드:** 특정 문제를 해결하기 위해 라우터 펌웨어를 다운그레이드할 수 있습니다.
 
-1. In a web browser, enter the URL to your router's admin panel (e.g., 192.168.8.1) and sign in.
-2. From the left sidebar, select **SYSTEM** > **Upgrade**.  
+## 1. 라우터가 최신 펌웨어 버전을 실행 중인지 확인 (업그레이드 전용)
 
-## 2. Download the firmware file
+1. 웹 브라우저에서 라우터 관리 패널 URL을 입력합니다 (예: 192.168.8.1).
+2. 왼쪽 사이드바에서 **SYSTEM** > **Upgrade**를 선택합니다.
 
-1. In the search bar of the [firmware download center](https://dl.gl-inet.com/), search for and select your router model.
-2. In the **Stable** tab or other tabs, select **Download for common upgrade and uboot** next to the firmware version you want to download. 
+## 2. 펌웨어 파일 다운로드
 
-## 3. Upload the firmware
+1. [펌웨어 다운로드 센터](https://dl.gl-inet.com/)의 검색창에서 라우터 모델을 검색하여 선택합니다.
+2. **Stable** 탭 또는 기타 탭에서 다운로드하려는 펌웨어 버전 옆의 **Download for common upgrade and uboot**를 선택합니다.
 
-The following instructions were written for uploading your firmware through the router admin panel.  (To upload your firmware via the GL.iNet mobile app, [download the app](https://www.gl-inet.com/app/) and set it up.)
+## 3. 펌웨어 업로드
 
-1. In a web browser, enter the URL to your router's admin panel (e.g., 192.168.8.1) and sign in. 
-2. (Optional) If you want to back up your current settings, follow the steps below.
+다음 지침은 라우터 관리 패널을 통해 펌웨어를 업로드하는 방법으로 작성되었습니다. (GL.iNet 모바일 앱을 통해 펌웨어를 업로드하려면 [앱을 다운로드](https://www.gl-inet.com/app/)하여 설정하세요.)
 
-    ??? "Back up your current settings"
+1. 웹 브라우저에서 라우터 관리 패널 URL을 입력합니다 (예: 192.168.8.1).
+2. (선택 사항) 현재 설정을 백업하려면 다음 단계를 따르세요.
 
-        a. From the left sidebar, click **SYSTEM** > **Advanced Settings**. 
+    ??? "현재 설정 백업"
 
-        b. Click the link or **Go To LuCI** button to access LuCI login page. 
+        a. 왼쪽 사이드바에서 **SYSTEM** > **Advanced Settings**를 클릭합니다.
 
-        c. Enter the admin password, then click **Log in**. 
+        b. 링크 또는 **Go To LuCI** 버튼을 클릭하여 LuCI 로그인 페이지에 액세스합니다.
 
-        d. Click **System** > **Backup / Flash Firmware**. 
+        c. 관리 비밀번호를 입력한 후 **Log in**을 클릭합니다.
 
-        e. Under **Backup**, click **Generate archive**. A file containing your current settings will be downloaded to your device. 
-        
-        **Please note that this file is only applicable to the firmware version at the time of backup and not to other firmware versions.**
+        d. **System** > **Backup / Flash Firmware**를 클릭합니다.
 
-3. From the left sidebar, click **SYSTEM** > **Upgrade**. 
-4. Click **Local Upgrade** and select the file you downloaded earlier. 
-5. To retain your current settings (e.g., your router admin password), toggle **Keep Settings** to on. 
-6. Click **Install**.
+        e. **Backup** 아래에서 **Generate archive**를 클릭합니다. 현재 설정이 포함된 파일이 장치에 다운로드됩니다.
 
-**Note:** During the upgrade process, do not power off the router. After the upgrade is complete, you will see the router login screen. 
+        **이 파일은 백업 당시의 펌웨어 버전에만 적용되며 다른 펌웨어 버전에는 적용되지 않습니다.**
 
-If you lost the router settings during the firmware update process, restore your router settings. 
+3. 왼쪽 사이드바에서 **SYSTEM** > **Upgrade**를 클릭합니다.
+4. **Local Upgrade**를 클릭하고 앞서 다운로드한 파일을 선택합니다.
+5. 현재 설정(예: 라우터 관리 비밀번호)을 유지하려면 **Keep Settings**를 켭니다.
+6. **Install**을 클릭합니다.
 
-If the above method doesn't work, try upgrading the firmware via [U-boot](../faq/debrick.md).
+**참고:** 업그레이드 과정 중 라우터의 전원을 끄지 마세요. 업그레이드가 완료되면 라우터 로그인 화면이 표시됩니다.
+
+펌웨어 업데이트 과정에서 라우터 설정을 잃어버린 경우 라우터 설정을 복원합니다.
+
+위 방법이 작동하지 않으면 [U-boot](../faq/debrick.md)를 통해 펌웨어를 업그레이드해 보세요.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 통해 문의해 주세요.
