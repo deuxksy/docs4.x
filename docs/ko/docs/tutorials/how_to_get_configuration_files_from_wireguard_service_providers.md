@@ -1,367 +1,367 @@
-# How to get configuration files from WireGuard service providers
+# WireGuard 서비스 제공업체에서 구성 파일 가져오기
 
 ??? "AzireVPN"
     ### AzireVPN
 
-    [Official Website](https://www.azirevpn.com/aff/9x7wisg4){target="_blank"}
+    [공식 웹사이트](https://www.azirevpn.com/aff/9x7wisg4){target="_blank"}
 
-    1. Access [AzireVPN official website](https://www.azirevpn.com/aff/9x7wisg4){target="_blank"} and login, then access the [WireGuard Configuration generator](https://www.azirevpn.com/cfg/wireguard){target="_blank"}
+    1. [AzireVPN 공식 웹사이트](https://www.azirevpn.com/aff/9x7wisg4){target="_blank"}에 접속하여 로그인한 후 [WireGuard Configuration generator](https://www.azirevpn.com/cfg/wireguard){target="_blank"}에 접속하세요
 
-        ![azirevpn wireguard configuration generator](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/azirevpn/azirevpn_wireguard_generator.png){class="glboxshadow"}
+        ![azirevpn wireguard configuration generator](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/azirevpn/azirevpn_wireguard_generator.png){class="glboxshadow"}
 
-    2. At the IP option, please select **IPv4**. Then click **Download Configuration**.
+    2. IP 옵션에서 **IPv4**를 선택합니다. 그런 다음 **Download Configuration**을 클릭합니다.
 
-        ![azirevpn wireguard configuration generator](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/azirevpn/azirevpn_wireguard_generator_ip.png){class="glboxshadow"}
+        ![azirevpn wireguard configuration generator](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/azirevpn/azirevpn_wireguard_generator_ip.png){class="glboxshadow"}
 
-    3. Then follow [this guide](../interface_guide/wireguard_client.md#set-up-azirevpn) to continue.
+    3. 그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-azirevpn)를 따라 계속하세요.
 
-    4. You can also use [mobile app](../faq/mobile_app.md) to setup AzireVPN.
+    4. [모바일 앱](../faq/mobile_app.md)을 사용하여 AzireVPN을 설정할 수도 있습니다.
 
 ??? "Hide.me VPN"
     ### Hide.me VPN
 
-    [Official Website](https://hide.me/?friend=glinet){target="_blank"}
+    [공식 웹사이트](https://hide.me/?friend=glinet){target="_blank"}
 
-    Hide.me VPN provides a simple way to use their WireGuard service in GL.iNet router.
+    Hide.me VPN은 GL.iNet 라우터에서 자신들의 WireGuard 서비스를 사용하는 간단한 방법을 제공합니다.
 
-    1. [SSH](https://docs.gl-inet.com/router/en/3/tutorials/ssh/){target="_blank"} to router.
+    1. 라우터에 [SSH](https://docs.gl-inet.com/router/en/3/tutorials/ssh/){target="_blank"}로 접속하세요.
 
-    2. Copy the install url below, then paste it to the terminal, hit the Enter key. (Right click the mouse will paste it.)
+    2. 아래 설치 URL을 복사한 후 터미널에 붙여넣고 Enter 키를 누르세요. (마우스 오른쪽 버튼을 클릭하면 붙여넣기 됩니다.)
 
         `curl -fsSL https://raw.githubusercontent.com/eventure/hide.client.routers/master/glinet_v4/hidemevpn | sh -s install`
 
-    3. It will start installing, then ask for the username and password. When typing or pasting the password, no change is visible on the terminal, just hit the Enter key after typing.
+    3. 설치가 시작되면 사용자 이름과 비밀번호를 묻습니다. 비밀번호를 입력하거나 붙여넣을 때 터미널에는 변경 사항이 표시되지 않으므로 입력 후 Enter 키를 누르세요.
 
-    4. Once you're done, go to the web Admin Panel and you'll see that a hide.me VPN group has been created with configuration files already in it. Just connect as you would any other configuration file.
+    4. 완료되면 웹 관리 패널로 이동하면 hide.me VPN 그룹이 생성되었고 구성 파일이 이미 포함되어 있는 것을 볼 수 있습니다. 다른 구성 파일과 마찬가지로 연결하면 됩니다.
 
-    **Note:** The key in the Hide.me VPN configuration file is regenerated before each connection and becomes invalid after disconnection, so copying this configuration file to other devices will not connect successfully.
+    **참고**: Hide.me VPN 구성 파일의 키는 연결하기 전에 다시 생성되며 연결 해제 후 유효하지 않으므로 이 구성 파일을 다른 장치에 복사해도 연결되지 않습니다.
 
-    [Refer link](https://github.com/eventure/hide.client.routers){target="_blank"}
+    [참조 링크](https://github.com/eventure/hide.client.routers){target="_blank"}
 
 ??? "Mullvad"
     ### Mullvad
 
-    [Official Website](https://mullvad.net/){target="_blank"}
+    [공식 웹사이트](https://mullvad.net/){target="_blank"}
 
-    1. Access [Mullvad Official Website](https://mullvad.net/){target="_blank"} and login, then access the [WireGuard configuration file generator](https://mullvad.net/en/account/#/wireguard-config){target="_blank"}
+    1. [Mullvad 공식 웹사이트](https://mullvad.net/){target="_blank"}에 접속하여 로그인한 후 [WireGuard configuration file generator](https://mullvad.net/en/account/#/wireguard-config){target="_blank"}에 접속하세요
 
-    2. Then follow [this guide](../interface_guide/wireguard_client.md/#set-up-mullvad) to continue.
+    2. 그런 다음 [이 가이드](../interface_guide/wireguard_client.md/#set-up-mullvad)를 따라 계속하세요.
 
-    3. You can also use [mobile app](../faq/mobile_app.md) to setup Mullvad.
+    3. [모바일 앱](../faq/mobile_app.md)을 사용하여 Mullvad를 설정할 수도 있습니다.
 
 ??? "PIA (Private Internet Access)"
     ### PIA (Private Internet Access)
 
-    [Official Website](https://privateinternetaccess.com/offer/GLiNET_71dx4t8bl){target="_blank"}
+    [공식 웹사이트](https://privateinternetaccess.com/offer/GLiNET_71dx4t8bl){target="_blank"}
 
-    It can't downlaod the WireGuard configs from its website, please use [mobile app](../faq/mobile_app.md) to setup PIA VPN.
+    웹사이트에서 WireGuard 구성을 다운로드할 수 없으므로 [모바일 앱](../faq/mobile_app.md)을 사용하여 PIA VPN을 설정하세요.
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Fc7NTdQ9QFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ??? "Surfshark"
     ### Surfshark
 
-    [Official Website](https://get.surfshark.net/aff_c?offer_id=926&aff_id=1400){target="_blank"}
+    [공식 웹사이트](https://get.surfshark.net/aff_c?offer_id=926&aff_id=1400){target="_blank"}
 
-    1. If you are using [Surfshark](https://get.surfshark.net/aff_c?offer_id=926&aff_id=1400){target="_blank"}, log in then go to [this](https://my.surfshark.com/vpn/manual-setup/router){target="_blank"} page, click on **Router**, and select **WireGuard**.
+    1. [Surfshark](https://get.surfshark.net/aff_c?offer_id=926&aff_id=1400){target="_blank"}를 사용하는 경우 로그인한 후 [이 페이지](https://my.surfshark.com/vpn/manual-setup/router){target="_blank"}로 이동하여 **Router**를 클릭하고 **WireGuard**를 선택하세요.
 
-        ![surfshark wireguard manual setup](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/surfshark/surfshark_wireguard_manual_setup_1.png){class="glboxshadow"}
+        ![surfshark wireguard manual setup](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/surfshark/surfshark_wireguard_manual_setup_1.png){class="glboxshadow"}
 
-    2. In the next window, select **I don't have a key pair**.
+    2. 다음 창에서 **I don't have a key pair**를 선택하세요.
 
-        ![surfshark wireguard manual setup](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/surfshark/surfshark_wireguard_manual_setup_2.png){class="glboxshadow"}
+        ![surfshark wireguard manual setup](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/surfshark/surfshark_wireguard_manual_setup_2.png){class="glboxshadow"}
 
-    3. Select **Generate a new key pair**.
+    3. **Generate a new key pair**를 선택하세요.
 
-        ![surfshark wireguard manual setup](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/surfshark/surfshark_wireguard_manual_setup_3.png){class="glboxshadow"}
+        ![surfshark wireguard manual setup](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/surfshark/surfshark_wireguard_manual_setup_3.png){class="glboxshadow"}
 
-    4. Once the key has been generatd, select **Choose a location**.
+    4. 키가 생성되면 **Choose a location**를 선택하세요.
 
-        ![surfshark wireguard manual setup](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/surfshark/surfshark_wireguard_manual_setup_4.png){class="glboxshadow"}
+        ![surfshark wireguard manual setup](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/surfshark/surfshark_wireguard_manual_setup_4.png){class="glboxshadow"}
 
-    5. Lastly, choose a location you would like to set up, and hit the **download** button next to the location. You will be able to download the configuration files.
+    5. 마지막으로 설정하려는 위치를 선택하고 위치 옆의 **download** 버튼을 누르세요. 구성 파일을 다운로드할 수 있습니다.
 
-        ![surfshark wireguard manual setup](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/surfshark/surfshark_wireguard_manual_setup_5.png){class="glboxshadow"}
+        ![surfshark wireguard manual setup](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/surfshark/surfshark_wireguard_manual_setup_5.png){class="glboxshadow"}
 
-    6. Then follow [this guide](../interface_guide/wireguard_client.md#set-up-surfshark) to continue.
+    6. 그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-surfshark)를 따라 계속하세요.
 
-    [Refer link](https://support.surfshark.com/hc/en-us/articles/6585805139474-How-to-set-up-a-manual-WireGuard-connection-on-Android-){target="_blank"}
+    [참조 링크](https://support.surfshark.com/hc/en-us/articles/6585805139474-How-to-set-up-a-manual-WireGuard-connection-on-Android-){target="_blank"}
 
 ??? "AirVPN"
     ### AirVPN
 
-    [Official Website](https://airvpn.org/?referred_by=402389){target="_blank"}
+    [공식 웹사이트](https://airvpn.org/?referred_by=402389){target="_blank"}
 
-    1. If you are using [AirVPN](https://airvpn.org/?referred_by=402389){target="_blank"}, sign in to their website, go to the [Client Area](https://airvpn.org/client/){target="_blank"}, click the [Config Generator](https://airvpn.org/generator/){target="_blank"}
+    1. [AirVPN](https://airvpn.org/?referred_by=402389){target="_blank"}을 사용하는 경우 웹사이트에 로그인한 후 [Client Area](https://airvpn.org/client/){target="_blank"}로 이동하여 [Config Generator](https://airvpn.org/generator/){target="_blank"}를 클릭하세요
 
-        ![airvpn configuration generator](https://static.gl-inet.com/docs/router/en/4/tutorials/get_wg_configs/airvpn/airvpn_config_generator.png){class="glboxshadow" width="400"}
+        ![airvpn configuration generator](https://static.gl.inet.com/docs/router/en/4/tutorials/get_wg_configs/airvpn/airvpn_config_generator.png){class="glboxshadow" width="400"}
 
-    2. At the Config Generator page, select WireGuard at the Protocols sector.
+    2. Config Generator 페이지에서 Protocols 섹터에서 WireGuard를 선택하세요.
 
-        ![airvpn protocols](https://static.gl-inet.com/docs/router/en/4/tutorials/get_wg_configs/airvpn/airvpn_protocols.png){class="glboxshadow" width="600"}
+        ![airvpn protocols](https://static.gl.inet.com/docs/router/en/4/tutorials/get_wg_configs/airvpn/airvpn_protocols.png){class="glboxshadow" width="600"}
 
-    3. Select a server, then scroll down to the end, click **Generate** button. It will download the configuration file.
+    3. 서버를 선택한 후 맨 아래로 스크롤하고 **Generate** 버튼을 클릭하세요. 구성 파일이 다운로드됩니다.
 
-        ![airvpn select server](https://static.gl-inet.com/docs/router/en/4/tutorials/get_wg_configs/airvpn/airvpn_select_server.png){class="glboxshadow" width="600"}
+        ![airvpn select server](https://static.gl.inet.com/docs/router/en/4/tutorials/get_wg_configs/airvpn/airvpn_select_server.png){class="glboxshadow" width="600"}
 
-    4. Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+    4. 그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
 ??? "Astrill"
     ### Astrill
 
-    [Official Website](https://www.astrill.com/a/dik2masnw6ig){target="_blank"}
+    [공식 웹사이트](https://www.astrill.com/a/dik2masnw6ig){target="_blank"}
 
-    If you are using [Astrill](https://www.astrill.com/a/dik2masnw6ig){target="_blank"}, please log in then access [this page](https://www.astrill.com/member-zone/tools/wireguard-configuration){target="_blank"} to generate WireGuard configurations.
+    [Astrill](https://www.astrill.com/a/dik2masnw6ig){target="_blank"}을 사용하는 경우 로그인한 후 [이 페이지](https://www.astrill.com/member-zone/tools/wireguard-configuration){target="_blank"}에 접속하여 WireGuard 구성을 생성하세요.
 
-    Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+    그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
 ??? "IVPN"
     ### IVPN
 
-    [Official Website](https://www.ivpn.net/){target="_blank"}
+    [공식 웹사이트](https://www.ivpn.net/){target="_blank"}
 
-    If you are using [IVPN](https://www.ivpn.net/){target="_blank"}, you need to generate the WireGuard config manually. Follow the guide base on your OS.
+    [IVPN](https://www.ivpn.net/){target="_blank"}을 사용하는 경우 WireGuard 구성을 수동으로 생성해야 합니다. OS에 따라 가이드를 따르세요.
 
     [Windows](https://www.ivpn.net/setup/windows-10-wireguard/){target="_blank"}, [macOS](https://www.ivpn.net/setup/macos-wireguard/){target="_blank"}, [Linux](https://www.ivpn.net/setup/linux-wireguard/){target="_blank"}
 
-    Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+    그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
 ??? "NVPN"
     ### NVPN
 
-    [Official Website](https://www.nvpn.net/){target="_blank"}
+    [공식 웹사이트](https://www.nvpn.net/){target="_blank"}
 
-    Fellow the guide [here](https://support.nvpn.net/Knowledgebase/Article/View/428/0/how-to-use-our-wireguard#windows){target="_blank"} to create the config.
+    [여기](https://support.nvpn.net/Knowledgebase/Article/View/428/0/how-to-use-our-wireguard#windows){target="_blank"} 가이드를 따라 구성을 생성하세요.
 
-    Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+    그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
 ??? "OVPN"
     ### OVPN
 
-    [Official Website](https://www.ovpn.com/en?ref=glinet){target="_blank"}
+    [공식 웹사이트](https://www.ovpn.com/en?ref=glinet){target="_blank"}
 
-    1. Login [www.ovpn.com](https://www.ovpn.com/en?ref=glinet){target="_blank"}, find the menu below to get WireGuard configuration files.
+    1. [www.ovpn.com](https://www.ovpn.com/en?ref=glinet){target="_blank"}에 로그인하고 아래 메뉴에서 WireGuard 구성 파일을 찾으세요.
 
-        ![ovpn dashboard](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/ovpn/get_wireguard_configuration_files.jpg){class="glboxshadow"}
+        ![ovpn dashboard](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/ovpn/get_wireguard_configuration_files.jpg){class="glboxshadow"}
 
-    2. Click **Generate WireGuard keys**, choose the server you wanted, then download the config.
+    2. **Generate WireGuard keys**를 클릭하고 원하는 서버를 선택한 후 구성을 다운로드하세요.
 
-        ![ovpn generate wireguard keys](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/ovpn/download_wireguard_configuration_files.jpg){class="glboxshadow"}
+        ![ovpn generate wireguard keys](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/ovpn/download_wireguard_configuration_files.jpg){class="glboxshadow"}
 
-    3. Open the config by text edit software, copy the content.
+    3. 텍스트 편집 소프트웨어로 구성을 열고 내용을 복사하세요.
 
-        The config may contain IPv6 content, as GL.iNet routers is not support IPv6 good enough, so please delete the IPv6 content. I have a example show below, the highlight content is the IPv6 content.
+        구성에 IPv6 내용이 포함될 수 있습니다. GL.iNet 라우터는 IPv6를 충분히 지원하지 않으므로 IPv6 내용을 삭제하세요. 아래에 예시가 있으며 강조 표시된 부분이 IPv6 내용입니다.
 
-        ![remove wireguard ipv6 content](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/ovpn/remove_wireguard_ipv6_content.jpg){class="glboxshadow"}
-    
-    4. Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+        ![remove wireguard ipv6 content](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/ovpn/remove_wireguard_ipv6_content.jpg){class="glboxshadow"}
 
-    5. You can also use [mobile app](../faq/mobile_app.md) to setup OVPN.
+    4. 그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
+
+    5. [모바일 앱](../faq/mobile_app.md)을 사용하여 OVPN을 설정할 수도 있습니다.
 
 ??? "PrivateVPN"
     ### PrivateVPN
 
-    [Official Website](https://affiliate.privatevpn.com/scripts/click.php?a_aid=5e3a511658bc3){target="_blank"}
+    [공식 웹사이트](https://affiliate.privatevpn.com/scripts/click.php?a_aid=5e3a511658bc3){target="_blank"}
 
-    1. Login then access the [Control panel](https://privatevpn.com/control-panel){target="_blank"}
-    
-        ![PrivateVPN Control panel](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/privatevpn/privatevpn_wireguard_1.jpg){class="glboxshadow"}
-    
-    2. Select a server
-    
-        ![select a server](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/privatevpn/privatevpn_wireguard_2.jpg){class="glboxshadow"}
-    
-    3. Click **GENERATE CONFIG**, then copy the config.
-    
-        ![generate config](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/privatevpn/privatevpn_wireguard_3.jpg){class="glboxshadow"}
+    1. 로그인한 후 [Control panel](https://privatevpn.com/control-panel){target="_blank"}에 접속하세요
 
-    4. Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+        ![PrivateVPN Control panel](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/privatevpn/privatevpn_wireguard_1.jpg){class="glboxshadow"}
+
+    2. 서버를 선택하세요
+
+        ![select a server](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/privatevpn/privatevpn_wireguard_2.jpg){class="glboxshadow"}
+
+    3. **GENERATE CONFIG**를 클릭한 후 구성을 복사하세요
+
+        ![generate config](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/privatevpn/privatevpn_wireguard_3.jpg){class="glboxshadow"}
+
+    4. 그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
 ??? "PrivadoVPN"
     ### PrivadoVPN
 
-    [Official Website](https://privadovpn.com/#a_aid=GLINET){target="_blank"}
+    [공식 웹사이트](https://privadovpn.com/#a_aid=GLINET){target="_blank"}
 
-    Access PrivadoVPN website, then login.
+    PrivadoVPN 웹사이트에 접속한 후 로그인하세요.
 
-    At the dashboard, find the Manual Configuration section, click WireGuard. Select the server you want to connect to, then click Download Configration.
+    대시보드에서 Manual Configuration 섹션을 찾고 WireGuard를 클릭하세요. 연결하려는 서버를 선택한 후 Download Configration을 클릭하세요.
 
-    ![privadovpn wireguard manual configuration](https://static.gl-inet.com/docs/router/en/4/tutorials/get_wg_configs/privadovpn/privadovpn_wireguard_manual_configuration.png){class="glboxshadow"}
+    ![privadovpn wireguard manual configuration](https://static.gl.inet.com/docs/router/en/4/tutorials/get_wg_configs/privadovpn/privadovpn_wireguard_manual_configuration.png){class="glboxshadow"}
 
-    ![privadovpn wireguard manual configuration download](https://static.gl-inet.com/docs/router/en/4/tutorials/get_wg_configs/privadovpn/privadovpn_wireguard_manual_configuration_download.png){class="glboxshadow"}
+    ![privadovpn wireguard manual configuration download](https://static.gl.inet.com/docs/router/en/4/tutorials/get_wg_configs/privadovpn/privadovpn_wireguard_manual_configuration_download.png){class="glboxshadow"}
 
-    Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+    그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
 ??? "Proton VPN"
     ### Proton VPN
 
-    [Official Website](https://go.getproton.me/aff_c?offer_id=26&aff_id=1612){target="_blank"}
+    [공식 웹사이트](https://go.getproton.me/aff_c?offer_id=26&aff_id=1612){target="_blank"}
 
-    If you are using [Proton VPN](https://go.getproton.me/aff_c?offer_id=26&aff_id=1612){target="_blank"}, please follow the guide [here](https://protonvpn.com/support/wireguard-configurations/){target="_blank"} to generate the WireGuard configuration file.
+    [Proton VPN](https://go.getproton.me/aff_c?offer_id=26&aff_id=1612){target="_blank"}을 사용하는 경우 [여기](https://protonvpn.com/support/wireguard-configurations/){target="_blank"} 가이드를 따라 WireGuard 구성 파일을 생성하세요.
 
-    Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+    그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
 ??? "PureVPN"
     ### PureVPN
 
-    [Official Website](https://billing.purevpn.com/aff.php?aff=35535){target="_blank"}
+    [공식 웹사이트](https://billing.purevpn.com/aff.php?aff=35535){target="_blank"}
 
-    Please refer to [this guide](https://support.purevpn.com/router/how-to-setup-purevpn-on-glinet-router){target="_blank"} or the following steps to get the WireGuard configuration file manually.
+    [이 가이드](https://support.purevpn.com/router/how-to-setup-purevpn-on-glinet-router){target="_blank"}를 참조하거나 다음 단계에 따라 WireGuard 구성 파일을 수동으로 가져오세요.
 
-    1. Log in to your [Member Area](https://my.puremember.com/){target="_blank"} and click **Manual Configuration**.
+    1. [Member Area](https://my.puremember.com/){target="_blank"}에 로그인한 후 **Manual Configuration**을 클릭하세요.
 
-        ![purevpn wireguard manual configuration](https://static.gl-inet.com/docs/router/en/4/tutorials/get_wg_configs/purevpn/manual-purevpn1.png){class="glboxshadow"}
+        ![purevpn wireguard manual configuration](https://static.gl.inet.com/docs/router/en/4/tutorials/get_wg_configs/purevpn/manual-purevpn1.png){class="glboxshadow"}
 
-    2. Go to your Member Area and download the WireGuard configuration file from there.
+    2. Member Area로 이동하여 WireGuard 구성 파일을 다운로드하세요.
 
-        ![purevpn wireguard manual configuration](https://static.gl-inet.com/docs/router/en/4/tutorials/get_wg_configs/purevpn/manual-purevpn2.png){class="glboxshadow"}
+        ![purevpn wireguard manual configuration](https://static.gl.inet.com/docs/router/en/4/tutorials/get_wg_configs/purevpn/manual-purevpn2.png){class="glboxshadow"}
 
-    **Note**: Please make sure to copy the file and activate the connection within 30 minutes once the profile is downloaded, otherwise the configuration will expire and you will have to redownload a fresh configuration file.
+    **참고**: 프로필을 다운로드한 후 30분 이내에 파일을 복사하고 연결을 활성화하세요. 그렇지 않으면 구성이 만료되어 새 구성 파일을 다시 다운로드해야 합니다.
 
-    Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+    그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
-    [Refer link](https://support.purevpn.com/router/how-to-setup-purevpn-on-glinet-router){target="_blank"}
+    [참조 링크](https://support.purevpn.com/router/how-to-setup-purevpn-on-glinet-router){target="_blank"}
 
 ??? "SpiderVPN"
     ### SpiderVPN
 
-    [Official Website](https://spidervpn.org/#a_aid=5ddfa0372e7ff){target="_blank"}
+    [공식 웹사이트](https://spidervpn.org/#a_aid=5ddfa0372e7ff){target="_blank"}
 
-    1. Login [www.spidervpn.org](https://spidervpn.org/#a_aid=5ddfa0372e7ff), find the section to get your VPN configuration. Follow the steps to get the configuration.
+    1. [www.spidervpn.org](https://spidervpn.org/#a_aid=5ddfa0372e7ff)에 로그인하고 VPN 구성을 가져오는 섹션을 찾으세요. 구성을 가져오는 단계를 따르세요.
 
-        ![get spider vpn configuration](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/spidervpn/spidervpn_config_1.jpg){class="glboxshadow"}
+        ![get spider vpn configuration](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/spidervpn/spidervpn_config_1.jpg){class="glboxshadow"}
 
-    2. Download the vpn configuration
+    2. vpn 구성 다운로드
 
-        ![download spider vpn configuration](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/spidervpn/spidervpn_config_2.jpg){class="glboxshadow"}
+        ![download spider vpn configuration](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/spidervpn/spidervpn_config_2.jpg){class="glboxshadow"}
 
-    3. Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+    3. 그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
 ??? "StarVPN"
     ### StarVPN
 
-    [Official Website](https://www.starvpn.com/dashboard/aff.php?aff=91){target="_blank"}
+    [공식 웹사이트](https://www.starvpn.com/dashboard/aff.php?aff=91){target="_blank"}
 
-    1. **Register an account with StarVPN**
+    1. **StarVPN 계정 등록**
 
-        Head on over to their [pricing plan](https://www.starvpn.com/#pricing){target="_blank"} options and choose a VPN plan that suits your needs. You can register on checkout or directly [here](https://www.starvpn.com/dashboard/register.php){target="_blank"}.
+        [pricing plan](https://www.starvpn.com/#pricing){target="_blank"} 옵션으로 이동하여 필요에 맞는 VPN 요금제를 선택하세요. 결제 시 등록하거나 [여기](https://www.starvpn.com/dashboard/register.php){target="_blank"}에서 직접 등록할 수 있습니다.
 
-    2. **Download Wireguard Configuration**
+    2. **Wireguard 구성 다운로드**
 
-        Log into the StarVPN member area [dashboard](https://www.starvpn.com/dashboard){target="_blank"}. Click on Wireguard Config to download the configuration file. Each slot will contain a unique wireguard configuration file.
+        StarVPN 회원 영역 [dashboard](https://www.starvpn.com/dashboard){target="_blank"}에 로그인하세요. Wireguard Config를 클릭하여 구성 파일을 다운로드하세요. 각 슬롯에는 고유한 wireguard 구성 파일이 포함되어 있습니다.
 
-        ![starvpn download wireguard config](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/starvpn/download-config_edited.jpg){class="glboxshadow"}
+        ![starvpn download wireguard config](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/starvpn/download-config_edited.jpg){class="glboxshadow"}
 
-    3. The config may contain IPv6 content, as GL.iNet routers is not support IPv6 good enough, so please delete the IPv6 content.
+    3. 구성에 IPv6 내용이 포함될 수 있습니다. GL.iNet 라우터는 IPv6를 충분히 지원하지 않으므로 IPv6 내용을 삭제하세요.
 
-        ![startvpn wireguard configuration remove ipv6 content](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/starvpn/starvpn_wireguard_configuration_remove_ipv6.jpg){class="glboxshadow"}
+        ![startvpn wireguard configuration remove ipv6 content](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/starvpn/starvpn_wireguard_configuration_remove_ipv6.jpg){class="glboxshadow"}
 
-    4. Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+    4. 그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
-    [Refer link](https://www.starvpn.com/wireguard-setup-on-gl-inet-router/){target="_blank"}
+    [참조 링크](https://www.starvpn.com/wireguard-setup-on-gl-inet-router/){target="_blank"}
 
 ??? "StrongVPN"
     ### StrongVPN
 
-    [Official Website](https://strongvpn.com/?tr_aid=5ac44bd241ca7){target="_blank"}
+    [공식 웹사이트](https://strongvpn.com/?tr_aid=5ac44bd241ca7){target="_blank"}
 
-    1. If you are using [StrongVPN](https://strongvpn.com/?tr_aid=5ac44bd241ca7){target="_blank"}, sign in at [https://wg.strongvpn.com](https://wg.strongvpn.com){target="_blank"}
-    
-    2. Select a location from the drop down menu, click **GENERATE**, open the downloaded text file.
-    
-        ![strongvpn wireguard configuration generator](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/strongvpn/strongvpn_wireguard_configuration_generator.png){class="glboxshadow"}
-    
-    3. Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+    1. [StrongVPN](https://strongvpn.com/?tr_aid=5ac44bd241ca7){target="_blank"}을 사용하는 경우 [https://wg.strongvpn.com](https://wg.strongvpn.com){target="_blank"}에 로그인하세요
 
-    4. You can also use [mobile app](../faq/mobile_app.md) to setup StrongVPN.
+    2. 드롭다운 메뉴에서 위치를 선택하고 **GENERATE**를 클릭한 후 다운로드한 텍스트 파일을 엽니다.
+
+        ![strongvpn wireguard configuration generator](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/strongvpn/strongvpn_wireguard_configuration_generator.png){class="glboxshadow"}
+
+    3. 그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
+
+    4. [모바일 앱](../faq/mobile_app.md)을 사용하여 StrongVPN을 설정할 수도 있습니다.
 
 ??? "TRUST.ZONE"
     ### TRUST.ZONE
 
-    [Official Website](https://trustzonevpn.info/r.php?RID=B-byr1v-MDAxNzE3NjgxMjM4){target="_blank"}
+    [공식 웹사이트](https://trustzonevpn.info/r.php?RID=B-byr1v-MDAxNzE3NjgxMjM4){target="_blank"}
 
-    1. Access [https://trust.zone/setup](https://trust.zone/setup) and login.
-    
-    2. Scroll down to the WireGuard section, choose the port you want, then download a config of specific server or a zip file of all configs.
+    1. [https://trust.zone/setup](https://trust.zone/setup)에 접속하여 로그인하세요.
 
-    3. Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+    2. WireGuard 섹션까지 아래로 스크롤하고 원하는 포트를 선택한 후 특정 서버의 구성 또는 모든 구성의 zip 파일을 다운로드하세요.
+
+    3. 그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
 ??? "VPN.AC"
     ### VPN.AC
 
-    [Official Website](https://vpn.ac/aff.php?aff=1424){target="_blank"}
+    [공식 웹사이트](https://vpn.ac/aff.php?aff=1424){target="_blank"}
 
-    1. If you are using [VPN.AC](https://vpn.ac/aff.php?aff=1424){target="_blank"}, you need to login the control panel and find WireGuard Manager from the "Services" menu.
-    
-        ![VPN.AC WireGuard Manager](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/vpnac/vpn.ac_wireguard_manager.jpg){class="glboxshadow"}
-    
-    2. Create the config and download.
-    
-        ![VPN.AC create wireguard profiles](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/vpnac/vpn.ac_create_wireguard_profiles.jpg){class="glboxshadow"}
+    1. [VPN.AC](https://vpn.ac/aff.php?aff=1424){target="_blank"}을 사용하는 경우 제어 패널에 로그인한 후 "Services" 메뉴에서 WireGuard Manager를 찾으세요.
 
-    3. Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+        ![VPN.AC WireGuard Manager](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/vpnac/vpn.ac_wireguard_manager.jpg){class="glboxshadow"}
+
+    2. 구성을 생성하고 다운로드하세요.
+
+        ![VPN.AC create wireguard profiles](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/vpnac/vpn.ac_create_wireguard_profiles.jpg){class="glboxshadow"}
+
+    3. 그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
 ??? "VPN Unlimited(KeepSolid)"
     ### VPN Unlimited(KeepSolid)
 
-    [Official Website](https://keepsolid.g2afse.com/click?pid=270&offer_id=7){target="_blank"}
+    [공식 웹사이트](https://keepsolid.g2afse.com/click?pid=270&offer_id=7){target="_blank"}
 
-    1. If you are using [VPN Unlimited](https://keepsolid.g2afse.com/click?pid=270&offer_id=7){target="_blank"}, sign in to your [User Office](https://my.keepsolid.com/){target="_blank"} > select the VPN Unlimited® application > click **Manage**.
-    
-        ![vpn unlimited setup on gl.inet router](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/vpnunlimited/01.jpg){class="glboxshadow"}
-    
-    2. Press the field under **Device** and click **Manually create a new device…** > set it's custom name, for example WireGuard > choose appropriate location of the **Server** > select the **WireGuard**® protocol from the dropdown menu > click **Generate**.
-    
-        ![vpn unlimited setup on gl.inet router](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/vpnunlimited/02.jpg){class="glboxshadow"}
-    
-    3. The configuration parameters will then appear below in the text format.
-    
-        ![vpn unlimited setup on gl.inet router](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/vpnunlimited/03.jpg){class="glboxshadow"}
+    1. [VPN Unlimited](https://keepsolid.g2afse.com/click?pid=270&offer_id=7){target="_blank"}을 사용하는 경우 [User Office](https://my.keepsolid.com/){target="_blank"}에 로그인한 후 VPN Unlimited® 애플리케이션을 선택하고 **Manage**를 클릭하세요.
 
-        Combine the configuration as below.
+        ![vpn unlimited setup on gl.inet router](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/vpnunlimited/01.jpg){class="glboxshadow"}
+
+    2. **Device** 아래 필드을 누르고 **Manually create a new device…**를 클릭한 후 사용자 정의 이름(예: WireGuard)을 설정하고 **Server**의 적절한 위치를 선택한 후 드롭다운 메뉴에서 **WireGuard**® 프로토콜을 선택하고 **Generate**를 클릭하세요.
+
+        ![vpn unlimited setup on gl.inet router](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/vpnunlimited/02.jpg){class="glboxshadow"}
+
+    3. 그러면 구성 매개변수가 아래 텍스트 형식으로 표시됩니다.
+
+        ![vpn unlimited setup on gl.inet router](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/vpnunlimited/03.jpg){class="glboxshadow"}
+
+        아래와 같이 구성을 결합하세요.
 
         <p>
         [Interface]</br>
-        PrivateKey = <i>paste the PrivateKey from your User Office</i></br>
-        ListenPort = <i>paste the ListenPort details</i></br>
-        Address = <i>paste Address information</i></br>
-        DNS = <i>paste DNS details from the User Office</i></br>
+        PrivateKey = <i>User Office에서 PrivateKey를 붙여넣으세요</i></br>
+        ListenPort = <i>ListenPort 정보를 붙여넣으세요</i></br>
+        Address = <i>Address 정보를 붙여넣으세요</i></br>
+        DNS = <i>User Office에서 DNS 정보를 붙여넣으세요</i></br>
         </br>
         [Peer]</br>
-        PublicKey = <i>paste PublicKey from the User Office</i></br>
-        PresharedKey = <i>paste PresharedKey details</i></br>
-        AllowedIPs = <i>paste AllowedIPs details</i></br>
-        Endpoint = <i>paste Endpoint information</i></br>
+        PublicKey = <i>User Office에서 PublicKey를 붙여넣으세요</i></br>
+        PresharedKey = <i>PresharedKey 정보를 붙여넣으세요</i></br>
+        AllowedIPs = <i>AllowedIPs 정보를 붙여넣으세요</i></br>
+        Endpoint = <i>Endpoint 정보를 붙여넣으세요</i></br>
         </p>
 
-    4. Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
- 
-    [Refer link 1](https://www.vpnunlimited.com/help/manuals/wireguard-setup-on-glinet-router){target="_blank"}
+    4. 그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
-    [Refer link 2](https://www.vpnunlimited.com/help/manuals/wireguard/windows){target="_blank"}
+    [참조 링크 1](https://www.vpnunlimited.com/help/manuals/wireguard-setup-on-glinet-router){target="_blank"}
+
+    [참조 링크 2](https://www.vpnunlimited.com/help/manuals/wireguard/windows){target="_blank"}
 
 ??? "Windscribe"
     ### Windscribe
 
-    [Official Website](https://windscribe.com/yo/1u2h9ndl){target="_blank"}
+    [공식 웹사이트](https://windscribe.com/yo/1u2h9ndl){target="_blank"}
 
-    1. Log in to your Windscribe membership account [here](https://windscribe.com/login?auth_required){target="_blank"}, then access the [WireGuard Config Generator](https://windscribe.com/getconfig/wireguard){target="_blank"}. 
-    
-    2. Select the server location and port you'd like to use, then click **Download Config**.
+    1. [여기](https://windscribe.com/login?auth_required){target="_blank"}에서 Windscribe 회원 계정에 로그인한 후 [WireGuard Config Generator](https://windscribe.com/getconfig/wireguard){target="_blank"}에 접속하세요.
 
-        ![windscribe WireGuard Config Generator](https://static.gl-inet.com/docs/router/en/3/tutorials/wireguard_client/windscribe/windscribe_01.jpg){class="glboxshadow"}
+    2. 사용하려는 서버 위치와 포트를 선택한 후 **Download Config**를 클릭하세요.
 
-    3. Follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+        ![windscribe WireGuard Config Generator](https://static.gl.inet.com/docs/router/en/3/tutorials/wireguard_client/windscribe/windscribe_01.jpg){class="glboxshadow"}
+
+    3. [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따르세요.
 
 ??? "12VPX"
     ### 12VPX
 
-    [Official Website](https://12vpx.com/?aff=1174){target="_blank"}
+    [공식 웹사이트](https://12vpx.com/?aff=1174){target="_blank"}
 
-    If you are using [12VPX](https://12vpx.com/?aff=1174){target="_blank"}, login then access [this page](https://12vpx.com/setup/wireguard){target="_blank"}, you will see the configs of all servers.
+    [12VPX](https://12vpx.com/?aff=1174){target="_blank"}을 사용하는 경우 로그인한 후 [이 페이지](https://12vpx.com/setup/wireguard){target="_blank"}에 접속하면 모든 서버의 구성을 볼 수 있습니다.
 
-    Then follow [this guide](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers) to continue.
+    그런 다음 [이 가이드](../interface_guide/wireguard_client.md#set-up-wireguard-client-manually-for-other-providers)를 따라 계속하세요.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}를 통해 문의해 주세요.
