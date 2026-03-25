@@ -1,14 +1,14 @@
-# How to download the firmware for my GL.iNet router?
+# GL.iNet 라우터용 펌웨어를 다운로드하는 방법은 무엇인가요?
 
-If you want to update your router (or unbrick it via U-Boot), download the firmware files by the following steps: 
+라우터를 업데이트하려는 경우(또는 U-Boot를 통해 벽돌을 해제하려는 경우) 다음 단계에 따라 펌웨어 파일을 다운로드하세요.
 
-1. In the [GL.iNet firmware download center](https://dl.gl-inet.com), select the search bar and your router model. 
-2. Select a tab at the top:
-    * **Stable:** The official release for everyday use and recommended for most users. 
-    * **Beta** (only available to certain router models): The pre-release version that is still undergoing development. 
-    * **Snapshot** (only available to certain router models): The daily build that includes the latest updates. 
-3. Click the **Download** button. 
+1. [GL.iNet 펌웨어 다운로드 센터](https://dl.gl.inet.com)에서 검색창과 라우터 모델을 선택하세요.
+2. 상단 탭을 선택하세요:
+    * **Stable:** 일상 사용을 위한 공식 릴리스이며 대부분의 사용자에게 권장됩니다.
+    * **Beta** (일부 라우터 모델에서만 사용 가능): 여전히 개발 중인 사전 릴리스 버전입니다.
+    * **Snapshot** (일부 라우터 모델에서만 사용 가능): 최신 업데이트가 포함된 일일 빌드입니다.
+3. **Download** 버튼을 클릭하세요.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.

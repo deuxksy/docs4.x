@@ -1,19 +1,19 @@
-# How to make Wi-Fi Calling work on Opal (GL-SFT1200)?
+# Opal (GL-SFT1200)에서 Wi-Fi 통화가 작동하도록 만드는 방법은 무엇인가요?
 
-## Upgrade Firmware
+## 펌웨어 업그레이드
 
-In the web Admin Panel, go to SYSTEM -> Upgrade, upgrade the firmware to the latest version. Please refer to the [Firmware Download Center](https://dl.gl-inet.com/){target="_blank"} to check the latest version.
+웹 관리 패널에서 SYSTEM -> Upgrade로 이동하여 펌웨어를 최신 버전으로 업그레이드하세요. [펌웨어 다운로드 센터](https://dl.gl-inet.com/){target="_blank"}를 참조하여 최신 버전을 확인하세요.
 
-![opal4317](https://static.gl-inet.com/docs/router/en/4/faq/wifi_call/opal4317.jpg){class="glboxshadow}
+![opal4317](https://static.gl.inet.com/docs/router/en/4/faq/wifi_call/opal4317.jpg){class="glboxshadow"}
 
-## Disable Network Acceleration
+## 네트워크 가속 비활성화
 
-Based on our experience and customer feedback, Wi‑Fi Calling works properly after disabling Network/Hardware Acceleration.
+경험과 고객 피드백에 따르면 네트워크/하드웨어 가속을 비활성화한 후 Wi‑Fi 통화가 정상적으로 작동합니다.
 
-After the firmware upgrade, log in to the web Admin Panel, go to **NETWORK** -> **Network Acceleration**, then disable it.
+펌웨어 업그레이드 후 웹 관리 패널에 로그인하고 **NETWORK** -> **Network Acceleration**으로 이동한 후 비활성화하세요.
 
-![networkacc](https://static.gl-inet.com/docs/router/en/4/faq/wifi_call/netacc.jpg){class="glboxshadow}
+![networkacc](https://static.gl.inet.com/docs/router/en/4/faq/wifi_call/netacc.jpg){class="glboxshadow"}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.

@@ -30,7 +30,7 @@ GL.iNet KVM 장치의 경우 [GL.iNet KVM 문서](https://docs.gl-inet.com/kvm/e
 * [iPhone 테더링 실패](iphone_tethering_fail.md)
 * [셀룰러 네트워크 문제 해결 가이드](cellular_network_troubleshooting_guide.md)
 * [기존 라우터를 GL.iNet 라우터로 교체 후 인터넷 연결 안됨](no_internet_after_replacing_the_old_router_with_glinet.md)
-* [GL.iNet 라우터에서 USB 모뎀이 제대로 작동하지 않음](usb_modem_is_not_working_properly_on_gl_inet_router.md)
+* [GL.iNet 라우터에서 USB 모뎁이 제대로 작동하지 않음](usb_modem_is_not_working_properly_on_gl_inet_router.md)
 * [네트워크 복구 또는 공장 초기화 방법](repair_network_or_reset_firmware.md)
 * [라우터가 고장 나면 어떻게 해야 하나요?](debrick.md)
 * [MacOS에서 Samba 공유에 쓰기 불가](macos_cannot_write_samba.md)
@@ -51,7 +51,7 @@ GL.iNet KVM 장치의 경우 [GL.iNet KVM 문서](https://docs.gl-inet.com/kvm/e
 * [WireGuard 설정 방법](../interface_guide/wireguard_client.md)
 * [VPN 트래픽이 아닌 트래픽을 차단하는 방법](block_non_vpn_traffic.md)
 * [VPN Kill Switch](block_non_vpn_traffic.md)
-* [OpenVPN에서 어떤 프로토콜을 선택해야 하나요, TCP 또는 UDP?](openvpn_tcp_udp.md)
+* [OpenVPN에서 어떤� 프로토콜을 선택해야 하나요, TCP 또는 UDP?](openvpn_tcp_udp.md)
 * [AmneziaWG 난독화 파라미터 소개](amnezia_obfuscation_parameters.md)
 * [VPN 사용 시 Ethernet WAN을 구성해야 하나요?](do_i_have_to_configure_ethernet_wan_when_using_vpn.md)
 

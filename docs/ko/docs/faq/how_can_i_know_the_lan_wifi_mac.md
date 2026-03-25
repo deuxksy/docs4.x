@@ -1,51 +1,51 @@
-# How can I find all MAC addresses of my device?
+# 장치의 모든 MAC 주소를 찾는 방법은 무엇인가요?
 
-## Usage Scenario
+## 사용 시나리오
 
-The MAC addresses of GL.iNet device are unique for each network interface, such as WAN 1, WAN 2, LAN ports, 2.4G Wi-Fi and 5G Wi-Fi.
+GL.iNet 장치의 MAC 주소는 WAN 1, WAN 2, LAN 포트, 2.4G Wi-Fi 및 5G Wi-Fi와 같은 각 네트워크 인터페이스마다 고유합니다.
 
-When you connect to some hotels, camping sites, or campuses, the network manager may ask for your device's MAC address to register on the whitelist before getting Internet access. 
+호텔, 캠핑장 또는 캠퍼스에 연결할 때 네트워크 관리자가 인터넷 액세스 권한을 얻기 위해 장치의 MAC 주소를 요청할 수 있습니다.
 
-You can look up the exact MAC address(es) of your device by the following methods.
+다음 방법으로 장치의 정확한 MAC 주소를 찾을 수 있습니다.
 
-## Method 1. via Product Label (for WAN MAC only)
+## 방법 1. 제품 라벨 통한 확인 (WAN MAC만 해당)
 
-Find the **WAN MAC address** from the bottom label.
+하단 라벨에서 **WAN MAC 주소**를 찾으세요.
 
-For example, the WAN MAC is E4:95:6E:40:DB:A9 in the image below.
+아래 이미지에서 WAN MAC은 E4:95:6E:40:DB:A9입니다.
 
-![wan_lan_wifi](https://static.gl-inet.com/docs/router/en/4/tutorials/where_to_find_the_device_id_mac_sn/wan_lan_wifi.png){class="glboxshadow"}
+![wan_lan_wifi](https://static.gl.inet.com/docs/router/en/4/tutorials/where_to_find_the_device_id_mac_sn/wan_lan_wifi.png){class="glboxshadow"}
 
-## Method 2. via SSH
+## 방법 2. SSH를 통한 확인
 
-Please check [here](https://docs.gl-inet.com/router/en/4/tutorials/ssh_log_in_to_the_router/) for how to use SSH.
+SSH 사용 방법은 [여기](https://docs.gl-inet.com/router/en/4/tutorials/ssh_log_in_to_the_router/)를 확인하세요.
 
-Input **ifconfig** in the SSH, then you will receive some data output, displaying interfaces such as br-lan, ethx, wlanx, etc. in sequence.
+SSH에서 **ifconfig**를 입력하면 br-lan, ethx, wlanx 등의 인터페이스가 순서대로 표시되는 데이터 출력을 받게 됩니다.
 
-### Find the MAC of ethernet ports
+### 이더넷 포트의 MAC 찾기
 
-Taking the following image as an example.
+다음 이미지를 예로 듭니다.
 
-![ifconfigwan](https://static.gl-inet.com/docs/router/en/4/tutorials/where_to_find_the_device_id_mac_sn/ifcongwan.jpg){class="glboxshadow"}
+![ifconfigwan](https://static.gl.inet.com/docs/router/en/4/tutorials/where_to_find_the_device_id_mac_sn/ifcongwan.jpg){class="glboxshadow"}
 
-- **eth0** is the WAN port, with MAC address **94:83:C4:19:19:08**. 
+- **eth0**는 WAN 포트이며 MAC 주소는 **94:83:C4:19:19:08**입니다.
 
-    If there is one more WAN port (e.g. GL-MT6000), there will be one more WAN MAC address.
+    WAN 포트가 하나 더 있는 경우(예: GL-MT6000) WAN MAC 주소가 하나 더 있습니다.
 
-- **eth1**, **eth2**, etc, are the LAN ports, with MAC address **94:83:C4:19:19:09**. 
+- **eth1**, **eth2** 등은 LAN 포트이며 MAC 주소는 **94:83:C4:19:19:09**입니다.
 
-    There would be only one MAC address even there are more than one LAN ports.
+    LAN 포트가 여러 개 있어도 MAC 주소는 하나만 있습니다.
 
-### Find the MAC of wireless ports
+### 무선 포트의 MAC 찾기
 
-Taking the following image as an example.
+다음 이미지를 예로 듭니다.
 
-![ifconfigwifi](https://static.gl-inet.com/docs/router/en/4/tutorials/where_to_find_the_device_id_mac_sn/ifcongwifi.jpg){class="glboxshadow"}
+![ifconfigwifi](https://static.gl.inet.com/docs/router/en/4/tutorials/where_to_find_the_device_id_mac_sn/ifcongwifi.jpg){class="glboxshadow"}
 
-- **wlan0-1** is the 2.4G Wi-Fi, with MAC address **96:83:C4:19:19:0B**.
+- **wlan0-1**은 2.4G Wi-Fi이며 MAC 주소는 **96:83:C4:19:19:0B**입니다.
 
-- **wlan1** is the 5G Wi-Fi, with MAC address **94:83:C4:19:19:0A**.
+- **wlan1**은 5G Wi-Fi이며 MAC 주소는 **94:83:C4:19:19:0A**입니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.

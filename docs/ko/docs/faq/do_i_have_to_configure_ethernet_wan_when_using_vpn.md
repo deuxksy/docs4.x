@@ -1,25 +1,25 @@
-# Do I have to configure Ethernet WAN when using VPN?
+# VPN 사용 시 Ethernet WAN을 구성해야 하나요?
 
-The answer is No. You can configure any WAN source for your GL.iNet router when setting it as VPN client. Your LAN and WLAN will be covered by VPN tunnel.
+아니요, VPN 클라이언트로 설정할 때 GL.iNet 라우터에 모든 WAN 소스를 구성할 수 있습니다. LAN과 WLAN이 VPN 터널로覆盖됩니다.
 
-## Configure by Wi-Fi Repeater
+## Wi-Fi 리피터로 구성
 
-You can connect the GL.iNet router (set as VPN client) to your primary router wirelessly, in this way the GL.iNet router will function as a Wi-Fi Repeater.
+GL.iNet 라우터(VPN 클라이언트로 설정)를 기본 라우터에 무선으로 연결할 수 있습니다. 이렇게 하면 GL.iNet 라우터가 Wi-Fi 리피터로 작동합니다.
 
-![repater](https://static.gl-inet.com/docs/router/en/4/faq/wan_source_vpn/repeater.jpg){class="glboxshadow"}
+![repater](https://static.gl.inet.com/docs/router/en/4/faq/wan_source_vpn/repeater.jpg){class="glboxshadow"}
 
-## Configure by Ethernet cable
+## 이더넷 케이블로 구성
 
-You can connect the GL.iNet router (set as VPN client) to your primary router via an Ethernet cable.
+GL.iNet 라우터(VPN 클라이언트로 설정)를 기본 라우터에 이더넷 케이블로 연결할 수 있습니다.
 
-![ethernet](https://static.gl-inet.com/docs/router/en/4/faq/wan_source_vpn/ethernet.jpg){class="glboxshadow"}
+![ethernet](https://static.gl.inet.com/docs/router/en/4/faq/wan_source_vpn/ethernet.jpg){class="glboxshadow"}
 
-## Configure by USB Tethering
+## USB 테더링으로 구성
 
-You can connect the GL.iNet router (set as VPN client) to your phone via a USB cable, which is also known as USB Tethering.
+GL.iNet 라우터(VPN 클라이언트로 설정)를 USB 케이블을 통해 폰에 연결할 수 있습니다. 이를 USB 테더링이라고 합니다.
 
-![tethering](https://static.gl-inet.com/docs/router/en/4/faq/wan_source_vpn/tethering.jpg){class="glboxshadow"}
+![tethering](https://static.gl.inet.com/docs/router/en/4/faq/wan_source_vpn/tethering.jpg){class="glboxshadow"}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.

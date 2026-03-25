@@ -1,25 +1,25 @@
-# iPhone Tethering failed
+# iPhone 테더링 실패
 
-If you encounter an iPhone tethering failure, you can try the following steps to resolve the issue.
+iPhone 테더링 실패가 발생한 경우 다음 단계를 시도하여 문제를 해결할 수 있습니다.
 
-1. Please make sure the **Maximise Compatibility** is **Enabled** (iPhone 8 or above)
+1. **Maximise Compatibility**가 **활성화**되어 있는지 확인하세요 (iPhone 8 이상)
 
-    ![maxcompat](https://static.gl-inet.com/docs/router/en/4/tutorials/iphone_tethering_fail/maxcompat.PNG){class="glboxshadow gl-50-desktop" }
+    ![maxcompat](https://static.gl.inet.com/docs/router/en/4/tutorials/iphone_tethering_fail/maxcompat.PNG){class="glboxshadow gl-50-desktop"}
 
-2. Disable hotspot on your phone, wait 5 seconds, then enable it again.
+2. 폰에서 핫스팟을 비활성화하고 5초 기다린 후 다시 활성화하세요.
 
-    ![hotspot](https://static.gl-inet.com/docs/router/en/4/tutorials/iphone_tethering_fail/hotspot.PNG){class="glboxshadow gl-50-desktop"}
+    ![hotspot](https://static.gl.inet.com/docs/router/en/4/tutorials/iphone_tethering_fail/hotspot.PNG){class="glboxshadow gl-50-desktop"}
 
-3. Make sure the iOS version is 15 or above.
+3. iOS 버전이 15 이상인지 확인하세요.
 
-4. Unplug and replug the Lightning / Type-C cable. 
+4. Lightning / Type-C 케이블을 뽑았다가 다시 연결하세요.
 
-5. Use another USB cable. Ensure it supports data transfer (not just charging).
+5. 다른 USB 케이블을 사용하세요. 데이터 전송을 지원하는지 확인하세요(충전 전용이 아님).
 
-6. Use the original power supply for the router.
+6. 라우터용 정품 전원 어댑터를 사용하세요.
 
-7. Reboot both the router and your iPhone. Sometimes rebooting the iPhone solves the tethering issue.
+7. 라우터와 iPhone을 모두 재부팅하세요. iPhone을 재부팅하면 테더링 문제가 해결되는 경우가 있습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.
