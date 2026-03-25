@@ -1,16 +1,16 @@
-# Hardware Acceleration
+# 하드웨어 가속
 
-**Note**: This guide applies to firmware v4.2 and earlier. For newer versions, please refer to [Network Acceleration](network_acceleration.md). 
+**참고**: 이 가이드는 펌웨어 v4.2 이전 버전에 적용됩니다. 최신 버전은 [네트워크 가속](network_acceleration.md)을 참조하세요.
 
 ---
 
-Hardware acceleration (sometimes called *hardware NAT, flow offloading, or offloading*) reduces CPU load by moving packet forwarding from the CPU to the router's SoC/NIC hardware. This typically increases maximum throughput and lowers CPU utilization, but it has important trade-offs, especially for features that rely on the Linux networking stack (netfilter/iptables/nftables) or the kernel queuing disciplines (qdisc) used by SQM (Smart Queue Management).
+하드웨어 가속(하드웨어 NAT, 플로우 오프로딩 또는 오프로딩이라고도 함)은 패킷 포워딩을 CPU에서 라우터의 SoC/NIC 하드웨어로 이동시켜 CPU 부하를 줄입니다. 이는 일반적으로 최대 처리량을 높이고 CPU 활용률을 낮추지만, Linux 네트워킹 스택(netfilter/iptables/nftables) 또는 SQM(Smart Queue Management)에서 사용하는 커널 대기 중복(qdisc)에 의존하는 기능에 대해 중요한 절충안이 있습니다.
 
-When hardware acceleration is enabled, the following functions will not work properly: Client Speed and Traffic Statistics, Client Speed Limit.
+하드웨어 가속이 활성화되면 다음 기능이 제대로 작동하지 않습니다: 클라이언트 속도 및 트래픽 통계, 클라이언트 속도 제한.
 
-## Supported Models
+## 지원 모델
 
-??? "Supported Models"
+??? "지원 모델"
     - GL-E5800 (Mudi 7)
     - GL-MT5000 (Brume 3)
     - GL-MT3600BE (Beryl 7)
@@ -27,7 +27,7 @@ When hardware acceleration is enabled, the following functions will not work pro
     - GL-SFT1200 (Opal)
     - GL-MT1300 (Beryl)
 
-??? "Unsupported Models"
+??? "미지원 모델"
     - GL-AXT1800 (Slate AX)
     - GL-AX1800 (Flint)
     - GL-A1300 (Slate Plus)
@@ -40,22 +40,22 @@ When hardware acceleration is enabled, the following functions will not work pro
     - GL-B1300 (Convexa-B)
     - GL-X300B (Collie)
 
-## Quick Setup
+## 빠른 설정
 
-On the left side of the web Admin Panel, go to **NETWORK** -> **Hardware Acceleration**.
+웹 관리 패널 왼쪽에서 **NETWORK** -> **Hardware Acceleration**으로 이동합니다.
 
 ![Hardware Acceleration](https://static.gl-inet.com/docs/router/en/4/tutorials/hardware_acceleration/hardware_acceleration.png){class="glboxshadow"}
 
-Toggle the switch to enable, and click Apply.
+스위치를 토글하여 활성화하고 적용을 클릭합니다.
 
 ---
 
-## Hardware NAT vs. Software NAT
+## 하드웨어 NAT vs. 소프트웨어 NAT
 
-* You care most about throughput (e.g., multi‑gigabit broadband) and don't need on‑router SQM or per‑client shaping → enable Hardware NAT / Network Acceleration. This delivers the highest throughput and lowest CPU usage.
+* 처리량(예: 멀티기가비트 광대역)을 가장 중요하게 생각하고 라우터 내 SQM 또는 클라이언트별 쉐이핑이 필요 없는 경우 → 하드웨어 NAT / 네트워크 가속을 활성화합니다. 이는 최고의 처리량과 최소의 CPU 사용량을 제공합니다.
 
-* You care about low latency, consistent QoS, per‑client limits, or you rely on SQM (cake/fq_codel) → use Software NAT (disable hardware offload). SQM and QoS require packets to traverse the kernel qdisc stack — offloaded packets bypass this path and are therefore not shaped.
+* 낮은 대기 시간, 일관된 QoS, 클라이언트별 제한이 중요하거나 SQM(cake/fq_codel)에 의존하는 경우 → 소프트웨어 NAT를 사용합니다(하드웨어 오프로드 비활성화). SQM과 QoS는 패킷이 커널 qdisc 스택을 통과해야 합니다. 오프로드된 패킷은 이 경로를 우회하므로 쉐이핑되지 않습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 통해 연락하세요.
