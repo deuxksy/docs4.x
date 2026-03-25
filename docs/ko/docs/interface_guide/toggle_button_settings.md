@@ -1,12 +1,12 @@
-# Toggle Button Settings
+# 토글 버튼 설정
 
-The Toggle Button Settings allow you to assign specific functions to the physical toggle button on your router for quick access and control, providing convenient shortcuts for common tasks. 
+토글 버튼 설정을 사용하면 라우터의 물리적 토글 버튼에 특정 기능을 할당하여 빠른 액세스와 제어를 제공하고 일반적인 작업에 대한 편리한 바로가기를 만들 수 있습니다.
 
-You can customize the button’s behavior in the web Admin Panel.
+웹 관리 패널에서 버튼 동작을 사용자 정의할 수 있습니다.
 
-## Supported Models
+## 지원되는 모델
 
-??? "Supported Models"
+??? "지원되는 모델"
     - GL-MT3600BE (Beryl 7)
     - GL-BE3600 (Slate 7)
     - GL-MT3000 (Beryl AX)
@@ -20,7 +20,7 @@ You can customize the button’s behavior in the web Admin Panel.
     - GL-AR750S (Slate)
     - GL-AR750 (Creta)
 
-??? "Unsupported Models"
+??? "지원되지 않는 모델"
     - GL-E5800 (Mudi 7)
     - GL-MT5000 (Brume 3)
     - GL-BE6500 (Flint 3e)
@@ -38,13 +38,13 @@ You can customize the button’s behavior in the web Admin Panel.
     - GL-AP1300 (Cirrus)
     - GL-X300B (Collie)
 
-## Setup
+## 설정
 
-On the left side of the web Admin Panel, go to **SYSTEM** -> **Toggle Button Settings**.
+웹 관리 패널 왼쪽에서 **SYSTEM** -> **Toggle Button Settings**로 이동합니다.
 
-![toggle button settings](https://static.gl-inet.com/docs/router/en/4/interface_guide/toggle_button_settings/toggle_button_settings.jpg){class="glboxshadow"}
+![toggle button settings](https://static.gl.inet.com/docs/router/en/4/interface_guide/toggle_button_settings/toggle_button_settings.jpg){class="glboxshadow"}
 
-Prior to firmware v4.8, there are four options, allowing users to customize the toggle button's functionality. 
+펌웨어 v4.8 이전에는 4가지 옵션이 있으며 사용자가 토글 버튼의 기능을 사용자 정의할 수 있습니다.
 
 - No Function
 - AdGuard Home
@@ -52,24 +52,24 @@ Prior to firmware v4.8, there are four options, allowing users to customize the 
 - Tor
 - WireGuard Client
 
-Since firmware v4.8, more options have been introduced: Repeater, Wi‑Fi, and LED. Users can customize the toggle buttons according to their needs.
+펌웨어 v4.8부터 Repeater, Wi‑Fi, LED와 같은 더 많은 옵션이 도입되었습니다. 사용자는 필요에 따라 토글 버튼을 사용자 정의할 수 있습니다.
 
 - No Function
 - Repeater
-- Wi-Fi (Main/Guest Wi-Fi)
+- Wi-Fi (메인/게스트 Wi-Fi)
 - VPN
-- Tor 
-- AdGuard Home 
+- Tor
+- AdGuard Home
 - LED
 
-![toggle button 4.8](https://static.gl-inet.com/docs/router/en/4/interface_guide/toggle_button_settings/toggle_button_4.8.png){class="glboxshadow"}
+![toggle button 4.8](https://static.gl.inet.com/docs/router/en/4/interface_guide/toggle_button_settings/toggle_button_4.8.png){class="glboxshadow"}
 
-When applying settings, you can decide whether or not to immediately enable/disable your selected feature based on the toggle switch's on/off(left/right) position.
+설정을 적용할 때 토글 스위치의 켜짐/꺼짐(왼쪽/오른쪽) 위치에 따라 선택한 기능을 즉시 활성화/비활성화할지 결정할 수 있습니다.
 
-**Note**: After a device reboot, the system will automatically apply the feature state according to the toggle switch position.
+**참고**: 장치를 재시작한 후 시스템은 토글 스위치 위치에 따라 기능 상태를 자동으로 적용합니다.
 
-For example, if you configure the WireGuard Client to be controlled by the toggle switch: When the switch is LEFT (ON), the WireGuard Client starts automatically. When the switch is RIGHT (OFF), the WireGuard Client remains disabled.
+예를 들어 WireGuard Client가 토글 스위치로 제어되도록 구성한 경우: 스위치가 왼쪽(ON)이면 WireGuard Client가 자동으로 시작됩니다. 스위치가 오른쪽(OFF)이면 WireGuard Client가 비활성화된 상태로 유지됩니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.
