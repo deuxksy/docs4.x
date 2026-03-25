@@ -1,220 +1,220 @@
-# Connect to the Internet via cellular
+# 셀룰러를 통해 인터넷에 연결
 
-**Note**: This guide is based on firmware v4.8. For earlier versions, please refer to [here](internet_cellular_v4.7.md).
+**참고**: 이 가이드는 펌웨어 v4.8을 기준으로 합니다. 이전 버전은 [여기](internet_cellular_v4.7.md)를 참조하세요.
 
 ---
 
-Most GL.iNet routers support cellular connectivity. This guide covers three types of models:
+대부분의 GL.iNet 라우터는 셀룰러 연결을 지원합니다. 이 가이드에서는 세 가지 유형의 모델을 다룹니다.
 
-1. **Built-in 4G Single-SIM models**
+1. **내장 4G 단일 SIM 모델**
 
-    Some models include a built-in 4G module with a single SIM card slot, such as the GL-E750 (Mudi). Please refer to [Setup for Single-SIM models](#setup-for-single-sim-models).
+    GL-E750 (Mudi)와 같이 단일 SIM 카드 슬롯이 있는 내장 4G 모듈이 포함된 일부 모델입니다. [단일 SIM 모델 설정](#setup-for-single-sim-models)을 참조하세요.
 
-2. **Built-in 5G Dual-SIM models**
+2. **내장 5G 듀얼 SIM 모델**
 
-    Some models include a built-in 5G module with dual SIM card slots, such as the GL-X3000 (Spitz AX). The cellular settings in the web Admin Panel may differ slightly. Please refer to [Setup for Dual-SIM models](#setup-for-dual-sim-models).
+    GL-X3000 (Spitz AX)와 같이 듀얼 SIM 카드 슬롯이 있는 내장 5G 모듈이 포함된 일부 모델입니다. 웹 관리 패널의 셀룰러 설정은 약간 다를 수 있습니다. [듀얼 SIM 모델 설정](#setup-for-dual-sim-models)을 참조하세요.
 
-3. **USB Modem compatible models**
+3. **USB 모뎀 호환 모델**
 
-    Some models do not have a built-in SIM card slot, but feature a USB port and support cellular connectivity via a USB modem, such as the GL-MT3000 (Beryl AX). Please refer to [Setup for USB modem](#setup-for-usb-modem).
+    GL-MT3000 (Beryl AX)와 같이 내장 SIM 카드 슬롯은 없지만 USB 포트가 있어 USB 모뎀을 통해 셀룰러 연결을 지원하는 일부 모델입니다. [USB 모뎀 설정](#setup-for-usb-modem)을 참조하세요.
 
-**Note:** Some SIM cards require activation before first use. To ensure compatibility, activate the SIM card in a smartphone before inserting it into the router.
+**참고:** 일부 SIM 카드는 처음 사용하기 전에 활성화가 필요할 수 있습니다. 호환성을 위해 라우터에 SIM 카드를 삽입하기 전에 스마트폰에서 SIM 카드를 활성화하세요.
 
-## Setup for Single-SIM models
+## 단일 SIM 모델 설정
 
-The following steps apply to models with a built-in cellular modem and a single SIM card slot.
+다음 단계는 내장 셀룰러 모뎀과 단일 SIM 카드 슬롯이 있는 모델에 적용됩니다.
 
-Here we use the **GL-E750 (Mudi)** as an example. 
+여기서는 **GL-E750 (Mudi)**를 예로 들어 설명합니다.
 
-We recommend you power off the router first, insert a pre-activated SIM into the slot, then power it on. If you insert the SIM card after the router has booted up, the web Admin Panel may not update automatically. In that case, please refresh the page or restart the router.
+라우터의 전원을 먼저 끄고, 미리 활성화된 SIM 카드를 슬롯에 삽입한 다음 전원을 켜는 것을 권장합니다. 라우터가 부팅된 후에 SIM 카드를 삽입하면 웹 관리 패널이 자동으로 업데이트되지 않을 수 있습니다. 이 경우 페이지를 새로고침하거나 라우터를 재시작하세요.
 
-### Auto Setup
+### 자동 설정
 
-Log in to the router's web Admin Panel and navigate to **INTERNET** -> **Cellular**.
+라우터의 웹 관리 패널에 로그인하고 **INTERNET** -> **Cellular**로 이동합니다.
 
-1. When no SIM card is inserted, the page displays a message "Your SIM card has not been detected".
+1. SIM 카드가 삽입되지 않은 경우 "SIM 카드가 감지되지 않았습니다"라는 메시지가 표시됩니다.
 
     ![single no sim](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/single_no_sim.png){class="glboxshadow"}
 
-2. Insert a SIM card. The device will start connecting as shown below.
+2. SIM 카드를 삽입합니다. 아래와 같이 연결을 시작합니다.
 
     ![single sim connecting](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/single_sim_connecting.png){class="glboxshadow"}
 
-    If it does not connect automatically, click the **Connect** button if available.
+    자동으로 연결되지 않은 경우 **Connect** 버튼을 클릭합니다.
 
-    If the SIM card is not detected, try restarting the router to see if it can be detected.
-    
-3. Once the cellular network is connected, the page will display the network details with a green dot, indicating a successful connection.
-    
-    ![single sim connected](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/single_sim_connected.png){class="glboxshadow"}
+    SIM 카드가 감지되지 않은 경우 라우터를 재시작하여 감지되는지 확인하세요.
 
-If Auto Setup fails, please try [Manual Setup](#manual-setup-single-sim).
+3. 셀룰러 네트워크에 연결되면 페이지에 녹색 점과 함께 네트워크 세부 정보가 표시되어 연결이 성공했음을 나타냅니다.
 
-### Manual Setup {#manual-setup-single-sim}
+    ![single sim connected](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/single_sim_connected.png){class="glboxshadow"}
 
-In the router's web Admin Panel, navigate to **INTERNET** -> **Cellular**, then click **SIM Card Settings**.
+자동 설정이 실패하면 [수동 설정](#manual-setup-single-sim)을 시도하세요.
 
-![sim card settings](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/single_sim_settings_1.png){class="glboxshadow"}
+### 수동 설정 {#manual-setup-single-sim}
 
-You can view or modify the cellular settings of the current SIM card. 
+라우터의 웹 관리 패널에서 **INTERNET** -> **Cellular**로 이동한 다음 **SIM Card Settings**를 클릭합니다.
 
-**Note**: Some SIM cards may require a specific APN. If your SIM card fails to register, please contact your carrier to check for any restrictions. Configure the correct APN on your router if necessary. 
+![sim card settings](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/single_sim_settings_1.png){class="glboxshadow"}
 
-Applying the changes will trigger a reconnection.
+현재 SIM 카드의 셀룰러 설정을 보거나 수정할 수 있습니다.
 
-![single sim card settings 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/single_sim_settings_2.png){class="glboxshadow"}
+**참고**: 일부 SIM 카드는 특정 APN이 필요할 수 있습니다. SIM 카드가 등록되지 않으면 이동통신사에 문의하여 제한 사항이 있는지 확인하세요. 필요한 경우 라우터에 올바른 APN을 구성하세요.
 
-- **APN**: APN (Access Point Name) is a gateway parameter required for a cellular network connection. It allows the router to connect to the internet provided by your mobile carrier. You can use the default APN or set a custom APN provided by your carrier.
+변경 사항을 적용하면 재연결이 트리거됩니다.
 
-- **Protocol**: The cellular communication protocol (e.g., 3G, QMI, or QCM). This is usually auto-detected, and you can change it to match your modem and carrier requirements.
+![single sim card settings 1](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/single_sim_settings_2.png){class="glboxshadow"}
 
-- **Port**: The serial port used to communicate with the cellular modem. This is usually auto-detected and does not require manual adjustment.
+- **APN**: APN (Access Point Name)은 셀룰러 네트워크 연결에 필요한 게이트웨이 매개변수입니다. 라우터가 이동통신사가 제공하는 인터넷에 연결할 수 있도록 합니다. 기본 APN을 사용하거나 이동통신사가 제공하는 사용자 지정 APN을 설정할 수 있습니다.
 
-- **TTL**: TTL (Time To Live) defines the maximum time packets can survive in the network. By default, the router decrements the TTL of incoming packets from client devices by 1 before forwarding them. If you need to override it, you can set a fixed value here. The TTL setting is valid only for IPv4.
+- **Protocol**: 셀룰러 통신 프로토콜(예: 3G, QMI 또는 QCM). 일반적으로 자동 감지되며 모뎀과 이동통신사 요구 사항에 맞게 변경할 수 있습니다.
 
-- **HL**: In IPv6, HL (Hop Limit) limits the number of transmission hops for data packets in the network and serves as the equivalent of TTL in IPv4.
+- **Port**: 셀룰러 모뎀과 통신하는 데 사용되는 시리얼 포트입니다. 일반적으로 자동 감지되며 수동 조정이 필요하지 않습니다.
 
-- **MTU**: The default MTU value is 1500 bytes.
+- **TTL**: TTL(Time To Live)은 패킷이 네트워크에서 존재할 수 있는 최대 시간을 정의합니다. 기본적으로 라우터는 클라이언트 장치에서 들어오는 패킷의 TTL을 1씩 줄인 후 포워딩합니다. 재정의해야 하는 경우 여기에 고정 값을 설정할 수 있습니다. TTL 설정은 IPv4에만 유효합니다.
 
-- **Authentication**: Choose the authentication method required by your carrier (e.g., NONE, PAP, CHAP). This is usually set to NONE if no credentials are needed.
+- **HL**: IPv6에서 HL(Hop Limit)은 네트워크에서 데이터 패킷의 전송 홉 수를 제한하며 IPv4의 TTL과 동일한 역할을 합니다.
 
-- **Band Masking**: You can enable Band Masking if you want the router to block certain bands or use only specific cellular bands. Click [here](#band-masking) for details.
+- **MTU**: 기본 MTU 값은 1500바이트입니다.
 
-## Setup for Dual-SIM models
+- **Authentication**: 이동통신사가 요구하는 인증 방법(예: NONE, PAP, CHAP)을 선택합니다. 자격 증명이 필요하지 않은 경우 일반적으로 NONE으로 설정됩니다.
 
-The following steps apply to models with a built-in cellular modem that supports dual SIM cards. The pages may differ slightly from single-SIM models.
+- **Band Masking**: 라우터가 특정 대역을 차단하거나 특정 셀룰러 대역만 사용하도록 하려면 Band Masking을 활성화할 수 있습니다. 자세한 내용은 [여기](#band-masking)를 클릭하세요.
 
-Here we use the **GL-X3000 (Spitz AX)** as an example. It supports Dual SIM, Single Standby, which means it can hold two SIM cards for cellular access, but only one SIM card can be active at a time. You can manually switch between the two SIM cards.
+## 듀얼 SIM 모델 설정
 
-We recommend you power off the router first, insert your pre-activated SIM card(s) into the slots, then power it on. If you insert the SIM card after the router has booted up, the web Admin Panel may not update automatically. In that case, please refresh the page or restart the router.
+다음 단계는 듀얼 SIM 카드를 지원하는 내장 셀룰러 모뎀이 있는 모델에 적용됩니다. 페이지는 단일 SIM 모델과 약간 다를 수 있습니다.
 
-### Auto Setup
+여기서는 **GL-X3000 (Spitz AX)**를 예로 들어 설명합니다. 듀얼 SIM, 단일 대기 모드를 지원합니다. 즉, 셀룰러 액세스를 위해 두 개의 SIM 카드를 장착할 수 있지만 한 번에 하나의 SIM 카드만 활성화할 수 있습니다. 두 SIM 카드 간에 수동으로 전환할 수 있습니다.
 
-Log in to the router's web Admin Panel and navigate to **INTERNET** -> **Cellular**.
+라우터의 전원을 먼저 끄고, 미리 활성화된 SIM 카드를 슬롯에 삽입한 다음 전원을 켜는 것을 권장합니다. 라우터가 부팅된 후에 SIM 카드를 삽입하면 웹 관리 패널이 자동으로 업데이트되지 않을 수 있습니다. 이 경우 페이지를 새로고침하거나 라우터를 재시작하세요.
 
-1. When no SIM card is inserted, the page displays a message "Your SIM card has not been detected". 
+### 자동 설정
 
-    ![no sim](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/no_sim.png){class="glboxshadow"}
+라우터의 웹 관리 패널에 로그인하고 **INTERNET** -> **Cellular**로 이동합니다.
 
-2. When a SIM card is inserted, the page displays as follows. Click **Connect**.
+1. SIM 카드가 삽입되지 않은 경우 "SIM 카드가 감지되지 않았습니다"라는 메시지가 표시됩니다.
 
-    ![cellular unconnected](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/cellular_unconnected.png){class="glboxshadow"}
+    ![no sim](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/no_sim.png){class="glboxshadow"}
 
-    If the SIM card is not detected, try restarting the router to see if it can be detected.
+2. SIM 카드가 삽입되면 페이지가 아래와 같이 표시됩니다. **Connect**를 클릭합니다.
 
-3. Once the cellular network is connected, the page will display the network details with a green dot, indicating a successful connection.
+    ![cellular unconnected](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/cellular_unconnected.png){class="glboxshadow"}
 
-    ![cellular connected](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/cellular_connected.png){class="glboxshadow"}
+    SIM 카드가 감지되지 않은 경우 라우터를 재시작하여 감지되는지 확인하세요.
 
-4. Click **View More Information** to show more cellular information, including modem details, SIM card details, Internet details, and cellular signal.
+3. 셀룰러 네트워크에 연결되면 페이지에 녹색 점과 함께 네트워크 세부 정보가 표시되어 연결이 성공했음을 나타냅니다.
 
-    ![view more info](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/view_more_info.png){class="glboxshadow"}
+    ![cellular connected](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/cellular_connected.png){class="glboxshadow"}
 
-    ![cellular info](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/cellular_info.jpg){class="glboxshadow gl-90-desktop"}
+4. **View More Information**을 클릭하여 모뎀 세부 정보, SIM 카드 세부 정보, 인터넷 세부 정보, 셀룰러 신호를 포함한 더 많은 셀룰러 정보를 표시합니다.
 
-If Auto Setup fails, please try [Manual Setup](#manual-setup-dual-sim).
+    ![view more info](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/view_more_info.png){class="glboxshadow"}
 
-### Manual Setup {#manual-setup-dual-sim}
+    ![cellular info](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/cellular_info.jpg){class="glboxshadow gl-90-desktop"}
 
-In the router's web Admin Panel, navigate to **INTERNET** -> **Cellular**, then click **SIM Card Settings**.
+자동 설정이 실패하면 [수동 설정](#manual-setup-dual-sim)을 시도하세요.
 
-![sim card settings 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/sim_card_settings_1.png){class="glboxshadow"}
+### 수동 설정 {#manual-setup-dual-sim}
 
-You can view or modify the cellular settings of the current SIM card. 
+라우터의 웹 관리 패널에서 **INTERNET** -> **Cellular**로 이동한 다음 **SIM Card Settings**를 클릭합니다.
 
-**Note**: Some SIM cards may require a specific APN. If your SIM card fails to register, please contact your carrier to check for any restrictions. Configure the correct APN on your router if necessary. 
+![sim card settings 1](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/sim_card_settings_1.png){class="glboxshadow"}
 
-Applying the changes will trigger a reconnection.
+현재 SIM 카드의 셀룰러 설정을 보거나 수정할 수 있습니다.
 
-![sim card settings 2](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/sim_card_settings_2.png){class="glboxshadow"}
+**참고**: 일부 SIM 카드는 특정 APN이 필요할 수 있습니다. SIM 카드가 등록되지 않으면 이동통신사에 문의하여 제한 사항이 있는지 확인하세요. 필요한 경우 라우터에 올바른 APN을 구성하세요.
 
-- **APN**: APN (Access Point Name) is a gateway parameter required for a cellular network connection. It allows the router to connect to the internet provided by your mobile carrier. You can use the default APN or set a custom APN provided by your carrier.
+변경 사항을 적용하면 재연결이 트리거됩니다.
 
-- **Protocol**: The auto-detected cellular communication protocol (e.g., QMI or QCM) based on your modem and carrier.
+![sim card settings 2](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/sim_card_settings_2.png){class="glboxshadow"}
 
-- **Port**: The auto-detected serial port for communication with the cellular modem. 
+- **APN**: APN (Access Point Name)은 셀룰러 네트워크 연결에 필요한 게이트웨이 매개변수입니다. 라우터가 이동통신사가 제공하는 인터넷에 연결할 수 있도록 합니다. 기본 APN을 사용하거나 이동통신사가 제공하는 사용자 지정 APN을 설정할 수 있습니다.
 
-- **TTL**: TTL (Time To Live) defines the maximum time packets can survive in the network. By default, the router decrements the TTL of incoming packets from client devices by 1 before forwarding them. If you need to override it, you can set a fixed value here. The TTL setting is valid only for IPv4.
+- **Protocol**: 모뎀과 이동통신사에 따라 자동 감지되는 셀룰러 통신 프로토콜(예: QMI 또는 QCM).
 
-- **HL**: In IPv6, HL (Hop Limit) limits the number of transmission hops for data packets in the network and serves as the equivalent of TTL in IPv4.
+- **Port**: 셀룰러 모뎀과 통신하기 위해 자동 감지되는 시리얼 포트.
 
-- **MTU**: The default MTU value is 1500 bytes.
+- **TTL**: TTL(Time To Live)은 패킷이 네트워크에서 존재할 수 있는 최대 시간을 정의합니다. 기본적으로 라우터는 클라이언트 장치에서 들어오는 패킷의 TTL을 1씩 줄인 후 포워딩합니다. 재정의해야 하는 경우 여기에 고정 값을 설정할 수 있습니다. TTL 설정은 IPv4에만 유효합니다.
 
-- **Authentication**: Choose the authentication method required by your carrier (e.g., NONE, PAP, CHAP). This is usually set to NONE if no credentials are needed.
+- **HL**: IPv6에서 HL(Hop Limit)은 네트워크에서 데이터 패킷의 전송 홉 수를 제한하며 IPv4의 TTL과 동일한 역할을 합니다.
 
-- **Band Masking**: You can enable Band Masking if you want the router to block certain bands or use only specific cellular bands. Click [here](#band-masking) for details.
+- **MTU**: 기본 MTU 값은 1500바이트입니다.
 
-### SIM Card Slot Settings
+- **Authentication**: 이동통신사가 요구하는 인증 방법(예: NONE, PAP, CHAP)을 선택합니다. 자격 증명이 필요하지 않은 경우 일반적으로 NONE으로 설정됩니다.
 
-In the router's web Admin Panel, navigate to **INTERNET** -> **Cellular**, then click **SIM Card Switch**.
+- **Band Masking**: 라우터가 특정 대역을 차단하거나 특정 셀룰러 대역만 사용하도록 하려면 Band Masking을 활성화할 수 있습니다. 자세한 내용은 [여기](#band-masking)를 클릭하세요.
 
-![sim card switch](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/slot_settings_0.png){class="glboxshadow"}
+### SIM 카드 슬롯 설정
 
-It will display the auto switch button, the activa SIM card, the ICCID and Network Operator.
+라우터의 웹 관리 패널에서 **INTERNET** -> **Cellular**로 이동한 다음 **SIM Card Switch**를 클릭합니다.
 
-![slot_settings_1](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/slot_settings_1.png){class="glboxshadow"}
+![sim card switch](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/slot_settings_0.png){class="glboxshadow"}
 
-If two SIM cards are inserted, you can enable **Auto Switch**.
+자동 전환 버튼, 활성 SIM 카드, ICCID 및 네트워크 운영자가 표시됩니다.
 
-![slot_settings_2](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/slot_settings_2.png){class="glboxshadow"}
+![slot_settings_1](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/slot_settings_1.png){class="glboxshadow"}
 
-- **Auto Switch**: Enables automatic switching between SIM 1 and SIM 2. The network detection method for SIM Auto Switch is the same as the one configured on the Multi-WAN page.
+두 개의 SIM 카드가 삽입된 경우 **Auto Switch**를 활성화할 수 있습니다.
 
-- **Preferred SIM Card Slot**: Please set the preferred SIM card to SIM 1 or SIM 2.
+![slot_settings_2](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/slot_settings_2.png){class="glboxshadow"}
 
-- **Failover Interval**: Available values range from 5 minutes to 24 hours.
+- **Auto Switch**: SIM 1과 SIM 2 간의 자동 전환을 활성화합니다. SIM 자동 전환의 네트워크 감지 방법은 Multi-WAN 페이지에서 구성된 방법과 동일합니다.
 
-    If the internet connection is still unavailable after a failover, the device will switch back to the preferred SIM slot and wait for this interval before retrying failover.
+- **Preferred SIM Card Slot**: 선호 SIM 카드를 SIM 1 또는 SIM 2로 설정하세요.
 
-    This option applies when both the preferred SIM card and the backup SIM card have no signal. The device will switch between SIM cards until one of them obtains a valid signal.
+- **Failover Interval**: 사용 가능한 값은 5분에서 24시간까지입니다.
 
-    ![failover interval](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/sim_failover_interval.png){class="glboxshadow"}
+    장애 조치 후에도 인터넷 연결을 사용할 수 없는 경우 장치는 선호 SIM 슬롯으로 다시 전환하고 장애 조치를 재시도하기 전에 이 간격 동안 기다립니다.
 
-- **Checking Preferred Slot Status Scheduled** 
-    
-    When enabled, the device will check the preferred SIM slot daily at the configured time and attempt to switch back if the preferred SIM regains internet access.
-    
-    This prevents the backup SIM from consuming excessive data. If the preferred SIM still has no signal, the device will continue using the backup SIM.
+    이 옵션은 선호 SIM 카드와 백업 SIM 카드 모두 신호가 없는 경우 적용됩니다. 장치는 SIM 카드 간에 전환하여 하나의 카드가 유효한 신호를 얻을 때까지 기다립니다.
 
-    ![checking preferred slot status scheduled](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/check_preferred_slot_status.png){class="glboxshadow"}
+    ![failover interval](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/sim_failover_interval.png){class="glboxshadow"}
 
-**Note**: The Auto Switch feature does not switch to another SIM card immediately. First, the device needs time to confirm that the current SIM cannot access the internet. Second, the other SIM is not in standby mode and requires time to activate.
+- **Checking Preferred Slot Status Scheduled**
 
-## Setup for USB modem
+    활성화하면 장치는 매일 구성된 시간에 선호 SIM 슬롯을 확인하고 선호 SIM이 인터넷 액세스를 다시 얻으면 전환을 시도합니다.
 
-The following steps apply to models without built-in SIM card slot, but has a USB port for connecting an external USB modem.
+    이렇게 하면 백업 SIM이 과도한 데이터를 소비하는 것을 방지할 수 있습니다. 선호 SIM에 여전히 신호가 없으면 장치는 백업 SIM을 계속 사용합니다.
 
-Here we use the **GL-MT3000 (Beryl AX)** with an external USB modem **SIMPoYo uFi** as an example.
+    ![checking preferred slot status scheduled](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/check_preferred_slot_status.png){class="glboxshadow"}
 
-We recommend you power off the router first, insert a pre-activated SIM into the USB modem, plug the modem into the router's USB port, then power on the router. If you plug the USB modem after the router has booted up, the web Admin Panel may not update automatically. In that case, please refresh the page or restart the router.
+**참고**: 자동 전환 기능은 즉시 다른 SIM 카드로 전환하지 않습니다. 첫째, 장치는 현재 SIM이 인터넷에 액세스할 수 없다는 것을 확인하는 데 시간이 필요합니다. 둘째, 다른 SIM은 대기 모드가 아니며 활성화하는 데 시간이 필요합니다.
 
-### Quick Setup
+## USB 모뎀 설정
 
-1. Power off the router first. Insert a SIM card into the USB modem, plug the modem into the router's USB port, then power on the router.
+다음 단계는 내장 SIM 카드 슬롯은 없지만 USB 모뎀 연결을 위한 USB 포트가 있는 모델에 적용됩니다.
 
-2. Log in to the router's web Admin Panel, navigate to **INTERNET** -> **Tethering**, then click **Connect**.
+여기서는 외장 USB 모뎀 **SIMPoYo uFi**가 있는 **GL-MT3000 (Beryl AX)**를 예로 들어 설명합니다.
 
-    ![usb modem 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/usb_modem_1.png){class="glboxshadow"}
+라우터의 전원을 먼저 끄고, 미리 활성화된 SIM 카드를 USB 모뎀에 삽입하고 모뎀을 라우터의 USB 포트에 연결한 다음 라우터의 전원을 켜는 것을 권장합니다. 라우터가 부팅된 후에 USB 모뎀을 연결하면 웹 관리 패널이 자동으로 업데이트되지 않을 수 있습니다. 이 경우 페이지를 새로고침하거나 라우터를 재시작하세요.
 
-    If you need to set advanced settings (e.g., TTL, HL, and MTU), click **Advanced** to customize, then click **Connect**.
+### 빠른 설정
 
-    ![usb modem 2](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/usb_modem_2.png){class="glboxshadow"}
+1. 라우터의 전원을 먼저 끕니다. SIM 카드를 USB 모뎀에 삽입하고 모뎀을 라우터의 USB 포트에 연결한 다음 라우터의 전원을 켭니다.
 
-    It will start connecting.
+2. 라우터의 웹 관리 패널에 로그인하고 **INTERNET** -> **Tethering**로 이동한 다음 **Connect**를 클릭합니다.
 
-    ![usb modem 3](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/usb_modem_3.png){class="glboxshadow"}
+    ![usb modem 1](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/usb_modem_1.png){class="glboxshadow"}
 
-3. Once connected, the page will display the network details with a green dot, indicating a successful connection.
-    
-    ![usb modem 4](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/usb_modem_4.png){class="glboxshadow"}
+    고급 설정(TTL, HL, MTU 등)을 설정해야 하는 경우 **Advanced**를 클릭하여 사용자 지정한 다음 **Connect**를 클릭합니다.
 
-    **Note:** After initial setup, if you restart the router with the USB modem plugged in, or replug the modem, it will be recognized automatically, and the network connection will be established without clicking the connect button again.
+    ![usb modem 2](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/usb_modem_2.png){class="glboxshadow"}
 
-### Compatible Modems
+    연결을 시작합니다.
 
-Here is a list of supported modems that we had tested before. 
+    ![usb modem 3](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/usb_modem_3.png){class="glboxshadow"}
 
-**SIMPoYo uFi** is a compact plug & play USB dongle with the Wi-Fi hotspot, designed for fast, reliable connectivity anywhere. It works seamlessly with most GL.iNet routers, as well as laptops, power banks, car USB ports, and other USB power sources. It comes with 10GB of free data for 30 days, valid in the UK, and 34 European countries.
+3. 연결되면 페이지에 녹색 점과 함께 네트워크 세부 정보가 표시되어 연결이 성공했음을 나타냅니다.
+
+    ![usb modem 4](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/usb_modem_4.png){class="glboxshadow"}
+
+    **참고:** 초기 설정 후 USB 모뎀이 연결된 상태로 라우터를 재시작하거나 모뎀을 다시 연결하면 자동으로 인식되며 연결 버튼을 다시 클릭하지 않아도 네트워크 연결이 설정됩니다.
+
+### 호환 모뎀
+
+여기서는 이전에 테스트한 지원 모뎀 목록입니다.
+
+**SIMPoYo uFi**는 Wi-Fi 핫스팟이 있는 컴팩트한 플그 앤 플레이 USB 동글로, 어디서나 빠르고 안정적인 연결을 위해 설계되었습니다. 대부분의 GL.iNet 라우터는 물론 노트북, 배터리 팩, 자동차 USB 포트 및 기타 USB 전원 공급 장치와도 원활하게 작동합니다. 영국 및 34개 유럽 국가에서 30일간 유효한 10GB 무료 데이터가 포함되어 있습니다.
 
 | Model                                  | Cellular | Tested | Tested by       | Comments* |
 | -------------------------------------- | -------- | ------ | --------------- | --------- |
@@ -241,154 +241,154 @@ Here is a list of supported modems that we had tested before.
 | Novatel USB551L (Verizon)              | 4G       | Yes    | GL.iNet/steven  | QMI       |
 | Verizon U620L (Verizon)                | 4G       | Yes    | anonymous       | Host-less |
 
-- **QMI**: This modem supports QMI mode. Please select QMI as the cellular communication protocol, and **/dev/cdc-wdm0** as the serial port in the SIM card settings.
+- **QMI**: 이 모뎀은 QMI 모드를 지원합니다. SIM 카드 설정에서 셀룰러 통신 프로토콜로 QMI를, 시리얼� 포트로 **/dev/cdc-wdm0**를 선택하세요.
 
-- **Host-less**: This modem supports Tethering mode. Please manage the connection via the router's Tethering interface rather than the Cellular interface.
+- **Host-less**: 이 모뎀은 Tethering 모드를 지원합니다. Cellular 인터페이스가 아닌 라우터의 Tethering 인터페이스를 통해 연결을 관리하세요.
 
-## Traffic Statistics
+## 트래픽 통계
 
-In the router's web Admin Panel, navigate to **INTERNET** -> **Cellular**, then click **Data Used**.
+라우터의 웹 관리 패널에서 **INTERNET** -> **Cellular**로 이동한 다음 **Data Used**를 클릭합니다.
 
-![traffic statistics](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/traffic_statistics_0.png){class="glboxshadow"}
+![traffic statistics](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/traffic_statistics_0.png){class="glboxshadow"}
 
-You will enter the Traffic Statistics page. It displays the used data of SIM card(s), and provides data limit settings.
+트래픽 통계 페이지로 이동합니다. SIM 카드의 사용된 데이터를 표시하고 데이터 제한 설정을 제공합니다.
 
-![traffic statistics 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/traffic_statistics_1.png){class="glboxshadow"}
+![traffic statistics 1](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/traffic_statistics_1.png){class="glboxshadow"}
 
-If the Data Used exceeds the Data Cap Amount, please modify the **Data Cap Amount** or the **Data Used** manually. Otherwise, the network may be disconnected, or the SIM card may Auto Switch (for Dual-SIM models).
+사용된 데이터가 데이터 제한량을 초과하면 **Data Cap Amount** 또는 **Data Used**를 수동으로 수정하세요. 그렇지 않으면 네트워크 연결이 끊어지거나 SIM 카드가 자동 전환될 수 있습니다(듀얼 SIM 모델의 경우).
 
-- **Modify the Data Used**
+- **Data Used 수정**
 
-    Click **Modify** on the right side of SIM 1/2 Data Used. 
+    SIM 1/2 Data Used 오른쪽의 **Modify**를 클릭합니다.
 
-    ![traffic statistics 2](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/traffic_statistics_2.jpg){class="glboxshadow"}
+    ![traffic statistics 2](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/traffic_statistics_2.jpg){class="glboxshadow"}
 
-    Then you can modify or reset the data used. 
+    그런 다음 사용된 데이터를 수정하거나 재설정할 수 있습니다.
 
-    ![traffic statistics 3](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/traffic_statistics_3_new.png){class="glboxshadow"}
+    ![traffic statistics 3](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/traffic_statistics_3_new.png){class="glboxshadow"}
 
-- **Set up SIM data limit**
+- **SIM 데이터 제한 설정**
 
-    If you want to set up the SIM data limit, enable **Save data when power off** first. It means the data can be saved even after the device is powered off.
+    SIM 데이터 제한을 설정하려면 먼저 **Save data when power off**를 활성화하세요. 이는 장치 전원을 꺼도 데이터가 저장됨을 의미합니다.
 
-    ![traffic statistics 4](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/traffic_statistics_4.png){class="glboxshadow"}
+    ![traffic statistics 4](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/traffic_statistics_4.png){class="glboxshadow"}
 
-    Then enable the SIM 1 or SIM 2 Limit Settings.
+    그런 다음 SIM 1 또는 SIM 2 제한 설정을 활성화합니다.
 
-    ![traffic statistics 5](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/traffic_statistics_5.jpg){class="glboxshadow"}
+    ![traffic statistics 5](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/traffic_statistics_5.jpg){class="glboxshadow"}
 
-For Dual-SIM models, we suggest enabling the **SIM Card Slot Auto Switch** at the same time. If the SIM 1 Data Cap Amount is set and the SIM Card Slot Auto Switch is enabled, SIM 1 will automatically switch to SIM 2 when it's data exceeds the Data Cap Amount and SIM 1 will be disabled.
+듀얼 SIM 모델의 경우 동시에 **SIM Card Slot Auto Switch**를 활성화하는 것을 권장합니다. SIM 1 데이터 제한량이 설정되어 있고 SIM Card Slot Auto Switch가 활성화되어 있으면 SIM 1의 데이터가 데이터 제한량을 초과할 때 SIM 1은 자동으로 SIM 2로 전환되며 SIM 1은 비활성화됩니다.
 
-## Historical Signal Record
+## 과거 신호 기록
 
-In the router's web Admin Panel, navigate to **INTERNET** -> **Cellular**, then click **Historical Signal Record**.
+라우터의 웹 관리 패널에서 **INTERNET** -> **Cellular**로 이동한 다음 **Historical Signal Record**를 클릭합니다.
 
-![historical signal record](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/historical_signal_record_0.png){class="glboxshadow"}
+![historical signal record](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/historical_signal_record_0.png){class="glboxshadow"}
 
-You can check the quality of your cellular connection here. If the signal is weak, try switching towers for a better signal.
+여기서 셀룰러 연결 품질을 확인할 수 있습니다. 신호가 약한 경우 기지국을 전환하여 더 나은 신호를 시도하세요.
 
-![historical signal record 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/historical_signal_record_1.png){class="glboxshadow"}
+![historical signal record 1](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/historical_signal_record_1.png){class="glboxshadow"}
 
-![historical signal record 2](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/historical_signal_record_2.png){class="glboxshadow"}
+![historical signal record 2](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/historical_signal_record_2.png){class="glboxshadow"}
 
-View the signal strength history by selecting different time frames in the upper-right corner.
+오른쪽 상단에서 다른 시간 프레임을 선택하여 신호 강도 기록을 봅니다.
 
-![historical signal record 3](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/historical_signal_record_3.png){class="glboxshadow"}
+![historical signal record 3](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/historical_signal_record_3.png){class="glboxshadow"}
 
 ## Band Masking
 
-Band Masking allows you to block specific bands or use only preferred cellular bands to improve weak cellular signal.
+Band Masking을 사용하면 특정 대역을 차단하거나 선호하는 셀룰러 대역만 사용하여 약한 셀룰러 신호를 개선할 수 있습니다.
 
-In the router's web Admin Panel, navigate to **INTERNET** -> **Cellular** -> **SIM Card Settings**, toggle on **Enable Band Masking**.
+라우터의 웹 관리 패널에서 **INTERNET** -> **Cellular** -> **SIM Card Settings**로 이동하고 **Enable Band Masking**을 토글합니다.
 
-![single sim band masking](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/single_sim_band_masking.png){class="glboxshadow"}
+![single sim band masking](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/single_sim_band_masking.png){class="glboxshadow"}
 
-Select the **Masking Mode** (Block or Open), then select the LTE Bands, 5G NSA Bands, and 5G SA Bands.
+**Masking Mode**(Block 또는 Open)를 선택한 다음 LTE Bands, 5G NSA Bands 및 5G SA Bands를 선택합니다.
 
 ## SMS
 
-Please refer to the [SMS tutorial](sms.md).
+[SMS 튜토리얼](sms.md)을 참조하세요.
 
-## SMS Forwarding
+## SMS 전달
 
-Please refer to the [SMS Forwarding tutorial](../tutorials/sms_forwarding.md).
+[SMS 전달 튜토리얼](../tutorials/sms_forwarding.md)을 참조하세요.
 
-## Lock Tower
+## 기지국 잠금
 
-!!! note "Supported Models"
+!!! note "지원 모델"
 
     - GL-E5800 (Mudi 7)
     - GL-X3000 (Spitz AX)
     - GL-XE3000 (Puli AX)
     - GL-X2000 (Spitz Plus)*
 
-    *The GL-X2000 (Spitz Plus) supports this feature on firmware ver.4.7 or later.
+    *GL-X2000 (Spitz Plus)는 펌웨어 4.7 이상에서 이 기능을 지원합니다.
 
-If you want to receive a high-quality signal and ensure a stable cellular connection, you can try locking tower.
+고품질 신호를 수신하고 안정적인 셀룰러 연결을 보장하려면 기지국 잠금을 시도할 수 있습니다.
 
-**Note:** The locked tower must match the frequency bands supported by your carrier and device; otherwise, the connection may fail.
+**참고:** 잠긴 기지국은 이동통신사와 장치가 지원하는 주파수 대역과 일치해야 합니다. 그렇지 않으면 연결이 실패할 수 있습니다.
 
-In the router's web Admin Panel, navigate to **INTERNET** -> **Cellular**. Click the three-dot icon in the upper right, then select **Lock Tower**.
+라우터의 웹 관리 패널에서 **INTERNET** -> **Cellular**로 이동합니다. 오른쪽 상단의 세 점 아이콘을 클릭한 다음 **Lock Tower**를 선택합니다.
 
-![lock tower 0](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/lock_tower_0.png){class="glboxshadow"}
+![lock tower 0](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/lock_tower_0.png){class="glboxshadow"}
 
-Click **Scan** to start scanning the cellular signal towers. It will take a few minutes. Do not refresh the page when scanning. 
+**Scan**을 클릭하여 셀룰러 신호 기지국 스캔을 시작합니다. 몇 분 정도 소요됩니다. 스캔 중에는 페이지를 새로고침하지 마세요.
 
-![lock tower 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/lock_tower_1.png){class="glboxshadow"}
+![lock tower 1](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/lock_tower_1.png){class="glboxshadow"}
 
-It will display the available towers.
+사용 가능한 기지국이 표시됩니다.
 
-![lock tower 2](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/lock_tower_2.png){class="glboxshadow"}
+![lock tower 2](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/lock_tower_2.png){class="glboxshadow"}
 
-Click a tower to view the details and lock onto it.
+기지국을 클릭하여 세부 정보를 보고 잠급니다.
 
-![lock tower 3](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/lock_tower_3.png){class="glboxshadow"}
+![lock tower 3](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/lock_tower_3.png){class="glboxshadow"}
 
-**Note**: 
+**참고**:
 
-1. The device may not be able to scan all towers when the Cellular interface is enabled.
+1. Cellular 인터페이스가 활성화되어 있으면 장치가 모든 기지국을 스캔하지 못할 수 있습니다.
 
-2. If the locked tower does not match the band masking or APN parameters in your cellular settings, the router will not be able to connect to the cellular network.
+2. 잠긴 기지국이 셀룰러 설정의 Band Masking 또는 APN 매개변수와 일치하지 않으면 라우터가 셀룰러 네트워크에 연결할 수 없습니다.
 
-3. After locking a cell tower, if you move the router to another location, it will still attempt to reconnect to the locked tower after rebooting. This may prevent the router from connecting to the cellular network automatically at the new location. In this case, you need to either unlock the current cell tower, or manually lock it to a new tower.
+3. 기지국을 잠근 후 라우터를 다른 위치로 이동하면 재부팅 후에도 잠긴 기지국에 다시 연결을 시도합니다. 이로 인해 라우터가 새 위치에서 자동으로 셀룰러 네트워크에 연결하지 못할 수 있습니다. 이 경우 현재 기지국을 잠금 해제하거나 새 기지국에 수동으로 잠급니다.
 
-## Lock Operator
+## 운영자 잠금
 
-This feature is available only on GL-X3000, GL-XE3000, and GL-X2000 (firmware ver.4.8 or later).
+이 기능은 GL-X3000, GL-XE3000 및 GL-X2000(펌웨어 4.8 이상)에서만 사용할 수 있습니다.
 
-By locking to a specific mobile operator, the router will only use that operator's network, ensuring a stable connection and avoiding unintended roaming charges — especially in border areas where the device may otherwise connect to foreign networks.
+특정 이동통신사에 잠그면 라우터는 해당 운영자의 네트워크만 사용하며 안정적인 연결을 보장하고 의도하지 않은 로밍 요금을 방지합니다. 특히 장치가 외국 네트워크에 연결될 수 있는 국경 지역에서 유용합니다.
 
-In the router's web Admin Panel, navigate to **INTERNET** -> **Cellular**. Click the three-dot icon in the upper right, then select **Lock Operator**.
+라우터의 웹 관리 패널에서 **INTERNET** -> **Cellular**로 이동합니다. 오른쪽 상단의 세 점 아이콘을 클릭한 다음 **Lock Operator**를 선택합니다.
 
-![lock operator 0](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/lock_operator_0.png){class="glboxshadow"}
+![lock operator 0](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/lock_operator_0.png){class="glboxshadow"}
 
-There are three locking modes: 
+세 가지 잠금 모드가 있습니다:
 
-- **Auto**: Automatically connect to an available operator network.
-- **Manual**: Manually lock onto a specific operator.
-- **Manual-Auto**: Automatically switch to an available operator network if the manual lock fails.
+- **Auto**: 사용 가능한 운영자 네트워크에 자동으로 연결합니다.
+- **Manual**: 특정 운영자에 수동으로 잠급니다.
+- **Manual-Auto**: 수동 잠금이 실패하면 사용 가능한 운영자 네트워크로 자동 전환됩니다.
 
-![lock operator 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/lock_operator_1.png){class="glboxshadow"}
+![lock operator 1](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/lock_operator_1.png){class="glboxshadow"}
 
-## Modem AT Command
+## 모뎀 AT 명령
 
-Modem AT commands are standard instructions used to communicate with the cellular modem. With this feature, you can send commands and check the modem status.
+모뎀 AT 명령은 셀룰러 모뎀과 통신하는 데 사용되는 표준 명령입니다. 이 기능을 사용하면 명령을 보내고 모뎀 상태를 확인할 수 있습니다.
 
-In the router's web Admin Panel, navigate to **INTERNET** -> **Cellular**. Click the three-dot icon in the upper right, then select **Modem AT Command**.
+라우터의 웹 관리 패널에서 **INTERNET** -> **Cellular**로 이동합니다. 오른쪽 상단의 세 점 아이콘을 클릭한 다음 **Modem AT Command**를 선택합니다.
 
-![AT command 0](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/at_command_0.jpg){class="glboxshadow"}
+![AT command 0](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/at_command_0.jpg){class="glboxshadow"}
 
-You will enter the AT Command page.
+AT 명령 페이지로 이동합니다.
 
-![AT command 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/at_command_1.png){class="glboxshadow"}
+![AT command 1](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/at_command_1.png){class="glboxshadow"}
 
-When Shortcut is set to **Manual command**, you can type your desired command in the AT Command field.
+Shortcut이 **Manual command**로 설정된 경우 AT 명령 필드에 원하는 명령을 입력할 수 있습니다.
 
-You can also click the Shortcut drop-down to select from a list of **preset commands**.
+Shortcut 드롭다운을 클릭하여 **미리 설정된 명령** 목록에서 선택할 수도 있습니다.
 
-![AT command 2](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/at_command_2.png){class="glboxshadow"}
+![AT command 2](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/at_command_2.png){class="glboxshadow}
 
-The following commands are available as presets:
+다음 명령을 미리 설정으로 사용할 수 있습니다:
 
 * Request IMEI
 * Request QCCID
@@ -398,107 +398,107 @@ The following commands are available as presets:
 * Operator Names
 * Request SIM card status
 
-As an example, the shortcut "Request IMEI" is selected here. Click "Send", and you will get the result as shown below.
+예로 "Request IMEI" 바로가기를 선택했습니다. "Send"를 클릭하면 아래와 같은 결과를 얻을 수 있습니다.
 
-![AT command 3](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/at_command_3.png){class="glboxshadow"}
+![AT command 3](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/at_command_3.png){class="glboxshadow"}
 
-In the bottom right corner, you can click **Export Debug Info** to download a .json file.
+오른쪽 하단에서 **Export Debug Info**를 클릭하여 .json 파일을 다운로드할 수 있습니다.
 
-![AT command 4](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/at_command_4.png){class="glboxshadow"}
+![AT command 4](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/at_command_4.png){class="glboxshadow"}
 
-## Troubleshooting
+## 문제 해결
 
-If you fail to establish a cellular connection, click the error message below for relevant solutions.
+셀룰러 연결 설정에 실패하면 아래 오류 메시지를 클릭하여 관련 솔루션을 확인하세요.
 
-??? note "No SIM / Your SIM card has not been detected"
+??? note "SIM 없음 / SIM 카드가 감지되지 않았습니다"
 
-    ![no sim](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/no_sim.png){class="glboxshadow"}
+    ![no sim](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/no_sim.png){class="glboxshadow"}
 
-    Here are some suggestions for troubleshooting.
-    
-    1. Refresh the page and wait a few minutes to check if the SIM card can be detected.
-    
-    2. Ensure the SIM card is installed correctly. Align the notch on the SIM card with the corresponding mark on the card slot to confirm proper insertion orientation.
-    
-    3. Power off the router, remove and reinsert the SIM card, then power the router back on.
-    
-    4. Try using another SIM card if available.
+    문제 해결을 위한 몇 가지 제안 사항입니다.
 
-    If the issue persists, download the logs and send them to [support@gl-inet.com](mailto:support@gl-inet.com).
+    1. 페이지를 새로고침하고 몇 분 기다려 SIM 카드가 감지되는지 확인하세요.
 
-??? note "SIM card not registered / The interface is connected, but the Internet can't be accessed"
+    2. SIM 카드가 올바르게 설치되었는지 확인하세요. SIM 카드의 노치를 카드 슬롯의 해당 마크와 정렬하여 올바른 삽입 방향을 확인하세요.
 
-    This issue has two types of error messages:
+    3. 라우터 전원을 끄고 SIM 카드를 제거한 다음 다시 삽입한 후 라우터 전원을 다시 켭니다.
 
-    - SIM card not registered
+    4. 가능한 경우 다른 SIM 카드를 사용해 보세요.
 
-        ![sim not registered](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/sim_not_registered.png){class="glboxshadow"}
+    문제가 지속되면 로그를 다운로드하여 [support@gl-inet.com](mailto:support@gl-inet.com)으로 보내세요.
 
-    - The interface is connected, but the Internet can't be accessed
-    
-        ![connected no internet](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/connected_no_internet.png){class="glboxshadow"}
+??? note "SIM 카드가 등록되지 않음 / 인터페이스는 연결되었지만 인터넷에 액세스할 수 없음"
 
-    Here are some suggestions for troubleshooting.
+    이 문제에는 두 가지 유형의 오류 메시지가 있습니다:
 
-    1. Refresh the page and wait a few minutes to check if the error disappears.
-    
-    2. Click **Disconnect**/**Abort**, then click **Connect** to try reconnecting.
-    
-    3. Restart the router.
-    
-    4. Verify the SIM card status and ensure it is activated. Test the SIM card by inserting it into a smartphone to confirm it can access the internet normally with an active mobile data plan, or contact your network carrier for verification.
-    
-    5. Some network carriers may require a 3G protocol for network connection. Please go to **SIM Card Settings** -> **Protocol**, select **3G**, then click **Apply**.
+    - SIM 카드가 등록되지 않음
 
-        ![sim protocol](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/sim_settings_protocol.png){class="glboxshadow gl-80-desktop"}
+        ![sim not registered](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/sim_not_registered.png){class="glboxshadow"}
 
-        The device will reconnect automatically. Wait a few minutes to check if the connection is successful.
+    - 인터페이스는 연결되었지만 인터넷에 액세스할 수 없음
 
-        ![connecting](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/connecting.png){class="glboxshadow"}
+        ![connected no internet](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/connected_no_internet.png){class="glboxshadow"}
 
-        If the connection is successful, the page will display as follows.
+    문제 해결을 위한 몇 가지 제안 사항입니다.
 
-        ![connected](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/connected.png){class="glboxshadow"}
-    
-    6. Some SIM cards may have special usage restrictions (e.g., requiring a specific APN). If your SIM card fails to register, contact your carrier to check for any restrictions. 
-    
-        If necessary, go to **SIM Card Settings** -> **APN**, configure the correct APN on the router, then click **Apply**.
+    1. 페이지를 새로고침하고 몇 분 기다려 오류가 사라지는지 확인하세요.
 
-        ![sim apn](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/sim_settings_apn.png){class="glboxshadow gl-80-desktop"}
-    
-    7. Click **View More Information** to check the cellular signal strength. If the signal is weak, ensure the antenna is installed correctly. Move the router to an open and unobstructed location for better signal reception.
+    2. **Disconnect**/**Abort**를 클릭한 다음 **Connect**를 클릭하여 재연결을 시도하세요.
 
-        ![cells signal](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/cells_info.png){class="glboxshadow gl-80-desktop"}
-    
-    8. Check if **Band Masking** or **Lock Tower** is enabled. If so, disable the feature and try reconnecting.
+    3. 라우터를 재시작하세요.
 
-    If the issue persists, download the logs and send them to [support@gl-inet.com](mailto:support@gl-inet.com).
+    4. SIM 카드 상태를 확인하고 활성화되었는지 확인하세요. 활성화된 모바일 데이터 요금제로 정상적으로 인터넷에 액세스할 수 있는지 확인하기 위해 스마트폰에 SIM 카드를 삽입하여 테스트하거나 네트워크 운영자에 문의하여 확인하세요.
 
-## IoT Certification {#iot-certification}
+    5. 일부 네트워크 운영자는 네트워크 연결을 위해 3G 프로토콜을 요구할 수 있습니다. **SIM Card Settings** -> **Protocol**로 이동하여 **3G**를 선택한 다음 **Apply**를 클릭하세요.
 
-### AT&T Certification
+        ![sim protocol](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/sim_settings_protocol.png){class="glboxshadow gl-80-desktop"}
 
-Click the link [att device certification](https://iotdevices.att.com/certified-devices.aspx#) and input the device name, you can find it. 
+        장치가 자동으로 재연결됩니다. 연결이 성공적인지 확인하기 위해 몇 분 기다리세요.
 
-![bandmasking](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/certification/at&t_certification.png){class="glboxshadow"}
+        ![connecting](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/connecting.png){class="glboxshadow"}
 
-![bandmasking](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/certification/at&t_certification_2.png){class="glboxshadow"}
+        연결이 성공하면 페이지가 아래와 같이 표시됩니다.
 
-### T-Mobile Certification
+        ![connected](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/connected.png){class="glboxshadow"}
 
-Click the link [t-mobile device certification](https://www.t-mobile.com/business/solutions/iot/device-certification) and choose 5G in **Filter**, you can find it. 
+    6. 일부 SIM 카드에는 특정 사용 제한이 있을 수 있습니다(예: 특정 APN 필요). SIM 카드가 등록되지 않으면 운영자에 문의하여 제한 사항이 있는지 확인하세요.
 
-![bandmasking](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_cellular/certification/t-mobile_certification.png){class="glboxshadow"}
+        필요한 경우 **SIM Card Settings** -> **APN**으로 이동하여 라우터에 올바른 APN을 구성한 다음 **Apply**를 클릭하세요.
 
+        ![sim apn](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/sim_settings_apn.png){class="glboxshadow gl-80-desktop"}
 
----
+    7. **View More Information**을 클릭하여 셀룰러 신호 강도를 확인하세요. 신호가 약한 경우 안테나가 올바르게 설치되었는지 확인하세요. 더 나은 신호 수신을 위해 라우터를 열리고 장애물이 없는 위치로 이동하세요.
 
-Related Articles
+        ![cells signal](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/4.8/troubleshoot/cells_info.png){class="glboxshadow gl-80-desktop"}
 
-- [Internet page](internet.md)
-- [How to set the priority of each Internet access method?](multi-wan.md)
-- [How to set the load balance when multiple Internet access methods are used at the same time?](multi-wan.md)
+    8. **Band Masking** 또는 **Lock Tower**가 활성화되어 있는지 확인하세요. 활성화된 경우 기능을 비활성화하고 재연결을 시도하세요.
+
+    문제가 지속되면 로그를 다운로드하여 [support@gl-inet.com](mailto:support@gl-inet.com)으로 보내세요.
+
+## IoT 인증 {#iot-certification}
+
+### AT&T 인증
+
+[att device certification](https://iotdevices.att.com/certified-devices.aspx#) 링크를 클릭하고 장치 이름을 입력하면 찾을 수 있습니다.
+
+![bandmasking](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/certification/at&t_certification.png){class="glboxshadow"}
+
+![bandmasking](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/certification/at&t_certification_2.png){class="glboxshadow"}
+
+### T-Mobile 인증
+
+[t-mobile device certification](https://www.t-mobile.com/business/solutions/iot/device-certification) 링크를 클릭하고 **Filter**에서 5G를 선택하면 찾을 수 있습니다.
+
+![bandmasking](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_cellular/certification/t-mobile_certification.png){class="glboxshadow"}
+
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+관련 문서
+
+- [Internet 페이지](internet.md)
+- [각 인터넷 액세스 방법의 우선 순위를 설정하는 방법](multi-wan.md)
+- [여러 인터넷 액세스 방법을 동시에 사용할 때 로드 밸런스를 설정하는 방법](multi-wan.md)
+
+---
+
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.

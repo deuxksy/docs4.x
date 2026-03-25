@@ -1,202 +1,202 @@
-# Connect to the Internet via an existing Wi-Fi by Repeater
+# Repeater를 통해 기존 Wi-Fi에 연결하여 인터넷 사용
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7mZtz8u8--E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Using Repeater means connecting the router to another existing wireless network, e.g. when you are using free Wi-Fi in a hotel or cafe.
+Repeater를 사용한다는 것은 라우터를 다른 기존 무선 네트워크에 연결하는 것을 의미합니다. 예를 들어 호텔이나 카페에서 무료 Wi-Fi를 사용할 때입니다.
 
-It works in WISP (Wireless Internet Service Provider) mode by default, which means that the router will create its own subnet and act as a firewall to protect you from the public network.
+기본적으로 WISP(Wireless Internet Service Provider) 모드로 작동하며, 이는 라우터가 자체 서브넷을 생성하고 방화벽으로 작동하여 공용 네트워크로부터 사용자를 보호합니다.
 
-## Basic Steps
+## 기본 단계
 
-Log in to the router's web admin panel, navigate to **INTERNET** -> **Repeater** section, and click **Connect**.
+라우터의 웹 관리 패널에 로그인하고 **INTERNET** -> **Repeater** 섹션으로 이동한 후 **Connect**를 클릭합니다.
 
-![repeater section](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_section.png){class="glboxshadow"}
+![repeater section](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_section.png){class="glboxshadow"}
 
-Choose the Wi-Fi network you want to connect to from the available network list.
+사용 가능한 네트워크 목록에서 연결할 Wi-Fi 네트워크를 선택합니다.
 
-![join wifi 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/join_wifi_1.png){class="glboxshadow"}
+![join wifi 1](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/join_wifi_1.png){class="glboxshadow"}
 
-**Note**: The page displays the Wi-Fi channels your router supports. Please ensure that the Wi-Fi network you're connecting to uses one of these channels, otherwise it may not be displayed in the available network list.
+**참고**: 이 페이지에는 라우터가 지원하는 Wi-Fi 채널이 표시됩니다. 연결하려는 Wi-Fi 네트워크가 이 채널 중 하나를 사용하는지 확인하세요. 그렇지 않으면 사용 가능한 네트워크 목록에 표시되지 않을 수 있습니다.
 
-Enter the correct Wi-Fi password and click **Apply**.
+올바른 Wi-Fi 비밀번호를 입력하고 **Apply**를 클릭합니다.
 
-![join wifi 2](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/join_wifi_2.png){class="glboxshadow"}
+![join wifi 2](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/join_wifi_2.png){class="glboxshadow"}
 
-If the Wi-Fi SSID you want to connect to is not in the Available Network list, click **Join Other Network** in the upper-right corner, manually input the Wi-Fi SSID and other information required. Refer to [here](#join-other-network) for detailed steps.
+연결하려는 Wi-Fi SSID가 사용 가능한 네트워크 목록에 없으면 오른쪽 상단의 **Join Other Network**를 클릭하여 Wi-Fi SSID 및 기타 필요한 정보를 수동으로 입력합니다. 자세한 단계는 [여기](#join-other-network)를 참조하세요.
 
-![join other network](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/join_other_network_1.png){class="glboxshadow"}
+![join other network](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/join_other_network_1.png){class="glboxshadow"}
 
-For connecting to a public hotspot, such as those provided by hotels/airports/malls, please refer to  [For Public Hotspot](#for-public-hotspot).
+호텔/공항/쇼핑몰에서 제공하는 공용 핫스팟에 연결하려면 [공용 핫스팟](#for-public-hotspot)을 참조하세요.
 
-For other settings, please refer to [Advanced Settings](#advanced-settings).
+기타 설정은 [고급 설정](#advanced-settings)을 참조하세요.
 
-After a while, if the password input is correct, the connection will be successful.
+잠시 후, 비밀번호 입력이 올바르면 연결이 성공합니다.
 
-![repeater connected](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_connected.png){class="glboxshadow"}
+![repeater connected](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_connected.png){class="glboxshadow"}
 
-## For Public Hotspot
+## 공용 핫스팟용
 
-When connecting the router to a public hotspot with a captive portal, enabling the following features can help improve the connection success rate.
+캡티브 포털이 있는 공용 핫스팟에 라우터를 연결할 때 다음 기능을 활성화하면 연결 성공률을 높이는 데 도움이 됩니다.
 
-![repeater settings for public hotspot](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_settings_for_public_hotspot.png){class="glboxshadow"}
+![repeater settings for public hotspot](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_settings_for_public_hotspot.png){class="glboxshadow"}
 
-- **Auto-Enable Login Mode for Public Hotspots**
+- **공용 핫스팟용 로그인 모드 자동 활성화**
 
-    This feature is available since v4.6
+    이 기능은 v4.6부터 사용할 수 있습니다.
 
-    If this option is enabled, this router will automatically enter Login Mode for Public Hotspots when it is successfully connected to a hotspot but not the Internet. **In this mode, some services will be suspended while the DNS mode will be switched to automatic**, which may leak your network activity to the hotspot provider (e.g. hotel or shopping mall).
+    이 옵션을 활성화하면 라우터가 핫스팟에 성공적으로 연결되었지만 인터넷에 연결되지 않은 경우 공용 핫스팟용 로그인 모드로 자동 전환됩니다. **이 모드에서는 일부 서비스가 일시 중단되고 DNS 모드가 자동으로 전환되며, 핫스팟 제공자(예: 호텔 또는 쇼핑몰)에 네트워크 활동이 유출될 수 있습니다.**
 
-    Even if this option is not enabled, the router will prompt you to enter this mode when it detects a captive portal in the hotspot and fails to log in successfully.
+    이 옵션을 활성화하지 않더라도 라우터는 핫스팟에서 캡티브 포털을 감지하고 로그인에 실패하면 이 모드로 전환하라는 메시지를 표시합니다.
 
-    ![login mode for public hotspots](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/login_mode_for_public_hotspots.png){class="glboxshadow"}
+    ![login mode for public hotspots](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/login_mode_for_public_hotspots.png){class="glboxshadow"}
 
-- **Enable Camouflage**
+- **위장 활성화**
 
-    If enabled, the router will masquerade as the client device you use to access the admin panel by emulating that device’s MAC address.
+    활성화하면 라우터는 관리 패널에 액세스하는 데 사용하는 클라이언트 장치의 MAC 주소를 에뮬레이션하여 해당 장치로 위장합니다.
 
-- **MAC Mode**
+- **MAC 모드**
 
-    You can choose which MAC the router uses to connect to the public hotspot.
+    라우터가 공용 핫스팟에 연결하는 데 사용할 MAC를 선택할 수 있습니다.
 
-    - **Factory**: Uses the device's original factory-assigned MAC address.
+    - **공장**: 장치의 원래 공장 할당 MAC 주소를 사용합니다.
 
-    - **Clone**: Clones a client device’s MAC address for connection. If the desired MAC isn’t listed, manually enter the address you want to clone. 
-    
-        Note: Many modern devices use randomized MAC addresses (often called Private Wi-Fi Address or random hardware address) when connecting to Wi-Fi networks. Because of this, the MAC address displayed here may not match the device’s actual physical MAC.
-  
-    - **Random**: Automatically generates a random MAC address for connection.
+    - **복제**: 연결을 위해 클라이언트 장치의 MAC 주소를 복제합니다. 원하는 MAC가 나열되어 있지 않으면 복제할 주소를 수동으로 입력합니다.
 
-    When saving the network configuration, the MAC Mode (including any cloned/randomized MAC address) is tied to the specific SSID you save. You can manually change these settings for each SSID at any time.
+        참고: 많은 최신 장치는 Wi-Fi 네트워크에 연결할 때 무작위 MAC 주소(일반적으로 프라이빗 Wi-Fi 주소 또는 무작위 하드웨어 주소라고 함)를 사용합니다. 따라서 여기에 표시된 MAC 주소는 장치의 실제 물리적 MAC와 일치하지 않을 수 있습니다.
 
-- **Auto Update MAC**: If this option is enabled, the MAC can update automatically.
+    - **무작위**: 연결을 위해 무작위 MAC 주소를 자동으로 생성합니다.
 
-## Advanced Settings
+    네트워크 구성을 저장할 때 MAC 모드(복제/무작위 MAC 주소 포함)는 저장하는 특정 SSID에 연결됩니다. 언제든지 각 SSID에 대해 이 설정을 수동으로 변경할 수 있습니다.
 
-When joining the network, there are some additional options.
+- **MAC 자동 업데이트**: 이 옵션을 활성화하면 MAC이 자동으로 업데이트될 수 있습니다.
 
-![advanced settings](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_advanced_settings.png){class="glboxshadow"}
+## 고급 설정
 
-* **Remember**: Enable this to remember the current repeated Wi-Fi network.
+네트워크에 참가할 때 몇 가지 추가 옵션이 있습니다.
 
-* **Lock BSSID**: When enabled, the router will connect only to the specific access point (AP) corresponding to the selected BSSID, even when other APs share the same SSID.
+![advanced settings](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_advanced_settings.png){class="glboxshadow"}
 
-* **Manually Set Static IP**: When enabled, you can manually configure a fixed IPv4 address, netmask, gateway, and DNS servers for the router's repeater connection, instead of obtaining these settings automatically.
+* **기억**: 이를 활성화하여 현재 반복된 Wi-Fi 네트워크를 기억합니다.
 
-    ![set static ip](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/manually_set_static_ip.png){class="glboxshadow"}
+* **BSSID 잠금**: 활성화하면 라우터는 다른 AP가 동일한 SSID를 공유하더라도 선택한 BSSID에 해당하는 특정 액세스 포인트(AP)에만 연결합니다.
 
-* **TTL**: TTL (Time To Live) sets the maximum time for packets to survive in the network, and is filled in according to the requirements of the operator. By default, the router forwards the TTL of the incoming client device minus one. If you need to camouflage, you can set a fixed value here. the TTL is valid only for IPv4.
+* **수동으로 고정 IP 설정**: 활성화하면 설정을 자동으로 가져오는 대신 라우터의 Repeater 연결에 대해 고정 IPv4 주소, 넷마스크, 게이트웨이 및 DNS 서버를 수동으로 구성할 수 있습니다.
 
-* **HL**: In IPv6, the HL (Hop Limit) field is used to limit the number of transmission hops of data packets in the network, which is equivalent to the TTL in IPv4.
+    ![set static ip](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/manually_set_static_ip.png){class="glboxshadow"}
 
-* **MTU**: The default value is 1500.
+* **TTL**: TTL(Time To Live)은 패킷이 네트워크에서 존재할 수 있는 최대 시간을 설정하며 통신 사업자의 요구 사항에 따라 입력됩니다. 기본적으로 라우터는 들어오는 클라이언트 장치의 TTL을 1씩 줄여 포워딩합니다. 위장이 필요한 경우 여기에 고정 값을 설정할 수 있습니다. TTL은 IPv4에만 유효합니다.
 
-## Repeater Options
+* **HL**: IPv6에서 HL(Hop Limit) 필드는 네트워크에서 데이터 패킷의 전송 홉 수를 제한하며 IPv4의 TTL과 동일합니다.
 
-To view repeater options, click the gear icon in the upper-right corner of the connected Repeater section.
+* **MTU**: 기본값은 1500입니다.
 
-![repeater options](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_connected.png){class="glboxshadow"}
+## Repeater 옵션
 
-**For firmware v4.8**, the Repeater Options page is displayed as follows.
+Repeater 옵션을 보려면 연결된 Repeater 섹션의 오른쪽 상단에 있는 기어 아이콘을 클릭합니다.
 
-![v4.8 repeater options 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/4.8/repeater_options_1.png){class="glboxshadow"}
+![repeater options](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_connected.png){class="glboxshadow"}
 
-- **Allow Switching to Other Networks Mode**: 
+**펌웨어 v4.8의 경우** Repeater 옵션 페이지는 다음과 같이 표시됩니다.
 
-    - No Switching mode: When No Switching mode is enabled, other saved networks will not be automatically connected when the current Wi-Fi is disconnected.
-  
-    - Auto Switching mode: When Auto Switching mode is enabled, the router will try to connect to other saved networks when the current Wi-Fi is disconnected.
-  
-    - Auto Switching Without Network: When Auto-switching Without Network mode is enabled, the router will not automatically scan for networks when it is successfully networked in the non-repeater mode, and will only try to automatically switch to other saved networks when the router is without a network, which can avoid communication packet loss. 
+![v4.8 repeater options 1](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/4.8/repeater_options_1.png){class="glboxshadow"}
 
-- **Band Selection**: you can select from three options: Auto, 5 GHz and 2.4 GHz.
+- **다른 네트워크 모드로 전환 허용**:
 
-    If you manually select a band, the router will not scan or connect to any Wi-Fi that is using another band.
+    - 전환 없음 모드: 전환 없음 모드를 활성화하면 현재 Wi-Fi가 연결 해제될 때 다른 저장된 네트워크에 자동으로 연결되지 않습니다.
 
-**For firmware v4.7 and earlier**, the Repeater Options page is displayed as below.
+    - 자동 전환 모드: 자동 전환 모드를 활성화하면 현재 Wi-Fi가 연결 해제될 때 라우터가 다른 저장된 네트워크에 연결을 시도합니다.
 
-![repeater options](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_options.png){class="glboxshadow"}
+    - 네트워크 없이 자동 전환: 네트워크 없이 자동 전환 모드를 활성화하면 라우터는 Repeater가 아닌 모드에서 성공적으로 네트워킹될 때 네트워크를 자동으로 스캔하지 않으며, 라우터에 네트워크가 없을 때만 다른 저장된 네트워크로 자동 전환을 시도하므로 통신 패킷 손실을 방지할 수 있습니다.
 
-* **Allow Switching To Other Saved Networks**. If the option is enabled, the router will automatically connect to other saved networks when it is unable to connect to the current Wi-Fi network.
+- **대역 선택**: 자동, 5GHz 및 2.4GHz의 세 가지 옵션에서 선택할 수 있습니다.
 
-* **Band Selection**. If you manually select a band, the router will not scan or connect to any Wi-Fi with another band.
+    대역을 수동으로 선택하면 라우터는 다른 대역을 사용하는 Wi-Fi를 스캔하거나 연결하지 않습니다.
 
-## Manage Known Network
+**펌웨어 v4.7 이전의 경우** Repeater 옵션 페이지는 아래와 같이 표시됩니다.
 
-To delete known network, click **Switch Network**.
+![repeater options](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_options.png){class="glboxshadow"}
 
-![switch network](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_connected.png){class="glboxshadow"}
+* **다른 저장된 네트워크로 전환 허용**. 이 옵션을 활성화하면 라우터가 현재 Wi-Fi 네트워크에 연결할 수 없을 때 다른 저장된 네트워크에 자동으로 연결합니다.
 
-Or click **Connect** in the Repeater section if there's no any network connected.
+* **대역 선택**. 대역을 수동으로 선택하면 라우터는 다른 대역의 Wi-Fi를 스캔하거나 연결하지 않습니다.
 
-![repeater section](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_section.png){class="glboxshadow"}
+## 알려진 네트워크 관리
 
-On the **Known Networks** section, click the trash icon to delete a known network, or the gear icon to configure the network.
+알려진 네트워크를 삭제하려면 **Switch Network**를 클릭합니다.
 
-![manage known network](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/manage_known_networks.png){class="glboxshadow"}
+![switch network](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_connected.png){class="glboxshadow"}
 
-## Join Other Network
+또는 연결된 네트워크가 없으면 Repeater 섹션에서 **Connect**를 클릭합니다.
 
-If the SSID is not in the Available Networks list, or if the SSID is hidden, you can click **Join Other Network**.
+![repeater section](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/repeater_section.png){class="glboxshadow"}
 
-![join other network 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/join_other_network_1.png){class="glboxshadow"}
+**알려진 네트워크** 섹션에서 휴지통 아이콘을 클릭하여 알려진 네트워크를 삭제하거나 기어 아이콘을 클릭하여 네트워크를 구성합니다.
 
-Input the SSID, select the Security and enter the password (if required).
+![manage known network](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/manage_known_networks.png){class="glboxshadow"}
 
-![join other network 2](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/join_other_network_2.png){class="glboxshadow"}
+## 다른 네트워크 참여
 
-For **Security** settings, there are two or three options, depending on the model.
+SSID가 사용 가능한 네트워크 목록에 없거나 SSID가 숨겨진 경우 **Join Other Network**를 클릭할 수 있습니다.
 
-* None, which means no password is required.
-* WPA/WPA2/WPA3, which is common and supported by nearly all Wi-Fi networks.
-* WPA/WPA2/WPA3 Enterprise, which requires Extensible Authentication Protocol (EAP) for authentication. A valid username and password are needed to connect (typically used in business or campus networks).
+![join other network 1](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/join_other_network_1.png){class="glboxshadow"}
 
-    ![join other network, eap](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/join_other_network_eap.jpg){class="glboxshadow"}
+SSID를 입력하고 보안을 선택한 다음 비밀번호(필요한 경우)를 입력합니다.
 
-    For detailed guidance on repeating EAP networks, please click [here](../tutorials/eap.md){target="_blank"}.
+![join other network 2](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/join_other_network_2.png){class="glboxshadow"}
 
-## Reconnection
+**보안** 설정에는 모델에 따라 두세 가지 옵션이 있습니다.
 
-In the following cases, the router will automatically attempts to reconnect to Wi-Fi every once in a while. You can manually disable this if needed. For SSID/password errors, remove the network from Known Networks to resolve.
+* 없음, 비밀번호가 필요하지 않음을 의미합니다.
+* WPA/WPA2/WPA3, 거의 모든 Wi-Fi 네트워크에서 지원하는 일반적인 보안입니다.
+* WPA/WPA2/WPA3 Enterprise, 인증을 위해 확장 가능한 인증 프로토콜(EAP)이 필요합니다. 연결하려면 유효한 사용자 이름과 비밀번호가 필요합니다(일반적으로 비즈니스 또는 캠퍼스 네트워크에서 사용).
 
-1. Incorrect SSID/password entered during Repeater setup.
+    ![join other network, eap](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/join_other_network_eap.jpg){class="glboxshadow"}
 
-2. Moved out of range of the upstream router after initial connection.
+    EAP 네트워크 반복에 대한 자세한 지침은 [여기](../tutorials/eap.md){target="_blank"}를 클릭하세요.
 
-3. Upstream router changes SSID/password or restricts access post-connection.
+## 재연결
 
-The reconnection process has three distinct phases: waiting phase, scanning phase and connecting phase.
+다음 경우 라우터는 일정 시간마다 Wi-Fi에 자동으로 재연결을 시도합니다. 필요한 경우 수동으로 비활성화할 수 있습니다. SSID/비밀번호 오류의 경우 알려진 네트워크에서 네트워크를 제거하여 해결하세요.
 
-1. Waiting Phase: No issues - router waits for reconnection conditions.
+1. Repeater 설정 중에 잘못된 SSID/비밀번호를 입력했습니다.
 
-2. Scanning Phase: Packet loss may occur on the scanned frequency band. New devices might face connection problems. For models GL-AXT1800/GL-AX1800, Guest Wi-Fi will be temporarily disabled.
+2. 초기 연결 후 상위 라우터의 범위를 벗어났습니다.
 
-3. Connecting Phase: Main Wi-Fi on the target band may drop for a few seconds during re-establishment.
+3. 상위 라우터가 SSID/비밀번호를 변경하거나 연결 후 액세스를 제한합니다.
 
-**Note**: Problems typically arise in the Scanning and Connecting Phases.
+재연결 프로세스에는 대기, 스캔, 연결의 세 가지 고유한 단계가 있습니다.
 
-## Troubleshooting
+1. 대기 단계: 문제 없음 - 라우터가 재연결 조건을 기다립니다.
 
-When the router is connected to a Wi-Fi network as a repeater, if the Internet is unavailable, a yellow message will be displayed as shown below.
+2. 스캔 단계: 스캔된 주파수 대역에서 패킷 손실이 발생할 수 있습니다. 새 장치는 연결 문제에 직면할 수 있습니다. GL-AXT1800/GL-AX1800 모델의 경우 게스트 Wi-Fi가 일시적으로 비활성화됩니다.
 
-**"The interface is connected, but the Internet can't be accessed."**
+3. 연결 단계: 대상 대역의 메인 Wi-Fi가 재설정 중에 몇 초 동안 끊길 수 있습니다.
 
-![connect but no internet](https://static.gl-inet.com/docs/router/en/4/interface_guide/internet_repeater/interface_connected_no_internet.png){class="glboxshadow"}
+**참고**: 문제는 일반적으로 스캔 및 연결 단계에서 발생합니다.
 
-To fix this issue:
+## 문제 해결
 
-1. Check if the upstream device (i.e., the Wi-Fi network your router is connected to) has internet access.
+라우터가 Repeater로 Wi-Fi 네트워크에 연결되어 있지만 인터넷을 사용할 수 없는 경우 아래와 같이 노란색 메시지가 표시됩니다.
 
-2. Go to [Multi-WAN](multi-wan.md) page to check the repeater interface status.
+**"인터페이스는 연결되었지만 인터넷에 액세스할 수 없습니다."**
+
+![connect but no internet](https://static.gl.inet.com/docs/router/en/4/interface_guide/internet_repeater/interface_connected_no_internet.png){class="glboxshadow"}
+
+이 문제를 해결하려면:
+
+1. 상위 장치(즉, 라우터가 연결된 Wi-Fi 네트워크)에 인터넷 액세스가 있는지 확인하세요.
+
+2. [Multi-WAN](multi-wan.md) 페이지로 이동하여 Repeater 인터페이스 상태를 확인하세요.
 
 ## DFS
 
-When connecting to an upstream 5G Wi-Fi, the router's Wi-Fi will follow the upstream Wi-Fi to use or not use the DFS channel.
+상위 5G Wi-Fi에 연결할 때 라우터의 Wi-Fi는 상위 Wi-Fi에 따라 DFS 채널을 사용하거나 사용하지 않습니다.
 
-* If the upstream Wi-Fi uses a DFS channel and is scannable, the router's 5G Wi-Fi will use the same channel.
+* 상위 Wi-Fi가 DFS 채널을 사용하고 스캔 가능한 경우 라우터의 5G Wi-Fi는 동일한 채널을 사용합니다.
 
-* The router's 5G Wi-Fi will switch to the non-DFS channel if the upstream Wi-Fi is not scannable or if the connection fails.
+* 상위 Wi-Fi가 스캔 가능하지 않거나 연결이 실패하면 라우터의 5G Wi-Fi는 비DFS 채널로 전환됩니다.
 
-??? "Supported Models"
+??? "지원되는 모델"
 
     - GL-E5800 (Mudi 7)
     - GL-MT3600BE (Beryl 7)
@@ -210,7 +210,7 @@ When connecting to an upstream 5G Wi-Fi, the router's Wi-Fi will follow the upst
     - GL-MT3000 (Beryl AX)
     - GL-AXT1800 (Slate AX)
 
-??? "Unsupported Models"
+??? "지원되지 않는 모델"
 
     - GL-MT5000 (Brume 3)
     - GL-MT2500/GL-MT2500A (Brume 2)
@@ -232,13 +232,13 @@ When connecting to an upstream 5G Wi-Fi, the router's Wi-Fi will follow the upst
 
 ---
 
-Related Articles
+관련 문서
 
-- [Internet page](internet.md)
-- [How to set the priority of each Internet access method?](multi-wan.md)
-- [How to set the load balance when multiple Internet access methods are used at the same time?](multi-wan.md)
-- [How can I know the LAN and Wi-Fi Mac Addresses](../faq/how_can_i_know_the_lan_wifi_mac.md)
+- [인터넷 페이지](internet.md)
+- [각 인터넷 액세스 방법의 우선 순위를 설정하는 방법](multi-wan.md)
+- [여러 인터넷 액세스 방법을 동시에 사용할 때 로드 밸런스를 설정하는 방법](multi-wan.md)
+- [LAN 및 Wi-Fi MAC 주소를 알 수 있는 방법](../faq/how_can_i_know_the_lan_wifi_mac.md)
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.
