@@ -1,135 +1,135 @@
-# Meet Our New Products
+# 신제품 소개
 
-An Introduction to our future products, and a glimpse into our latest development.
+향후 출시될 제품에 대한 소개와 최신 개발 현황을 살펴보세요.
 
 ## GL-BE9300 (Flint 3)
 
-Tri-band Wi-Fi 7 Home Router
+트라이밴드 Wi-Fi 7 홈 라우터
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/X87yCZkvJ4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-BE3600 (Slate 7)
 
-Dual-band Wi-Fi 7 Travel Router
+듀얼밴드 Wi-Fi 7 트래블 라우터
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5u0bzFlL-3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-X2000 (Spitz Plus)
 
-4G LTE Wi-Fi 6 Router
+4G LTE Wi-Fi 6 라우터
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_C6pMc9UMSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-B3000 (Marble)
 
-Decorative Wi-Fi 6 Router for Homes
+홈용 인테리어 Wi-Fi 6 라우터
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eV2AuTpZx3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-MT6000 (Flint 2)
 
-A High-Performance Wi-Fi 6 Home Router
+고성능 Wi-Fi 6 홈 라우터
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wOm1PS4Z-fY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-XE3000 (Spitz AX)
 
-Wi-Fi 6 5G Cellular Router with Battery
+배터리 장착 Wi-Fi 6 5G 셀룰러 라우터
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XrMDpWNEscM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-X3000 (Spitz AX)
 
-Wi-Fi 6 Dual SIM Router with 5G NR Connectivity
+5G NR 연결을 지원하는 Wi-Fi 6 듀얼 SIM 라우터
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uBz8QOp_Do4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-MT3000 (Beryl AX)
 
-A Pocket-sized Wi-Fi 6 Router for Home and Travel
+홈 및 여행을 위한 포켓 사이즈 Wi-Fi 6 라우터
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6h8G1MzF2hE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Beryl AX (GL-MT3000) VS Beryl (GL-MT1300) Comparison
+Beryl AX (GL-MT3000) VS Beryl (GL-MT1300) 비교
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/roOFAFT4cjs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-MT2500/GL-MT2500A (Brume 2)
 
-Security Gateway for Remote Access
+원격 접속을 위한 보안 게이트웨이
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9czDvi2irME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-MV1000 (Brume)
 
-Edge Computing Gateway for Highly Secure and Reliable Infrastructure
+고도로 보안되고 신뢰할 수 있는 인프라를 위한 엣지 컴퓨팅 게이트웨이
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4mVs6V_sHnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-MV1000W (Brume-W)
 
-A Pocket-sized Wireless Gateway for Secure Edge Computing
+보안 엣지 컴퓨팅을 위한 포켓 사이즈 무선 게이트웨이
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pR7rfVzAZzs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-AP1300 (Cirrus)
 
-Enterprise Ceiling Wireless Access Point
+기업용 천장형 무선 액세스 포인트
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wYTVenxLgQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-S1300 (Convexa-S)
 
-OpenWrt Gateway for Smart Home Wireless Devices
+스마트 홈 무선 장치를 위한 OpenWrt 게이트웨이
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wRA22wQxd48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-AX1800 (Flint)
 
-Secure and Ultra Fast Wi-Fi 6 Wireless Router for Home or Office
+홈 또는 오피스를 위한 보안 및 초고속 Wi-Fi 6 무선 라우터
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aXEIS3keP24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-E750 (Mudi)
 
-4G LTE Privacy Router for Road Warriors
+로드 워리어를 위한 4G LTE 프라이버시 라우터
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Y52aAzkWvQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-SFT1200 (Opal)
 
-Gigabit Wireless Router for Security-savvy Travelers
+보안을 중요시하는 여행자를 위한 기가비트 무선 라우터
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VkglWuItuXw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-XE300 (Puli)
 
-4G LTE Portable Wireless IoT Gateway
+4G LTE 휴대용 무선 IoT 게이트웨이
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4falAJFN9ww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-AR750S (Slate)
 
-Bring Gigabit Internet to Security -savvy Travelers
+보안을 중요시하는 여행자에게 기가비트 인터넷을 제공
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ze1HRRyuiQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-AXT1800 (Slate AX)
 
-Wi-Fi 6 Gigabit Wireless Router
+Wi-Fi 6 기가비트 무선 라우터
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/U94OkJfbTws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GL-B2200 (Velica)
 
-Integrated Tri-Band Wireless Mesh System with Open Technologies
+오픈 기술을 갖춘 통합 트라이밴드 무선 메시 시스템
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-NMWKGcXS8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Zr0ToJ68Pdw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Cloud
+## 클라우드
 
-Introducing GoodCloud, Your Remote Device Management Solution
+원격 장치 관리 솔루션인 GoodCloud 소개
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JkV2PAy-_Og" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

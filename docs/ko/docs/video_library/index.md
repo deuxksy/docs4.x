@@ -4,12 +4,12 @@ hide:
   - toc
 ---
 
-# Video Library
+# 비디오 라이브러리
 
-Learn about our products and use them through videos.
+영상을 통해 당사 제품을 알아보고 사용 방법을 익히세요.
 
-## Contents
+## 콘텐츠
 
-* [Meet Our New Products](products.md)
-* [Unboxing & First Time Setup](unboxing_first_set_up.md)
-* [Tutorials](tutorials.md)
+* [신제품 소개](products.md)
+* [언박싱 및 초기 설정](unboxing_first_set_up.md)
+* [튜토리얼](tutorials.md)
