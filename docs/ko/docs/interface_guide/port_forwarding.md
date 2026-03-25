@@ -1,53 +1,53 @@
-# Port Forwarding
+# 포트 포워딩
 
-This page has been available since firmware v4.6. For earlier versions, please refer to [Firewall](firewall.md).
+이 페이지는 펌웨어 v4.6부터 사용할 수 있습니다. 이전 버전은 [Firewall](firewall.md)을 참조하세요.
 
 ---
 
-On the left side of the web Admin Panel, go to **NETWORK** -> **Port Forwarding**.
+웹 관리 패널 왼쪽에서 **NETWORK** -> **Port Forwarding**으로 이동합니다.
 
-This page allows you to set firewall rules like **DMZ** and **Port Forwarding**.
+이 페이지에서 **DMZ** 및 **Port Forwarding**와 같은 방화벽 규칙을 설정할 수 있습니다.
 
-For **Open Ports on Router** settings, please go to SYSTEM -> Security.
+**Open Ports on Router** 설정은 SYSTEM -> Security로 이동하세요.
 
 ## DMZ
 
-DMZ lets you to expose one computer to the Internet, so all inbound packets will be redirected to this computer.
+DMZ를 사용하면 한 대의 컴퓨터를 인터넷에 노출할 수 있으므로 모든 인바운드 패킷이 이 컴퓨터로 리디렉션됩니다.
 
-Toggle on **Enable DMZ**. Select the internal IP address of your host device, which is going to receive all the inbound packets.
+**Enable DMZ**를 토글합니다. 모든 인바운드 패킷을 받을 호스트 장치의 내부 IP 주소를 선택합니다.
 
-You can set the priority for the DMZ. If the DMZ priority is higher than the port forwarding rules, all port forwarding rules will be invalidated. Otherwise, requests will be forwarded to the DMZ Host device only if the accessed port has no corresponding port forwarding rule.
+DMZ의 우선 순위를 설정할 수 있습니다. DMZ 우선 순위가 포트 포워딩 규칙보다 높으면 모든 포트 포워딩 규칙이 무효화됩니다. 그렇지 않으면 액세스된 포트에 해당하는 포트 포워딩 규칙이 없는 경우에만 요청이 DMZ 호스트 장치로 전달됩니다.
 
-![dmz](https://static.gl-inet.com/docs/router/en/4/interface_guide/port_forwarding/dmz.png){class="glboxshadow"}
+![dmz](https://static.gl.inet.com/docs/router/en/4/interface_guide/port_forwarding/dmz.png){class="glboxshadow"}
 
-## Port Forwarding
+## 포트 포워딩
 
-Port Forwarding lets remote computers connect to a local computer or server behind the router's firewall in the LAN (such as web servers, FTP servers, etc).
+포트 포워딩을 사용하면 원격 컴퓨터가 라우터 방화벽� 뒤의 LAN에 있는 로컬 컴퓨터나 서버(예: 웹 서버, FTP 서버 등)에 연결할 수 있습니다.
 
-To set up port forwarding, click **Add** in the Port Forwarding section.
+포트 포워딩을 설정하려면 Port Forwarding 섹션에서 **Add**를 클릭합니다.
 
-![port forwarding add](https://static.gl-inet.com/docs/router/en/4/interface_guide/port_forwarding/port_forwarding_add1.png){class="glboxshadow"}
+![port forwarding add](https://static.gl.inet.com/docs/router/en/4/interface_guide/port_forwarding/port_forwarding_add1.png){class="glboxshadow"}
 
-In the pop-up window, add a new port forwarding rule, and click **Apply**.
+팝업 창에서 새 포트 포워딩 규칙을 추가하고 **Apply**를 클릭합니다.
 
-![add new port forwarding rule](https://static.gl-inet.com/docs/router/en/4/interface_guide/port_forwarding/port_forwarding_add2.png){class="glboxshadow"}
+![add new port forwarding rule](https://static.gl.inet.com/docs/router/en/4/interface_guide/port_forwarding/port_forwarding_add2.png){class="glboxshadow"}
 
-**Protocol:** The protocol used, you can choose TCP, UDP, or both TCP and UDP.
+**Protocol:** 사용되는 프로토콜입니다. TCP, UDP 또는 둘 다 선택할 수 있습니다.
 
-**External Zone:** The options for external zone are `WAN`, `WireGuard Client`, `WireGuard Server`, `OpenVPN Client`, `OpenVPN Server`, `LAN`, `Guest`.
+**External Zone:** 외부 존의 옵션은 `WAN`, `WireGuard Client`, `WireGuard Server`, `OpenVPN Client`, `OpenVPN Server`, `LAN`, `Guest`입니다.
 
-**External Port:** The numbers of external ports. You can enter a specific port number here. The port range is from 1 to 65535. You can set a single port or set the port range by concatenating the first and last port numbers with the - symbol (Such as 501-510).
+**External Port:** 외부 포트 번호입니다. 특정 포트 번호를 입력할 수 있습니다. 포트 범위는 1에서 65535까지입니다. 단일 포트를 설정하거나 - 기호로 첫 번째와 마지막 포트 번호를 연결하여 포트 범위를 설정할 수 있습니다(예: 501-510).
 
-**Internal Zone:** The options for internal zone are `LAN`, `Guest`, `WireGuard Client`, `WireGuard Server`, `OpenVPN Client`, `OpenVPN Server`, `WAN`.
+**Internal Zone:** 내부 존의 옵션은 `LAN`, `Guest`, `WireGuard Client`, `WireGuard Server`, `OpenVPN Client`, `OpenVPN Server`, `WAN`입니다.
 
-**Internal IP:** The IP address assigned by the router to the device which needs to be accessed remotely. If you set a single port in **External Port**, you should set the single port here. If you set a port range in **External Port**, you should set the corresponding port range here.
+**Internal IP:** 라우터가 원격 액세스가 필요한 장치에 할당한 IP 주소입니다. **External Port**에 단일 포트를 설정한 경우 여기에 단일 포트를 설정해야 합니다. **External Port**에 포트 범위를 설정한 경우 여기에 해당 포트 범위를 설정해야 합니다.
 
-**Internal Port:** The internal port number of the device. You can enter a specific port number. Leave it blank if it is same as the external port.
+**Internal Port:** 장치의 내부 포트 번호입니다. 특정 포트 번호를 입력할 수 있습니다. 외부 포트와 동일한 경우 비워 두세요.
 
-**Description:** Set a name or add a description for the port forwarding rule (optional).
+**Description:** 포트 포워딩 규칙의 이름을 설정하거나 설명을 추가합니다(선택 사항).
 
-**Enable:** Enable or disable the rule.
+**Enable:** 규칙을 활성화 또는 비활성화합니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.
