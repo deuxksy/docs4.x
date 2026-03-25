@@ -1,37 +1,37 @@
-# Network Storage
+# 네트워크 스토리지
 
-## Contents
+## 목차
 
-- [Introduction](#introduction)
-- [Supported models](#supported-models)
-- [Insert storage device](#insert-storage-device)
-- [Set up Samba](#set-up-samba)
-- [Set up WebDAV](#set-up-webdav)
-- [Set up DLNA](#set-up-dlna)
-- [Samba Client](#samba-client)
-- [WebDAV Client](#webdav-client)
+- [소개](#소개)
+- [지원 모델](#지원-모델)
+- [저장 장치 연결](#저장-장치-연결)
+- [Samba 설정](#samba-설정)
+- [WebDAV 설정](#webdav-설정)
+- [DLNA 설정](#dlna-설정)
+- [Samba 클라이언트](#samba-클라이언트)
+- [WebDAV 클라이언트](#webdav-클라이언트)
 
-## Introduction
+## 소개
 
-Network storage enables wireless file sharing across devices by connecting a USB drive or SD card to your router. The router converts the storage device into a shared network drive, accessible to all Wi-Fi-connected devices.
+네트워크 스토리지를 사용하면 USB 드라이브나 SD 카드를 라우터에 연결하여 장치 간에 무선 파일 공유가 가능해집니다. 라우터는 저장 장치를 공유 네트워크 드라이브로 변환하여 Wi-Fi에 연결된 모든 장치에서 액세스할 수 있습니다.
 
-Some GL.iNet models have MicroSD(TF) card slots, while some models have USB ports, supporting USB flash drives and portable external hard drives. You can configure Samba, WebDAV, DLNA for these storage devices, which support common formats such as NTFS, FAT32, and EXT4.
+일부 GL.iNet 모델에는 MicroSD(TF) 카드 슬롯이 있고 일부 모델에는 USB 포트가 있어 USB 플래시 드라이브와 휴대용 외장 하드 드라이브를 지원합니다. 이러한 저장 장치에 대해 Samba, WebDAV, DLNA를 구성할 수 있으며 NTFS, FAT32, EXT4와 같은 일반적인 형식을 지원합니다.
 
-!!! Note 
+!!! 참고
 
-    1. The power consumption of a USB hard drive is quite high. Use it with an external power supply, otherwise it may cause malfunction.
+    1. USB 하드 드라이브의 소비 전력은 상당히 높습니다. 외부 전원 공급 장치와 함께 사용하십시오. 그렇지 않으면 오작동을 일으킬 수 있습니다.
 
-    2. Some models have a USB port or MicroSD slot but have limited storage space and do not support network storage.
+    2. 일부 모델에는 USB 포트 또는 MicroSD 슬롯이 있지만 저장 공간이 제한적이어서 네트워크 스토리지를 지원하지 않습니다.
 
-    3. The web Admin Panel only allows you to manage shared folders. To manage files on your storage device, please use the [mobile app](https://www.gl-inet.com/app/#download-app-glinet){target="_blank"}.
+    3. 웹 관리 패널에서는 공유 폴더만 관리할 수 있습니다. 저장 장치의 파일을 관리하려면 [모바일 앱](https://www.gl-inet.com/app/#download-app-glinet){target="_blank"}을 사용하십시오.
 
-## Supported Models
+## 지원 모델
 
-Usually, models with USB ports or MicroSD(TF) slots support network storage (i.e. file sharing). 
+일반적으로 USB 포트나 MicroSD(TF) 슬롯이 있는 모델은 네트워크 스토리지(즉, 파일 공유)를 지원합니다.
 
-For devices with flash storage of 32MB or less, the Network Storage function is not yet supported.
+플래시 저장 공간이 32MB 이하인 장치는 네트워크 스토리지 기능을 아직 지원하지 않습니다.
 
-| Router Model                           | Samba | Webdav | DLNA | USB Port | MicroSD Card |
+| 라우터 모델                           | Samba | Webdav | DLNA | USB 포트 | MicroSD 카드 |
 | :------------------------------------- | :---: | :---: | :---: | :------: | :----------: |
 | GL-E5800 (Mudi 7)                      | √     | √     | √     | √        | -            |
 | GL-MT5000 (Brume 3)                    | √     | √     | √     | √        | -            |
@@ -50,328 +50,328 @@ For devices with flash storage of 32MB or less, the Network Storage function is 
 | GL-E750V2 (Mudi V2)</br>***FW 4.7.2**  | √     | -     | -     | √        | √            |
 | GL-AR750S-EXT (Slate)</br>***FW 4.7.2**| √     | -     | -     | √        | √            |
 
-## Insert Storage Device
+## 저장 장치 연결
 
-For TF card, you need to power off the router first, insert the TF card and then power on the router.
+TF 카드의 경우 라우터의 전원을 먼저 끄고, TF 카드를 삽입한 다음 라우터의 전원을 켭니다.
 
-For USB Drive, you can directly plug it into the USB port. For portable external hard drive, if you have a separate power supply, please connect it to the power supply.
+USB 드라이브의 경우 USB 포트에 직접 꽂을 수 있습니다. 휴대용 외장 하드 드라이브의 경우 별도의 전원 공급 장치가 있으면 전원 공급 장치에 연결하십시오.
 
-Log in to the router's web Admin Panel and go to **APPLICATIONS** -> **Network Storage**.
+라우터의 웹 관리 패널에 로그인하고 **APPLICATIONS** -> **Network Storage**로 이동합니다.
 
 ![network storage](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/network_storage_init.png){class="glboxshadow"}
 
-Connect the storage device. When it is detected, the page is displayed as below.
+저장 장치를 연결합니다. 감지되면 페이지가 아래와 같이 표시됩니다.
 
 ![network storage, disk found](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/disk_found.png){class="glboxshadow"}
 
-## Set Up Samba {#set-up-samba}
+## Samba 설정 {#samba-설정}
 
-1. Toggle on **Enable Samba** and click **Apply**.
+1. **Enable Samba**를 토글하고 **Apply**를 클릭합니다.
 
-    * Allow Access Samba from WAN: Enable it if you want the upstream devices to access Samba.
+    * Allow Access Samba from WAN: 상위 장치에서 Samba에 액세스하려면 활성화하십시오.
 
     ![enable samba](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_quick_setup_share/enable_samba.png){class="glboxshadow"}
 
-2. Click **Quick Setup Share** to set the shared link.
+2. **Quick Setup Share**를 클릭하여 공유 링크를 설정합니다.
 
     ![samba quick setup share](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_quick_setup_share/samba_quick_setup_share.png){class="glboxshadow"}
 
-3. Add a user and click **Next**. This step will be skipped if you already have an account. 
+3. 사용자를 추가하고 **Next**를 클릭합니다. 이미 계정이 있는 경우 이 단계는 건너뜁니다.
 
     ![samba quick setup share, add a user](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_quick_setup_share/samba_quick_setup_share_add_user.png){class="glboxshadow"}
 
-4. Click the triangle icon to show all folders. Select a folder for sharing, or click the disk name (disk1_part1) if you want to share the whole disk. Then click **Next**.
+4. 삼각형 아이콘을 클릭하여 모든 폴더를 표시합니다. 공유할 폴더를 선택하거나 디스크 이름(disk1_part1)을 클릭하여整个 디스크를 공유합니다. 그런 다음 **Next**를 클릭합니다.
 
     ![samba quick setup share, add shared folder](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_quick_setup_share/samba_quick_setup_share_add_shared_folder.png){class="glboxshadow"}
 
-5. Set up the shared folder.
+5. 공유 폴더를 설정합니다.
 
-    For security reasons, it is not recommended to enable **Anonymous Access**.
+    보안상의 이유로 **Anonymous Access**를 활성화하지 않는 것이 좋습니다.
 
-    The user created in the previous step will be added to **Read-Only User** by default. If you want this user to be able to write or delete files, remove it from Read-Only User and add it to **Writable User**, and click **Apply**.
+    이전 단계에서 만든 사용자는 기본적으로 **Read-Only User**에 추가됩니다. 이 사용자가 파일을 쓰거나 삭제할 수 있도록 하려면 Read-Only User에서 제거하고 **Writable User**에 추가한 다음 **Apply**를 클릭합니다.
 
     ![samba quick setup share, shared folder settings](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_quick_setup_share/samba_quick_setup_share_shared_folder_settings.png){class="glboxshadow"}
 
-6. Obtain the folder access link. 
+6. 폴더 액세스 링크를 가져옵니다.
 
-    The page will show the link for Windows and Unix-like OS. The Unix-like system includes Android, iOS, macOS, Ubuntu, etc. 
-    
-    Now you can access your shared folder over Samba service via these links. Click [here](#samba-client) for details.
+    페이지에 Windows 및 Unix-like OS용 링크가 표시됩니다. Unix-like 시스템에는 Android, iOS, macOS, Ubuntu 등이 포함됩니다.
+
+    이제 이러한 링크를 통해 Samba 서비스로 공유 폴더에 액세스할 수 있습니다. 자세한 내용은 [여기](#samba-클라이언트)를 클릭하십시오.
 
     ![samba quick setup share, folder access link](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_quick_setup_share/samba_quick_setup_share_folder_access_link.png){class="glboxshadow"}
 
-    **Note:** If you enable **Allow Access Samba from WAN** and access the shared folder from upper network, please replace the router IP (default 192.168.8.1) in the access link with your router's WAN IP, which can be found on the INTERNET page of the web admin panel.
+    **참고:** **Allow Access Samba from WAN**을 활성화하고 상위 네트워크에서 공유 폴더에 액세스하는 경우 액세스 링크의 라우터 IP(기본값 192.168.8.1)을 웹 관리 패널의 INTERNET 페이지에서 찾을 수 있는 라우터의 WAN IP로 바꾸십시오.
 
 ---
 
-## Set Up WebDAV {#set-up-webdav}
+## WebDAV 설정 {#webdav-설정}
 
-1. Toggle on **Enable WebDAV**, and click **Apply**.
+1. **Enable WebDAV**를 토글하고 **Apply**를 클릭합니다.
 
-    * Allow Access WebDAV from WAN: Enable it if you want the upstream devices to access WebDAV.
+    * Allow Access WebDAV from WAN: 상위 장치에서 WebDAV에 액세스하려면 활성화하십시오.
 
-    * WebDAV Protocol: **HTTP** is not encrypted; use it at your own risk. **HTTPS** is encrypted and it uses self-signed certificate.
+    * WebDAV Protocol: **HTTP**는 암호화되지 않으므로 사용자의 책임하에 사용하십시오. **HTTPS**는 암호화되며 자체 서명된 인증서를 사용합니다.
 
-    * WebDAV Port: No need to modify the port number unless there’s a conflict. The recommended port number range is 1024 - 65535.
+    * WebDAV Port: 충돌이 없는 한 포트 번호를 수정할 필요가 없습니다. 권장 포트 번호 범위는 1024 - 65535입니다.
 
     ![enable webdav](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_quick_setup_share/enable_webdav.png){class="glboxshadow"}
 
-2. Click **Quick Setup Share** to set the shared link.
+2. **Quick Setup Share**를 클릭하여 공유 링크를 설정합니다.
 
     ![enable webdav](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_quick_setup_share/webdav_quick_setup_share.png){class="glboxshadow"}
 
-3. Add a user and click **Next**. This step will be skipped if you already have an account.
+3. 사용자를 추가하고 **Next**를 클릭합니다. 이미 계정이 있는 경우 이 단계는 건너뜁니다.
 
     ![webdav quick setup share, add a user](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_quick_setup_share/samba_quick_setup_share_add_user.png){class="glboxshadow"}
 
-4. Click the triangel icon to show all folders. Select a folder for sharing, or click the disk name (disk1_part1) to share the whole disk. Then click **Next**.
+4. 삼각형 아이콘을 클릭하여 모든 폴더를 표시합니다. 공유할 폴더를 선택하거나 디스크 이름(disk1_part1)을 클릭하여整个 디스크를 공유합니다. 그런 다음 **Next**를 클릭합니다.
 
     ![webdav quick setup share, add shared folder](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_quick_setup_share/samba_quick_setup_share_add_shared_folder.png){class="glboxshadow"}
 
-5. Set up the shared folder.
+5. 공유 폴더를 설정합니다.
 
-    For security reasons, it is not recommended to enable **Anonymous Access**.
+    보안상의 이유로 **Anonymous Access**를 활성화하지 않는 것이 좋습니다.
 
-    The user created in the previous step will be added to **Read-Only User** by default. If you want this user to be able to write or delete files, remove it from Read-Only User and add it to **Writable User**, and click **Apply**.
+    이전 단계에서 만든 사용자는 기본적으로 **Read-Only User**에 추가됩니다. 이 사용자가 파일을 쓰거나 삭제할 수 있도록 하려면 Read-Only User에서 제거하고 **Writable User**에 추가한 다음 **Apply**를 클릭합니다.
 
     ![webdav quick setup share, shared folder settings](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_quick_setup_share/webdav_quick_setup_share_shared_folder_settings.png){class="glboxshadow"}
 
-6. Obtain folder access link. 
+6. 폴더 액세스 링크를 가져옵니다.
 
-    The page will show the link for Windows and Unix-like OS. The Unix-like system includes Android, iOS, macOS, Ubuntu, etc. 
-    
-    Now you can access your shared folder over WebDAV service via these links. Click [here](#webdav-client) for details.
+    페이지에 Windows 및 Unix-like OS용 링크가 표시됩니다. Unix-like 시스템에는 Android, iOS, macOS, Ubuntu 등이 포함됩니다.
+
+    이제 이러한 링크를 통해 WebDAV 서비스로 공유 폴더에 액세스할 수 있습니다. 자세한 내용은 [여기](#webdav-클라이언트)를 클릭하십시오.
 
     ![webdav quick setup share, folder access link](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_quick_setup_share/webdav_quick_setup_share_folder_access_link.png){class="glboxshadow"}
 
-    **Note:** If you enabled **Allow Access WebDAV from WAN** and access the shared folder from upper network, please replace the router IP (default 192.168.8.1) in the access link with your router's WAN IP, which can be found on the INTERNET page of the web admin panel.
+    **참고:** **Allow Access WebDAV from WAN**을 활성화하고 상위 네트워크에서 공유 폴더에 액세스하는 경우 액세스 링크의 라우터 IP(기본값 192.168.8.1)을 웹 관리 패널의 INTERNET 페이지에서 찾을 수 있는 라우터의 WAN IP로 바꾸십시오.
 
 ---
 
-## Set Up DLNA {#set-up-dlna}
+## DLNA 설정 {#dlna-설정}
 
-Toggle on **Enable DLNA**, and click **Apply**.
+**Enable DLNA**를 토글하고 **Apply**를 클릭합니다.
 
 ![network storage, enable dlna](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/enable_dlna.jpg){class="glboxshadow"}
 
-Connect your smart TV to the router, and it will find the DLNA Server.
+스마트 TV를 라우터에 연결하면 DLNA 서버를 찾습니다.
 
 ---
 
-## Samba Client
+## Samba 클라이언트
 
 === "Windows"
 
-    Here is an example of Windows 11, which also applies to Windows 10.
+    Windows 11의 예시이며 Windows 10에도 적용됩니다.
 
-    Open up File Explorer and then right-click on **This PC** (in the left pane). From the resulting context menu, select **Show more options** -> **Add a network location**
+    파일 탐색기를 열고 왼쪽 창에서 **This PC**를 마우스 오른쪽 버튼으로 클릭합니다. 표시되는 상황 메뉴에서 **더 많은 옵션 표시** -> **네트워크 위치 추가**를 선택합니다.
 
     ![windows 11 add network location](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/windows11_add_network_location.png){class="glboxshadow"}
 
-    Click **Choose a custom network location** and then click **Next**.
+    **사용자 지정 네트워크 위치 선택**을 클릭한 다음 **Next**를 클릭합니다.
 
     ![windows 11 add network location](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/windows11_add_network_location_2.png){class="glboxshadow"}
 
-    Enter the Samba access link. Then click **Next**.
+    Samba 액세스 링크를 입력합니다. 그런 다음 **Next**를 클릭합니다.
 
     ![windows 11 add network location](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/windows11_add_network_location_3.png){class="glboxshadow"}
 
-    Give a name of this location. Click **Next**.
+    이 위치의 이름을 지정합니다. **Next**를 클릭합니다.
 
     ![windows 11 add network location](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/windows11_add_network_location_4.png){class="glboxshadow"}
 
-    Click **Finish**.
+    **Finish**를 클릭합니다.
 
     ![windows 11 add network location](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/windows11_add_network_location_5.png){class="glboxshadow"}
 
-    If it need username and password, it will ask to enter the credential. Then click **OK**.
+    사용자 이름과 비밀번호가 필요하면 자격 증명을 입력하라는 메시지가 표시됩니다. 그런 다음 **OK**를 클릭합니다.
 
     ![windows 11 add network location](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/windows11_add_network_location_6.png){class="glboxshadow"}
 
 === "macOS"
 
-    You can access Samba by the Finder.
+    Finder를 통해 Samba에 액세스할 수 있습니다.
 
-    Open up the Finder and click Go -> Connect to Server on the menu. Copy & paste the Samba access link.
+    Finder를 열고 메뉴에서 이동 -> 서버에 연결을 클릭합니다. Samba 액세스 링크를 복사하여 붙여넣습니다.
 
     ![network storage, mac os finder connect to server](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/finder_connect_to_server.png){class="glboxshadow"}
 
-    It will ask for the username and password, the username is when you setup **Shared Folder Settings**.
-    
-    If you set up anonymous access, please choose **Guest** in the image below.
+    사용자 이름과 비밀번호를 묻는 메시지가 표시됩니다. 사용자 이름은 **공유 폴더 설정**을 설정할 때의 사용자 이름입니다.
+
+    익명 액세스를 설정한 경우 아래 이미지에서 **Guest**를 선택하십시오.
 
     ![network storage, mac os finder connect to server username password](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/finder_username_password.png){class="glboxshadow"}
 
-    Click **Continue**, it will show the Samba on the sidebar of Finder.
+    **Continue**를 클릭하면 Finder의 사이드바에 Samba가 표시됩니다.
 
     ![network storage, mac os finder samba connected](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/finder_samba_connected.png){class="glboxshadow"}
 
 === "Android"
 
-    There are many Android apps that support Samba, here is an example of [Cx File Explorer](https://play.google.com/store/apps/details?id=com.cxinventor.file.explorer&hl=en&gl=US){target="_blank"}.
+    Samba를 지원하는 Android 앱이 많습니다. 여기서는 [Cx File Explorer](https://play.google.com/store/apps/details?id=com.cxinventor.file.explorer&hl=en&gl=US){target="_blank"}를 예로 들겠습니다.
 
-    At the home page, click **NETWORK**.
+    홈 페이지에서 **NETWORK**를 클릭합니다.
 
     ![cx file explorer home page](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/cx_file_explorer_home.png){class="glboxshadow" width="400"}
 
-    Click **New Location**.
-    
+    **New Location**을 클릭합니다.
+
     ![cx file explorer home page](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/cx_file_explorer_new_location.png){class="glboxshadow" width="400"}
 
-    Click **SMB**.
+    **SMB**를 클릭합니다.
 
     ![cx file explorer home page](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/cx_file_explorer_remote.png){class="glboxshadow" width="350"}
 
-    Input the **Host**, **Username**, **Password**. If is **Anonymous Access**, please check the **Anonymous**.
+    **Host**, **Username**, **Password**를 입력합니다. **익명 액세스**인 경우 **Anonymous**를 확인하십시오.
 
     ![cx file explorer home page](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/cx_file_explorer_smb.png){class="glboxshadow" width="350"}
 
 === "iOS"
 
-    iOS [Files](https://apps.apple.com/us/app/files/id1232058109){target="_blank"} app support Samba, or you can use other apps, for example [Documents](https://apps.apple.com/us/app/documents-file-reader-browser/id364901807){target="_blank"}.
+    iOS [Files](https://apps.apple.com/us/app/files/id1232058109){target="_blank"} 앱이 Samba를 지원하거나 다른 앱(예: [Documents](https://apps.apple.com/us/app/documents-file-reader-browser/id364901807){target="_blank"})를 사용할 수 있습니다.
 
-    The next section describes how to connect to Samba using **Files** app and **Documents** app respectively.
+    다음 섹션에서는 **Files** 앱과 **Documents** 앱을 사용하여 Samba에 연결하는 방법을 각각 설명합니다.
 
-    - Guide of connect to Samba server by [Files](https://apps.apple.com/us/app/files/id1232058109){target="_blank"} app.
+    - [Files](https://apps.apple.com/us/app/files/id1232058109){target="_blank"} 앱으로 Samba 서버에 연결하는 가이드.
 
-        Open the **Files** app. It's installed by default so you should find it on your home screen. As **Files** is now a removable app, you might need to reinstall it from the App Store if it doesn't show up.
+        **Files** 앱을 엽니다. 기본적으로 설치되어 있으므로 홈 화면에서 찾을 수 있습니다. **Files**는 이제 제거 가능한 앱이므로 표시되지 않으면 App Store에서 다시 설치해야 할 수 있습니다.
 
-        ![search files on iphone](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/ios15-iphone-12-pro-home-screen-search-files.jpg){class="glboxshadow" width=300"}
+        ![search files on iphone](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/ios15-iphone-12-pro-home-screen-search-files.jpg){class="glboxshadow" width=300}
 
-        Make sure you're on the **Browse** tab at the bottom of the screen. Tap the "…" (three dots) icon in the top-right to display the app's context menu.
-        
-        ![ios files set up SMB](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/ios_files_smb_1.png){class="glboxshadow" width=560"}
+        화면 하단에서 **찾아보기** 탭에 있는지 확인합니다. 오른쪽 상단의 "…" (세 개의 점) 아이콘을 탭하여 앱의 상황 메뉴를 표시합니다.
 
-        Tap the **Connect to Server** option near the top of the menu. On the next screen, enter your server's connection url. You can find the url in [Shared Link](#shared-link). Tap the **Next** button in the top-right to continue.
+        ![ios files set up SMB](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/ios_files_smb_1.png){class="glboxshadow" width=560}
 
-        ![ios files set up SMB](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/ios_files_smb_2.png){class="glboxshadow" width=560"}
+        메뉴 상단 근처의 **서버에 연결** 옵션을 탭합니다. 다음 화면에서 서버의 연결 URL을 입력합니다. URL은 [공유 링크](#shared-link)에서 찾을 수 있습니다. 계속하려면 오른쪽 상단의 **Next** 버튼을 탭합니다.
 
-        The following screen lets you enter authentication credentials if you'll be connecting to a protected network share. Tap **Registered User** and fill out the **Name** and **Password** fields with your Samba username and password. You can tap "Guest" instead if you enable the **Anonymous Access**.
+        ![ios files set up SMB](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/ios_files_smb_2.png){class="glboxshadow" width=560}
 
-        ![ios files set up SMB](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/ios_files_smb_3.png){class="glboxshadow" width=560"}
+        다음 화면에서 보호된 네트워크 공유에 연결할 경우 인증 자격 증명을 입력할 수 있습니다. **등록된 사용자**를 탭하고 Samba 사용자 이름과 비밀번호로 **이름** 및 **비밀번호** 필드를 작성합니다. **익명 액세스**를 활성화한 경우 대신 "Guest"를 탭할 수 있습니다.
 
-        Press the **Next** button in the top-right to complete the connection. Your iOS device should successfully connect to the server and display a list of available shares.
+        ![ios files set up SMB](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/ios_files_smb_3.png){class="glboxshadow" width=560}
 
-        ![ios files set up SMB](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/ios_files_smb_4.png){class="glboxshadow" width=560"}
+        오른쪽 상단의 **Next** 버튼을 눌러 연결을 완료합니다. iOS 장치가 서버에 성공적으로 연결되고 사용 가능한 공유 목록을 표시해야 합니다.
 
-        The Samba share will be listed at the bottom of menu, underneath the **Shared** heading.
+        ![ios files set up SMB](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/ios_files_smb_4.png){class="glboxshadow" width=560}
+
+        Samba 공유는 메뉴 하단의 **Shared** 제목 아래에 표시됩니다.
 
         ![ios files set up SMB](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/ios_files_smb_5.png){class="glboxshadow" width=560"}
 
-    - Guide of connect to Samba server by [Documents](https://apps.apple.com/us/app/documents-file-reader-browser/id364901807){target="_blank"} app.
+    - [Documents](https://apps.apple.com/us/app/documents-file-reader-browser/id364901807){target="_blank"} 앱으로 Samba 서버에 연결하는 가이드.
 
-        Click the plus button in the lower right corner.
+        오른쪽 하단 모서리의 더하기 버튼을 클릭합니다.
 
         ![documents samba](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_client/documents_1.png){class="glboxshadow" width="560"}
 
-        Click **Add Connection**.
+        **Add Connection**을 클릭합니다.
 
         ![documents samba](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_client/documents_2.png){class="glboxshadow" width="560"}
 
-        Click **Windows SMB**.
+        **Windows SMB**를 클릭합니다.
 
         ![documents samba](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_client/documents_3.png){class="glboxshadow" width="560"}
 
-        The **Title** is for a name of this connection. **URL** is the access link. **Login** is the username. If is anonymous access, just leave **Login** and **Password** empty.
+        **Title**은 이 연결의 이름입니다. **URL**은 액세스 링크입니다. **Login**은 사용자 이름입니다. 익명 액세스인 경우 **Login**과 **Password**를 비워 두십시오.
 
-        Click **Done** button to complete this setup.
+        설정을 완료하려면 **Done** 버튼을 클릭합니다.
 
         ![documents samba](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/documents_4_samba.png){class="glboxshadow" width="560"}
 
-## WebDAV Client
+## WebDAV 클라이언트
 
 === "Windows"
 
-    There is a lot of software that supports WebDAV, for example [RaiDrive](https://www.raidrive.com/){target="_blank"}, [Cyberduck](https://cyberduck.io/download/){target="_blank"}, [WinSCP](https://winscp.net/eng/index.php){target="_blank"}.
-    
-    Here is an example of RaiDrive.
+    WebDAV를 지원하는 소프트웨어가 많습니다. 예: [RaiDrive](https://www.raidrive.com/){target="_blank"}, [Cyberduck](https://cyberduck.io/download/){target="_blank"}, [WinSCP](https://winscp.net/eng/index.php){target="_blank"}.
 
-    Click **Add**.
+    여기서는 RaiDrive를 예로 들겠습니다.
+
+    **Add**를 클릭합니다.
 
     ![RaiDrive WebDAV](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_client/raidrive_add.png){class="glboxshadow"}
 
-    In the **Storage** area, click **NAS** -> **WebDAV**.
+    **Storage** 영역에서 **NAS** -> **WebDAV**를 클릭합니다.
 
-    In the **Address** area, check/uncheck the checkbox near Address to switch https/http, enter the address.
+    **Address** 영역에서 Address 근처의 확인란을 선택/선택 해제하여 https/http를 전환하고 주소를 입력합니다.
 
-    In the **Account** area, enter username and password, or check the **Anonymous**.
+    **Account** 영역에서 사용자 이름과 비밀번호를 입력하거나 **Anonymous**를 확인합니다.
 
-    Finally, click **Connect**, it will add a X drive in the File Explorer.
+    마지막으로 **Connect**를 클릭하면 파일 탐색기에 X 드라이브가 추가됩니다.
 
     ![RaiDrive WebDAV](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_client/raidrive_new_drive_webdav.png){class="glboxshadow"}
 
 === "macOS"
 
-    There is a lot of app that supports WebDAV, for example [FE File Explorer](https://apps.apple.com/hk/app/fe-file-explorer/id1444382558?l=en&mt=12){target="_blank"}, [Cyberduck](https://cyberduck.io/download/){target="_blank"}.
+    WebDAV를 지원하는 앱이 많습니다. 예: [FE File Explorer](https://apps.apple.com/hk/app/fe-file-explorer/id1444382558?l=en&mt=12){target="_blank"}, [Cyberduck](https://cyberduck.io/download/){target="_blank"}.
 
-    Here is an example of FE File Explorer.
+    여기서는 FE File Explorer를 예로 들겠습니다.
 
-    Click Add button.
+    추가 버튼을 클릭합니다.
 
     ![FE File Explorer WebDAV](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_client/fe_file_explorer_add.png){class="glboxshadow"}
 
-    Select **WebDAV**.
+    **WebDAV**를 선택합니다.
 
     ![FE File Explorer WebDAV](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_client/fe_file_explorer_webdav.png){class="glboxshadow"}
 
-    Enter connection settings. If is anonymous access, just leave **User Name** and **Password** empty. Then clidk **Save & Connect**.
+    연결 설정을 입력합니다. 익명 액세스인 경우 **User Name**과 **Password**를 비워 두십시오. 그런 다음 **Save & Connect**를 클릭합니다.
 
     ![FE File Explorer WebDAV](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_client/fe_file_explorer_webdav_connection_setting.png){class="glboxshadow"}
 
-    It may has a warning says *The following secure server (null) uses an untrusted certificate. Trust this server?*, that is because it use self signed certificate, please trust it.
+    *다음 보안 서버(null)에서 신뢰할 수 없는 인증서를 사용합니다. 이 서버를 신뢰하시겠습니까?*라는 경고가 표시될 수 있습니다. 이는 자체 서명된 인증서를 사용하기 때문입니다. 신뢰하십시오.
 
 === "Android"
 
-    There are many iOS apps that support WebDAV, here is an example of [Cx File Explorer](https://play.google.com/store/apps/details?id=com.cxinventor.file.explorer&hl=en&gl=US){target="_blank"}.
+    WebDAV를 지원하는 iOS 앱이 많습니다. 여기서는 [Cx File Explorer](https://play.google.com/store/apps/details?id=com.cxinventor.file.explorer&hl=en&gl=US){target="_blank"}를 예로 들겠습니다.
 
-    Note: Cx File Explorer doesn't support anonymous access.
+    참고: Cx File Explorer는 익명 액세스를 지원하지 않습니다.
 
-    At the home page, click **NETWORK**.
+    홈 페이지에서 **NETWORK**를 클릭합니다.
 
     ![cx file explorer home page](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/cx_file_explorer_home.png){class="glboxshadow" width="400"}
 
-    Click **New Location**.
-    
+    **New Location**을 클릭합니다.
+
     ![cx file explorer home page](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/cx_file_explorer_new_location.png){class="glboxshadow" width="400"}
 
-    Click **WebDAV**.
+    **WebDAV**를 클릭합니다.
 
     ![cx file explorer home page](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/samba_client/cx_file_explorer_remote.png){class="glboxshadow" width="350"}
 
-    Input the **Host**, **Port**, **Username**, **Password**.
+    **Host**, **Port**, **Username**, **Password**를 입력합니다.
 
     ![cx file explorer home page](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_client/cx_file_explorer_webdav.png){class="glboxshadow" width="350"}
 
 === "iOS"
 
-    There are many iOS apps that support WebDAV, here is an example of [Documents](https://apps.apple.com/us/app/documents-file-reader-browser/id364901807){target="_blank"}.
+    WebDAV를 지원하는 iOS 앱이 많습니다. 여기서는 [Documents](https://apps.apple.com/us/app/documents-file-reader-browser/id364901807){target="_blank"}를 예로 들겠습니다.
 
-    Click the plus button in the lower right corner.
+    오른쪽 하단 모서리의 더하기 버튼을 클릭합니다.
 
     ![documents WebDAV](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_client/documents_1.png){class="glboxshadow" width="560"}
 
-    Click **Add Connection**.
+    **Add Connection**을 클릭합니다.
 
     ![documents WebDAV](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_client/documents_2.png){class="glboxshadow" width="560"}
 
-    Click **WebDAV Server**.
+    **WebDAV Server**를 클릭합니다.
 
     ![documents WebDAV](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_client/documents_3.png){class="glboxshadow" width="560"}
 
-    The **Title** is for a name of this connection. **URL** is the access link. **Login** is the username.
+    **Title**은 이 연결의 이름입니다. **URL**은 액세스 링크입니다. **Login**은 사용자 이름입니다.
 
-    Click **Done** button to complete this setup.
+    설정을 완료하려면 **Done** 버튼을 클릭합니다.
 
     ![documents WebDAV](https://static.gl-inet.com/docs/router/en/4/tutorials/network_storage/webdav_client/documents_4_webdav.png){class="glboxshadow" width="560"}
 
-## Using Mobile App
+## 모바일 앱 사용
 
-The web Admin Panel only allows you to manage shared folders. To manage files on your storage device, please use the [mobile app](https://www.gl-inet.com/app/#download-app-glinet){target="_blank"}.
+웹 관리 패널에서는 공유 폴더만 관리할 수 있습니다. 저장 장치의 파일을 관리하려면 [모바일 앱](https://www.gl-inet.com/app/#download-app-glinet){target="_blank"}을 사용하십시오.
 
-- When accessing the app over the **local network**, it shows your storage device and its capacity, and supports read/write access.
+- **로컬 네트워크**를 통해 앱에 액세스하면 저장 장치와 용량이 표시되며 읽기/쓰기 액세스를 지원합니다.
 
-- When accessing the app via the **cloud**, it shows your storage device and its capacity, but does not support read/write access.
+- **클라우드**를 통해 앱에 액세스하면 저장 장치와 용량이 표시되지만 읽기/쓰기 액세스는 지원하지 않습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 통해 연락하세요.

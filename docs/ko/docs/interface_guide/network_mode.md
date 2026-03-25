@@ -1,73 +1,73 @@
-# Network Mode
+# 네트워크 모드
 
-On the left side of the web Admin Panel, go to **NETWORK** -> **Network Mode**.
+웹 관리 패널 왼쪽에서 **NETWORK** -> **Network Mode**로 이동합니다.
 
-Network mode refers to the various operational roles and functions that a router can assume to meet different network deployment needs. These modes are tailored to scenarios ranging from home Wi-Fi coverage to enterprise-level multi-link networking, with each mode disabling or enabling specific router features to optimize performance.
+네트워크 모드는 라우터가 다양한 네트워크 배포 요구 사항을 충족하기 위해 가정할 수 있는 다양한 작업 역할과 기능을 나타냅니다. 이러한 모드는 가정용 Wi-Fi 커버리지부터 기업 수준의 멀티링 네트워킹에 이르기까지 다양한 시나리오에 맞춰 조정되었으며, 각 모드는 성능을 최적화하기 위해 특정 라우터 기능을 비활성화하거나 활성화합니다.
 
-!!! note
+!!! 참고
 
-    1. When you change the router's network mode, you may need to reconnect all client devices.
-    
-    2. **When your router is in Access Point / WDS / Bridge mode, you will not be able to access the web admin panel using the original LAN IP address.** Instead, you need to log in to the upstream router to find the IP address it has assigned to this router, then use this IP address to access the web admin panel. If you do not have access to the upstream router, press and hold the reset button for 4 seconds to revert it to the default Router mode.
+    1. 라우터의 네트워크 모드를 변경하면 모든 클라이언트 장치를 다시 연결해야 할 수 있습니다.
 
-    3. **In Extender mode**, you can still access the web admin panel using its original LAN IP address.
-    
-    4. **In Non-Router mode, the following features will be unavailable**: Access Control (Allowlist and Blocklist), AstroWarp, VPN, AdGuard Home, Parental Control, ZeroTier, Tailscale, Port Forwarding, Multi-WAN, DHCP Server, Address Reservation, Guest Network, DNS, Port Management, IPv6, Drop-in Gateway, IGMP Snooping, Network Acceleration, NAT Settings.
+    2. **라우터가 액세스 포인트 / WDS / 브리지 모드인 경우 원래 LAN IP 주소로 웹 관리 패널에 액세스할 수 없습니다.** 대신 상위 라우터에 로그인하여 이 라우터에 할당된 IP 주소를 찾은 다음 이 IP 주소를 사용하여 웹 관리 패널에 액세스해야 합니다. 상위 라우터에 액세스할 수 없는 경우 재설정 버튼을 4초간 눌러 기본 라우터 모드로 되돌립니다.
 
-## For models with Wi-Fi
+    3. **Extender 모드에서는** 원래 LAN IP 주소를 사용하여 웹 관리 패널에 계속 액세스할 수 있습니다.
 
-Except for specific models, most GL.iNet wireless routers have Wi-Fi functionality.
+    4. **비라우터 모드에서는 다음 기능을 사용할 수 없습니다**: 액세스 제어(허용 목록 및 차단 목록), AstroWarp, VPN, AdGuard Home, 자녀 보호, ZeroTier, Tailscale, 포트 포워딩, 멀티 WAN, DHCP 서버, 주소 예약, 게스트 네트워크, DNS, 포트 관리, IPv6, Drop-in Gateway, IGMP Snooping, 네트워크 가속, NAT 설정.
 
-Models with Wi-Fi functionality usually support four network modes: Router, Access Point, Extender, and WDS modes. Note that some models do not support WDS mode.
+## Wi-Fi가 있는 모델의 경우
+
+특정 모델을 제외하고 대부분의 GL.iNet 무선 라우터에는 Wi-Fi 기능이 있습니다.
+
+Wi-Fi 기능이 있는 모델은 일반적으로 라우터, 액세스 포인트, Extender, WDS 모드의 네 가지 네트워크 모드를 지원합니다. 일부 모델은 WDS 모드를 지원하지 않습니다.
 
 ![network mode](https://static.gl-inet.com/docs/router/en/4/tutorials/network_mode/network_mode_page.png){class="glboxshadow"}
 
-- **Router**: This is the default operational mode for most home and small office routers, designed to create a private local area network and act as a dedicated gateway between the public internet and connected devices.
+- **라우터**: 대부분의 가정 및 소규모 사무실 라우터의 기본 작동 모드이며, 프라이빗 로컬 영역 네트워크를 생성하고 공용 인터넷과 연결된 장치 간의 전용 게이트웨이 역할을 하도록 설계되었습니다.
 
-    In Router Mode, the device enables core functions including NAT, DHCP, and a built-in firewall. It connects to an upstream line such as broadband fiber, automatically assigns private IP addresses to connected devices, and provides network security for the entire private network.
-    
-    ---
-
-- **Access Point**: This mode enables a router to connect to a wired network via a LAN cable and broadcast wireless signals, expanding Wi-Fi coverage in large spaces to allow more devices to access the network.
-
-    In Access Point mode, the router disables its NAT and DHCP functions, operating purely as a wireless signal transmitter and switch rather than a standalone gateway.
-
-    After switching to Access Point mode, you will not be able to access the web admin panel using the original LAN IP address. Instead, you need to log in to the upstream router to find the IP address it has assigned to this AP, then use this IP address to access the web admin panel. If you do not have access to the upstream router, press and hold the reset button for 4 seconds to revert it to the default Router mode.
+    라우터 모드에서 장치는 NAT, DHCP 및 내장 방화벽을 포함한 핵심 기능을 활성화합니다. 광파이버와 같은 상위 라인에 연결하고, 연결된 장치에 프라이빗 IP 주소를 자동으로 할당하며, 전체 프라이빗 네트워크에 대한 네트워크 보안을 제공합니다.
 
     ---
 
-- **Extender**: This mode is designed to extend the Wi-Fi coverage of an existing wireless network and eliminate signal dead zones in areas with poor connectivity.
+- **액세스 포인트**: 이 모드를 사용하면 라우터가 LAN 케이블을 통해 유선 네트워크에 연결되고 무선 신호를 브로드캐스팅하여 대형 공간에서 Wi-Fi 커버리지를 확장하고 더 많은 장치가 네트워크에 액세스할 수 있도록 합니다.
 
-    It enables the router to wirelessly receive signals from the main router, amplify them, and retransmit the boosted signal. Unlike Access Point mode, it requires no wired connection to the main router, but it may lead to bandwidth halving, as the device has to handle simultaneous signal reception and transmission.
+    액세스 포인트 모드에서 라우터는 NAT 및 DHCP 기능을 비활성화하며 독립형 게이트웨이가 아닌 순수 무선 신호 송수신기 및 스위치로 작동합니다.
 
-    In Extender mode, you will still be able to access the web admin panel using its original LAN IP address.
+    액세스 포인트 모드로 전환하면 원래 LAN IP 주소를 사용하여 웹 관리 패널에 액세스할 수 없습니다. 대신 상위 라우터에 로그인하여 이 AP에 할당된 IP 주소를 찾은 다음 이 IP 주소를 사용하여 웹 관리 패널에 액세스해야 합니다. 상위 라우터에 액세스할 수 없는 경우 재설정 버튼을 4초간 눌러 기본 라우터 모드로 되돌립니다.
 
     ---
 
-- **WDS**: Wireless Distribution System (WDS) mode is similar to Extender mode as it extends Wi-Fi coverage wirelessly, but it supports wireless bridging between multiple compatible routers. It is recommended for wireless network expansion when the upstream router has WDS functionality.
-    
-    This mode is ideal for scenarios like covering multi-story buildings or small office campuses where multiple routers need to work together to form a unified wireless network. Unlike Extender mode, which only transmits signals from one main router to a single extender, WDS mode allows interconnected routers to both send and receive signals, enabling seamless coverage across larger areas with multiple signal nodes.
+- **Extender**: 이 모드는 기존 무선 네트워크의 Wi-Fi 커버리지를 확장하고 연결성이 낮은 지역의 신호 데드 존을 제거하도록 설계되었습니다.
 
-    After switching to WDS mode, you will not be able to access the web admin panel using the original LAN IP address. Instead, you need to log in to the upstream router to find the IP address it has assigned to this WDS router, then use this IP address to access the web admin panel. If you do not have access to the upstream router, press and hold the reset button for 4 seconds to revert it to the default Router mode.
+    이를 통해 라우터는 메인 라우터에서 신호를 무선으로 수신, 증폭 및 부스팅된 신호를 재전송할 수 있습니다. 액세스 포인트 모드와 달리 메인 라우터에 대한 유선 연결이 필요하지 않지만 장치가 동시에 신호 수신 및 전송을 처리해야 하므로 대역폭이 절반으로 줄어들 수 있습니다.
 
-## For models without Wi-Fi
+    Extender 모드에서는 원래 LAN IP 주소를 사용하여 웹 관리 패널에 계속 액세스할 수 있습니다.
 
-GL-MT2500/GL-MT2500A does not support Access Point, Extender, or WDS modes, as it lacks Wi-Fi functionality. But it supports Router mode and Bridge mode.
+    ---
+
+- **WDS**: Wireless Distribution System(WDS) 모드는 Extender 모드와 유사하게 Wi-Fi 커버리지를 무선으로 확장하지만 여러 호환 라우터 간의 무선 브리징을 지원합니다. 상위 라우터에 WDS 기능이 있는 경우 무선 네트워크 확장에 권장됩니다.
+
+    이 모드는 여러 라우터가 함께 작동하여 통합 무선 네트워크를 형성해야 하는 다층 건물이나 소규모 오피스 캠퍼스와 같은 시나리오에 이상적입니다. Extender 모드는 하나의 메인 라우터에서 하나의 Extender로만 신호를 전송하는 반면, WDS 모드는 상호 연결된 라우터가 신호를 송수신할 수 있으므로 여러 신호 노드를 통해 더 넓은 지역의 원활한 커버리지가 가능합니다.
+
+    WDS 모드로 전환하면 원래 LAN IP 주소를 사용하여 웹 관리 패널에 액세스할 수 없습니다. 대신 상위 라우터에 로그인하여 이 WDS 라우터에 할당된 IP 주소를 찾은 다음 이 IP 주소를 사용하여 웹 관리 패널에 액세스해야 합니다. 상위 라우터에 액세스할 수 없는 경우 재설정 버튼을 4초간 눌러 기본 라우터 모드로 되돌립니다.
+
+## Wi-Fi가 없는 모델의 경우
+
+GL-MT2500/GL-MT2500A는 Wi-Fi 기능이 없으므로 액세스 포인트, Extender 또는 WDS 모드를 지원하지 않습니다. 하지만 라우터 모드와 브리지 모드는 지원합니다.
 
 ![network mode of gl-mt2500](https://static.gl-inet.com/docs/router/en/4/tutorials/network_mode/network_mode_page_mt2500.png){class="glboxshadow"}
 
-- **Router**: This is the default operational mode for most home and small office routers, designed to create a private local area network (LAN) and act as a dedicated gateway between the public internet and connected devices.
+- **라우터**: 대부분의 가정 및 소규모 사무실 라우터의 기본 작동 모드이며, 프라이빗 로컬 영역 네트워크(LAN)을 생성하고 공용 인터넷과 연결된 장치 간의 전용 게이트웨이 역할을 하도록 설계되었습니다.
 
-    In Router Mode, the device enables core functions including NAT, DHCP, and a built-in firewall. It connects to an upstream line such as broadband fiber, automatically assigns private IP addresses to connected devices, and provides network security for the entire private network.
-    
+    라우터 모드에서 장치는 NAT, DHCP 및 내장 방화벽을 포함한 핵심 기능을 활성화합니다. 광파이버와 같은 상위 라인에 연결하고, 연결된 장치에 프라이빗 IP 주소를 자동으로 할당하며, 전체 프라이빗 네트워크에 대한 네트워크 보안을 제공합니다.
+
     ---
 
-- **Bridge**: Allows the router to connect to a wired network and function as a bridge between network devices. 
+- **브리지**: 라우터가 유선 네트워크에 연결되고 네트워크 장치 간의 브리지 역할을 할 수 있도록 합니다.
 
-    In this mode, the router essentially operates as a switch, forwarding data between connected devices without performing NAT, firewall, or DHCP services. This enables seamless communication between devices on the same network by acting as a simple connection point rather than a network gateway.
+    이 모드에서 라우터는 기본적으로 스위치로 작동하며 NAT, 방화벽 또는 DHCP 서비스를 수행하지 않고 연결된 장치 간에 데이터를 포워딩합니다. 이를 통해 네트워크 게이트웨이가 아닌 간단한 연결 지점으로 작동하여 동일한 네트워크의 장치 간의 원활한 통신이 가능합니다.
 
-    After switching to Bridge mode, you will not be able to access the web admin panel using the original LAN IP address. Instead, you need to log in to the upstream router to find the IP address it has assigned to this Bridge router, then use this IP address to access the web admin panel. If you do not have access to the upstream router, press and hold the reset button for 4 seconds to revert it to the default Router mode.
+    브리지 모드로 전환하면 원래 LAN IP 주소를 사용하여 웹 관리 패널에 액세스할 수 없습니다. 대신 상위 라우터에 로그인하여 이 브리지 라우터에 할당된 IP 주소를 찾은 다음 이 IP 주소를 사용하여 웹 관리 패널에 액세스해야 합니다. 상위 라우터에 액세스할 수 없는 경우 재설정 버튼을 4초간 눌러 기본 라우터 모드로 되돌립니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 통해 연락하세요.
